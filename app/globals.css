@@ -3,27 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-primary: #0077B6;
+  --color-secondary: #2A9D8F;
+  --color-accent: #ADE8F4;
+  --color-neutral: #EEF4FD;
+  --color-neutralDark: #012757;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  --color-primary: #0077B6;
+  --color-secondary: #2A9D8F;
+  --color-accent: #ADE8F4;
+  --color-neutral: #EEF4FD;
+  --color-neutralDark: #012757;
   }
 }
 
+html, body {
+  height: 100%; /* Sayfanın tamamını kapsaması için */
+  margin: 0; /* Varsayılan marginleri kaldırmak için */
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom right, /* Sol üstten sağ alta doğru */
+    var(--color-accent), /* Başlangıç rengi */
+    var(--color-neutral)  /* Bitiş rengi */
+  );
+  
+  background-repeat: no-repeat; /* Arka planın tekrarlanmasını önler */
+  background-attachment: fixed; /* Arka planı sabitler, kaydırmayı önler */
+  background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
 }
 
 @layer utilities {
