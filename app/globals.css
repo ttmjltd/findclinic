@@ -12,11 +12,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --color-primary: #0077B6;
-  --color-secondary: #2A9D8F;
-  --color-accent: #ADE8F4;
-  --color-neutral: #EEF4FD;
-  --color-neutralDark: #012757;
+    --color-primary: #0077B6;
+    --color-secondary: #2A9D8F;
+    --color-accent: #ADE8F4;
+    --color-neutral: #EEF4FD;
+    --color-neutralDark: #012757;
   }
 }
 
@@ -26,11 +26,10 @@ html, body {
 }
 
 body {
-
   background: linear-gradient(
     to bottom right, /* Sol üstten sağ alta doğru */
     var(--color-accent), /* Başlangıç rengi */
-    var(--color-neutral)  /* Bitiş rengi */
+    var(--color-neutral) 45% /* Bitiş rengi */
   );
   
   background-repeat: no-repeat; /* Arka planın tekrarlanmasını önler */
