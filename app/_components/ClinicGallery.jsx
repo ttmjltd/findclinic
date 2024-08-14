@@ -19,7 +19,7 @@ const ClinicGallery = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="relative w-[60%]">
+      <div className="relative sm:w-[60%] w-[98%]">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-4">
             {data.map((item) => (
@@ -33,7 +33,7 @@ const ClinicGallery = () => {
                     height={500}
                     className="rounded-lg object-cover h-[500px] w-full"
                   />
-                  <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-4 text-center rounded-b-lg">
+                  <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-4 text-center rounded-b-lg text-base xs:text-[10px]">
                     {item.title}
                   </div>
                 </div>

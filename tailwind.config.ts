@@ -19,6 +19,9 @@ const config: Config = {
         neutralDark: '#012757',
         // Diğer renkler...
       },
+      screens: {
+        'xs': {'max': '450px'},
+      }
     },
   },
   plugins: [],
