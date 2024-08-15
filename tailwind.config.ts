@@ -16,7 +16,7 @@ const config: Config = {
         secondary: '#2A9D8F',
         accent: '#ADE8F4',
         neutral: '#EEF4FD',
-        neutralDark: '#012757'
+        neutralDark: '#012757',
         // Diğer renkler...
       },
       screens: {
