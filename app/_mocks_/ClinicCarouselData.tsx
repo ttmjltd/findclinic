@@ -1,10 +1,12 @@
-export const data = [
+import { ClinicData } from "../types";
+
+export const data: ClinicData[] = [
   {
     id: 1,
     type: "image",
     image: "/culture.webp",
     alt: "Angel Health Tourism",
-    title: "Angel Health Tourism"
+    title: "Angel Health Tourism",
   },
   {
     id: 2,
@@ -12,7 +14,6 @@ export const data = [
     image: "/doctor-working.avif",
     alt: "Mayo Health Clinic",
     title: "Mayo Health Clinic",
-
   },
   {
     id: 3,
@@ -20,15 +21,13 @@ export const data = [
     image: "/health_consulting.jpg",
     alt: "Grand Clinic Atlantis",
     title: "Grand Clinic Atlantis",
-
   },
-
   {
     id: 4,
     type: "image",
     image: "/mission.jpg",
     alt: "Angel Health Tourism",
-    title: "Angel Health Tourism"
+    title: "Angel Health Tourism",
   },
   {
     id: 5,
@@ -36,7 +35,6 @@ export const data = [
     image: "/surgery.jpeg",
     alt: "Mayo Health Clinic",
     title: "Mayo Health Clinic",
-
   },
   {
     id: 6,
@@ -44,6 +42,5 @@ export const data = [
     image: "/woman-smiling.webp",
     alt: "Grand Clinic Atlantis",
     title: "Grand Clinic Atlantis",
-
   },
 ];

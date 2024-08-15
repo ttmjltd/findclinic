@@ -1,10 +1,4 @@
-
-import React from 'react'
-
-interface ButtonProps {
-  label: string;
-  icon: any;
-}
+import { ButtonProps } from "../types"
 
 const Button: React.FC<ButtonProps> = ({label, icon}) => {
   return (
