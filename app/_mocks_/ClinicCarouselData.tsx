@@ -1,4 +1,4 @@
-import { ClinicData } from "../_components/ClinicGallery";
+import { ClinicData } from "../types";
 
 export const data: ClinicData[] = [
   {

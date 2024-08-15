@@ -1,18 +1,13 @@
 "use client";
 
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { data } from "../_mocks_/ClinicCarouselData";
+import { ClinicData } from "../types";
 
-export interface ClinicData {
-  id: number;
-  type: string;
-  image: string;
-  alt: string;
-  title: string;
-}
+
 
 const ClinicGallery: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });

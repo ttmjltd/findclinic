@@ -1,7 +1,6 @@
 import { Search } from "lucide-react";
 import Button from "../_atoms/Button";
 import Dropdown from "../_atoms/Dropdown";
-import React from "react";
 
 const SearchComponent = () => {
   return (
