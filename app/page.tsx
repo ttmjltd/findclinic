@@ -8,7 +8,6 @@ const ClinicGallery = dynamic(() => import("./_components/ClinicGallery"), {
 export default function Home() {
   return (
     <main>
-      <h1>Main Page</h1>
       <ClinicGallery />
     </main>
   );
