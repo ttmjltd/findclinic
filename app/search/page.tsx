@@ -1,6 +1,4 @@
 import Link from "next/link"
-import Button from "../_atoms/Button"
-import { Search } from "lucide-react"
 import SearchComponent from "../_components/SearchComponent"
 
 
