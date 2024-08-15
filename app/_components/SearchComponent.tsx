@@ -1,6 +1,6 @@
-import { Search } from "lucide-react";
 import Button from "../_atoms/Button";
 import Dropdown from "../_atoms/Dropdown";
+import { FiSearch } from "react-icons/fi";
 
 const SearchComponent = () => {
   return (
@@ -12,7 +12,7 @@ const SearchComponent = () => {
         <Dropdown placeholder={"Location"} />
       </div>
       <div>
-        <Button label={"Search"} icon={<Search />} />
+        <Button label={"Search"} icon={<FiSearch />} />
       </div>
     </div>
   );
