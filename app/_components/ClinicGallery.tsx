@@ -1,12 +1,20 @@
-'use client'
+"use client";
 
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
-import { data } from "../_mocks_/ClinicCarouselData";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { data } from "../_mocks_/ClinicCarouselData";
 
-const ClinicGallery = () => {
+export interface ClinicData {
+  id: number;
+  type: string;
+  image: string;
+  alt: string;
+  title: string;
+}
+
+const ClinicGallery: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const scrollPrev = useCallback(() => {
@@ -22,7 +30,7 @@ const ClinicGallery = () => {
       <div className="relative sm:w-[60%] w-[98%]">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-4">
-            {data.map((item) => (
+            {data.map((item: ClinicData) => (
               <div key={item.id} className="min-w-[calc(100%/3)] pl-4">
                 <div className="relative">
                   <Image
