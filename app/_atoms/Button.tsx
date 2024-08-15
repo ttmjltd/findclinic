@@ -3,7 +3,7 @@ import React from 'react'
 
 interface ButtonProps {
   label: string;
-  icon: string;
+  icon: any;
 }
 
 const Button: React.FC<ButtonProps> = ({label, icon}) => {
