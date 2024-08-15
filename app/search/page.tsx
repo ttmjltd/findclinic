@@ -6,7 +6,7 @@ import SearchComponent from "../_components/SearchComponent"
 
 const page = () => {
   return (
-    <div className="items-center">
+    <div>
         <h1 className="text-4xl text-secondary font-bold text-center mt-20">Let&apos;s find the best clinic for you!</h1>
 
         <SearchComponent/>
