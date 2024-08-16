@@ -16,7 +16,7 @@ export interface ClinicData {
     value:any,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     label:string,
-    name:string
+   
 
   }
   export interface CheckboxProps {
@@ -24,6 +24,12 @@ export interface ClinicData {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     label:string,
     checked:boolean,
-    name:string
+    
 
   }
+  export interface PatientFormState {
+    fullName: string;
+    email: string;
+    phone: string;
+    treatment: string;
+}
