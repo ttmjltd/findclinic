@@ -1,12 +1,12 @@
 
 'use client';
-import Input from "../_atoms/Input"
-import Checkbox from "../_atoms/Checkbox"
 import { useState } from "react";
 import { PatientFormState } from "../types";
+import Input from "../_atoms/Input";
+import Checkbox from "../_atoms/Checkbox";
 
 
-const page = () => {
+const FormComponent = () => {
     const [form, setForm] = useState<PatientFormState>({
         fullName: "",
         email: "",
@@ -18,9 +18,6 @@ const page = () => {
     const handleOnChange = (e: any, stateName: string) => {
         setForm((prev) => ({ ...prev, [stateName]: e.target.value }))
     }
-    console.log(form, "Frm");
-    console.log(terms, "terms");
-    console.log(subscribe, "subscribe");
 
     return (
         <div className="w-full h-lvh flex justify-center">
@@ -54,4 +51,4 @@ const page = () => {
     )
 }
 
-export default page
+export default FormComponent
