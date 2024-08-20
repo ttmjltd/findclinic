@@ -22,7 +22,9 @@ const OptionalCards: React.FC = () => {
 
   return (
     <div className="container mx-auto py-8">
-      <h2 className="text-2xl font-bold mb-4">Explore Other Options</h2>
+      <h2 className="text-2xl text-center text-secondary font-bold mb-4">
+        Explore Other Options
+      </h2>
       <div className="relative">
         <button
           className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 ml-4"
@@ -45,12 +47,12 @@ const OptionalCards: React.FC = () => {
                     width={200}
                     height={200}
                   />
-                  <div className="p-1">
-                    <h3 className="mt-0.5 text-sm font-medium text-gray-900">
+                  <div className="p-1 text-center">
+                    <h3 className="mt-0.5 text-sm  font-medium text-blue-900">
                       {item.title}
                     </h3>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-1">
+                  <div className="m-3 flex flex-wrap gap-2">
                     <span className="whitespace-nowrap rounded-full bg-blue-100 px-2.5 py-0.5 text-xs text-blue-600">
                       Hair Transplant
                     </span>
