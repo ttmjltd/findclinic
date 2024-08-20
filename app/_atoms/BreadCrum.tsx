@@ -6,9 +6,9 @@ const BreadCrum: React.FC<BreadCrumTypes> = ({clinicName}) => {
     <div>
 
         <span>Home</span>
-        <span className='text-secondary'> > </span>
+        <span className='text-secondary'> {">"} </span>
         <span>Treatment</span>
-        <span className='text-secondary'> > </span>
+        <span className='text-secondary'> {">"} </span>
         <span className='text-secondary'>{clinicName}</span>
     </div>
   )

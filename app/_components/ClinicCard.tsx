@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 import { FaStar } from 'react-icons/fa'
+import { BreadCrumTypes } from '../types'
 
-const ClinicCard = ({clinicName}) => {
+
+const ClinicCard: React.FC<BreadCrumTypes> = ({clinicName}) => { //BreadCrum Types used until ClinicCardTypes Created
   return (
     <div className='flex mt-10 w-fit'>
         <div className='rounded-xl'>

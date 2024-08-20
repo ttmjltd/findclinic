@@ -18,7 +18,7 @@ const ClinicReviews = () => {
                                               ))}
                     </div>
                     <div>
-                    "I can't say enough good things about Mayo Health Clinic. I've been to several clinics over the years, but none compare to the quality of care and attention to detail I’ve experienced here."
+                    &quot;I can&apos;t say enough good things about Mayo Health Clinic. I&apos;ve been to several clinics over the years, but none compare to the quality of care and attention to detail I&apos;ve experienced here.&quot;
                     </div>
 
                 </div>
@@ -32,7 +32,7 @@ const ClinicReviews = () => {
                                               ))}
                     </div>
                     <div>
-                   "I was impressed with how they took the time to understand my specific needs and customized a treatment plan just for me. Today, I feel better, and I owe it all to the incredible care I received.”
+                    &quot;I was impressed with how they took the time to understand my specific needs and customized a treatment plan just for me. Today, I feel better, and I owe it all to the incredible care I received.&quot;
                     </div>
 
                 </div>
@@ -46,7 +46,7 @@ const ClinicReviews = () => {
                                               ))}
                     </div>
                     <div>
-                    “From the moment I walked in, the receptionist greeted me with a warm smile, and the waiting area was so calm and relaxing. The doctors and nurses were professional yet personable, making me feel at ease.”
+                    &quot;From the moment I walked in, the receptionist greeted me with a warm smile, and the waiting area was so calm and relaxing. The doctors and nurses were professional yet personable, making me feel at ease.&quot;
                     </div>
 
                 </div>
