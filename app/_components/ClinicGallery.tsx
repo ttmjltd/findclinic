@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { data } from "../_mocks_/ClinicCarouselData";
 import { ClinicData } from "../types";
+import Link from "next/link";
 
 
 
@@ -27,19 +28,24 @@ const ClinicGallery: React.FC = () => {
           <div className="flex -ml-4">
             {data.map((item: ClinicData) => (
               <div key={item.id} className="min-w-[calc(100%/3)] pl-4">
-                <div className="relative">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    title={item.title}
-                    width={800}
-                    height={500}
-                    className="rounded-lg object-cover h-[500px] w-full"
-                  />
-                  <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-4 text-center rounded-b-lg text-base xs:text-[10px]">
-                    {item.title}
+                <Link href={`/clinic-details/${item.title.split(' ')                   // Metni boşluklardan ayırarak diziye çevirir
+        .map(word => 
+            word.charAt(0).toLowerCase() + word.slice(1).toLowerCase())  // Her kelimenin tamamını küçük harfe çevirir
+        .join('-')}`}>
+                  <div className="relative">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        title={item.title}
+                        width={800}
+                        height={500}
+                        className="rounded-lg object-cover h-[500px] w-full"
+                        />
+                      <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-4 text-center rounded-b-lg text-base xs:text-[10px]">
+                        {item.title}
+                      </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
