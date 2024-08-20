@@ -11,31 +11,31 @@ const ClinicServices = () => {
             <div className='grid grid-cols-3 mt-4'>
                 <span className='flex text-xs mr-4 items-center'>
                     <span className='mr-2'>
-                       <Image src="/services/car.gif" width="32" height="32" alt='car'/>
+                       <Image src="/services/car-no-bg.gif" width="32" height="32" alt='car' unoptimized/>
                     </span>
                     Airport Transfer
                 </span>
                 <span className='flex text-xs mr-4 items-center'>
                     <span className='mr-2'>
-                       <Image src="/services/hotel-bell.gif" width="32" height="32" alt='car'/>
+                       <Image src="/services/hotel-bell-no-bg.gif" width="32" height="32" alt='car' unoptimized/>
                     </span>
                     Hotel Reservation
                 </span>
                 <span className='flex text-xs mr-4 items-center'>
                     <span className='mr-2'>
-                       <Image src="/services/car2.gif" width="32" height="32" alt='car'/>
+                       <Image src="/services/car2-no-bg.gif" width="32" height="32" alt='car' unoptimized/>
                     </span>
                     Private Chauffeur
                 </span>
                 <span className='flex text-xs mr-4 items-center'>
                     <span className='mr-2'>
-                       <Image src="/services/doctor.gif" width="32" height="32" alt='car'/>
+                       <Image src="/services/doctor-no-bg.gif" width="32" height="32" alt='car' unoptimized/>
                     </span>
                     Doctor Consultation
                 </span>
                 <span className='flex text-xs mr-4 items-center'>
                     <span className='mr-2'>
-                       <Image src="/services/english.gif" width="32" height="32" alt='car'/>
+                       <Image src="/services/english-no-bg.gif" width="32" height="32" alt='car'unoptimized />
                     </span>
                     Translation Services
                 </span> 
