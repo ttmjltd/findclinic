@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Epilogue, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
+
+const epilogue = Epilogue({ subsets: ["latin"], weight: ["400", "700"] });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${epilogue.className} ${inter.className} font-epilogue`}>
         <Navbar/>
         <div>
           <div className="w-full">{children}</div>
