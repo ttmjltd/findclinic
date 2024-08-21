@@ -7,8 +7,6 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { data } from "../_mocks_/ClinicCarouselData";
 import { ClinicData } from "../types";
 
-
-
 const ClinicGallery: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
