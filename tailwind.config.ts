@@ -7,16 +7,21 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'epilogue': ['Epilogue', 'sans-serif'],
+      'inter': ['Inter', 'sans-serif'],
+    },
     extend: {
       backgroundImage: {
         
       },
       colors: {
-        primary: '#0077B6',
+        primary: '#012757',
         secondary: '#2A9D8F',
-        accent: '#ADE8F4',
+        accent: '#2A9D8F',
         neutral: '#EEF4FD',
         neutralDark: '#012757',
+        bgWhite: '#EEF4FD'
         // Diğer renkler...
       },
       screens: {
