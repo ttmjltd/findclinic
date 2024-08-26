@@ -1,27 +1,29 @@
-"use client"
-import React from 'react'
-import ProfileForm from '../_components/mock'
- import ProfileInfo from '../_components/ProfileInfo'
+"use client";
+import React from "react";
 
-// interface ProfileFormValues {
-//   name: string;
-//   email: string;
-//   phoneCode: string;
-//   phoneNumber: string;
-//   address: string;
-// }
+import ProfileInfo from "../_components/ProfileInfo";
 
-const DashboardPage = () => {
-  // const handleSubmit = (values: ProfileFormValues ) => {
-  //   // Handle form submission here
-  //   console.log(values);
-  // };
-  return (
-    <div>
-      {/* <ProfileForm onSubmit={handleSubmit}/> */}
-        <ProfileInfo/>
-    </div>
-  )
+interface ProfileFormValues {
+  name: string;
+  email: string;
+  phoneCode: string;
+  phoneNumber: string;
+  address: string;
 }
 
-export default DashboardPage
+const DashboardPage = () => {
+  const handleSubmit = (values: ProfileFormValues) => {
+    //Handle form submission here
+    console.log(values);
+  };
+  return (
+    <div>
+      <div className="text-center text-3xl text-secondary p-5">
+        <p>Reach thousands of potential patients</p>
+      </div>
+      <ProfileInfo onSubmit={handleSubmit} />
+    </div>
+  );
+};
+
+export default DashboardPage;
