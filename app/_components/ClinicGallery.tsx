@@ -8,8 +8,6 @@ import { data } from "../_mocks_/ClinicCarouselData";
 import { ClinicData } from "../types";
 import Link from "next/link";
 
-
-
 const ClinicGallery: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
