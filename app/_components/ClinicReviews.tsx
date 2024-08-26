@@ -4,11 +4,11 @@ import { FaStar } from 'react-icons/fa'
 
 const ClinicReviews = () => {
   return (
-    <div className='mt-6 md:mt-12 w-full md:w-fit'>
-      <h3 className='text-secondary font-bold text-lg md:text-xl'>Patient Reviews</h3>
+    <div className='mt-6 lg:mt-12 w-full'>
+      <h3 className='text-secondary font-bold text-lg lg:text-xl'>Patient Reviews</h3>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-4'>
-        <div className='bg-white m-2 md:m-4 p-4 md:p-6 text-center rounded-xl'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full mt-4'>
+        <div className='bg-white m-2 p-4 text-center rounded-xl'>
           <Image src="/reviews/adam.jpeg" width="133" height="133" alt='review-1' className='rounded-full mx-auto'/>
           <div className='font-bold text-center mt-4'>Adam D.</div>
           <div className='flex justify-center mt-2'>
@@ -21,7 +21,7 @@ const ClinicReviews = () => {
           </div>
         </div>
 
-        <div className='bg-white m-2 md:m-4 p-4 md:p-6 text-center rounded-xl'>
+        <div className='bg-white m-2 p-4 text-center rounded-xl'>
           <Image src="/reviews/adam.jpeg" width="133" height="133" alt='review-1' className='rounded-full mx-auto'/>
           <div className='font-bold text-center mt-4'>John D.</div>
           <div className='flex justify-center mt-2'>
@@ -34,7 +34,7 @@ const ClinicReviews = () => {
           </div>
         </div>
 
-        <div className='bg-white m-2 md:m-4 p-4 md:p-6 text-center rounded-xl'>
+        <div className='bg-white m-2 p-4 text-center rounded-xl'>
           <Image src="/reviews/adam.jpeg" width="133" height="133" alt='review-1' className='rounded-full mx-auto'/>
           <div className='font-bold text-center mt-4'>Peter M.</div>
           <div className='flex justify-center mt-2'>

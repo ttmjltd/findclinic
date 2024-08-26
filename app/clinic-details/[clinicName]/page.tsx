@@ -15,7 +15,7 @@ const page: React.FC<ClinicDetailsTypes> = ({ params }) => {
     .join(' ');
 
   return (
-    <div className='mx-4 md: max-w-full'>
+    <div className='mx-4 md:mx-36 max-w-full'>
 
       <div className='max-w-full md:max-w-2xl'>
         <BreadCrum clinicName={clinicName} />
