@@ -2,20 +2,13 @@
 import React from "react";
 
 import ProfileInfo from "../_components/ProfileInfo";
-
-interface ProfileFormValues {
-  name: string;
-  email: string;
-  phoneCode: string;
-  phoneNumber: string;
-  address: string;
-}
+import { ProfileInfoValues } from "../types";
 
 const DashboardPage = () => {
-  const handleSubmit = (values: ProfileFormValues) => {
-    //Handle form submission here
-    console.log(values);
+  const handleSubmit = (values: ProfileInfoValues) => {
+    console.log("Submitted values:", values);
   };
+
   return (
     <div>
       <div className="text-center text-3xl text-secondary p-5">

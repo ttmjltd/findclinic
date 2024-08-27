@@ -33,3 +33,16 @@ export interface ClinicData {
     phone: string;
     treatment: string;
 }
+
+export interface ProfileInfoProps {
+  onSubmit: (values: ProfileInfoValues) => void;
+}
+
+export interface ProfileInfoValues {
+  name: string;
+  email: string;
+  password: string;
+  phoneCode: string;
+  phoneNumber: string;
+  address: string;
+}

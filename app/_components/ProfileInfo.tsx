@@ -1,20 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Button from "../_atoms/Button";
+import { ProfileInfoProps, ProfileInfoValues } from "../types";
 
-interface ProfileInfoProps {
-  onSubmit: (values: ProfileInfoValues) => void;
-}
 
-interface ProfileInfoValues {
-  name: string;
-  email: string;
-  password: string;
-  phoneCode: string;
-  phoneNumber: string;
-  address: string;
-}
 const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
   const [values, setValues] = useState<ProfileInfoValues>({
     name: "",
@@ -56,6 +45,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                   <input
                     className="mt-1 p-2 w-full rounded-md border-gray-400 bg-neutral shadow-sm sm:text-sm"
                     placeholder="John Doe"
+                    name="name"
                     value={values.name}
                     onChange={handleChange}
                     type="text"
@@ -71,8 +61,8 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M12.1936 0.195853C12.2555 0.133771 12.3291 0.0845147 12.4101 0.050907C12.4911 0.0172993 12.5779 0 12.6656 0C12.7533 0 12.8401 0.0172993 12.9211 0.050907C13.0021 0.0845147 13.0756 0.133771 13.1376 0.195853L15.8041 2.86245C15.8662 2.92437 15.9155 2.99794 15.9491 3.07893C15.9827 3.15992 16 3.24675 16 3.33443C16 3.42212 15.9827 3.50895 15.9491 3.58994C15.9155 3.67093 15.8662 3.7445 15.8041 3.80642L5.13777 14.4728C5.06427 14.5457 4.97479 14.6005 4.87644 14.6328L0.876552 15.9661C0.759199 16.005 0.633332 16.0105 0.513018 15.9821C0.392705 15.9536 0.282685 15.8922 0.195258 15.8047C0.10783 15.7173 0.0464374 15.6073 0.0179438 15.487C-0.0105498 15.3667 -0.0050223 15.2408 0.0339079 15.1234L1.36721 11.1236C1.39952 11.0252 1.4543 10.9357 1.5272 10.8622L12.1936 0.195853ZM2.58184 11.6942L1.72053 14.2808L4.30579 13.4182L14.3895 3.33443L12.6656 1.61048L2.58184 11.6942Z"
                         fill="#2A9D8F"
                       />
@@ -93,6 +83,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                     type="email"
                     id="UserEmail"
                     placeholder="example@mail.com"
+                    name="email"
                     value={values.email}
                     onChange={handleChange}
                     required
@@ -107,8 +98,8 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M12.1936 0.195853C12.2555 0.133771 12.3291 0.0845147 12.4101 0.050907C12.4911 0.0172993 12.5779 0 12.6656 0C12.7533 0 12.8401 0.0172993 12.9211 0.050907C13.0021 0.0845147 13.0756 0.133771 13.1376 0.195853L15.8041 2.86245C15.8662 2.92437 15.9155 2.99794 15.9491 3.07893C15.9827 3.15992 16 3.24675 16 3.33443C16 3.42212 15.9827 3.50895 15.9491 3.58994C15.9155 3.67093 15.8662 3.7445 15.8041 3.80642L5.13777 14.4728C5.06427 14.5457 4.97479 14.6005 4.87644 14.6328L0.876552 15.9661C0.759199 16.005 0.633332 16.0105 0.513018 15.9821C0.392705 15.9536 0.282685 15.8922 0.195258 15.8047C0.10783 15.7173 0.0464374 15.6073 0.0179438 15.487C-0.0105498 15.3667 -0.0050223 15.2408 0.0339079 15.1234L1.36721 11.1236C1.39952 11.0252 1.4543 10.9357 1.5272 10.8622L12.1936 0.195853ZM2.58184 11.6942L1.72053 14.2808L4.30579 13.4182L14.3895 3.33443L12.6656 1.61048L2.58184 11.6942Z"
                         fill="#2A9D8F"
                       />
@@ -131,6 +122,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                     type="text"
                     id="Address"
                     placeholder="162 Regent Street, London"
+                    name="address"
                     value={values.address}
                     onChange={handleChange}
                     required
@@ -145,8 +137,8 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M12.1936 0.195853C12.2555 0.133771 12.3291 0.0845147 12.4101 0.050907C12.4911 0.0172993 12.5779 0 12.6656 0C12.7533 0 12.8401 0.0172993 12.9211 0.050907C13.0021 0.0845147 13.0756 0.133771 13.1376 0.195853L15.8041 2.86245C15.8662 2.92437 15.9155 2.99794 15.9491 3.07893C15.9827 3.15992 16 3.24675 16 3.33443C16 3.42212 15.9827 3.50895 15.9491 3.58994C15.9155 3.67093 15.8662 3.7445 15.8041 3.80642L5.13777 14.4728C5.06427 14.5457 4.97479 14.6005 4.87644 14.6328L0.876552 15.9661C0.759199 16.005 0.633332 16.0105 0.513018 15.9821C0.392705 15.9536 0.282685 15.8922 0.195258 15.8047C0.10783 15.7173 0.0464374 15.6073 0.0179438 15.487C-0.0105498 15.3667 -0.0050223 15.2408 0.0339079 15.1234L1.36721 11.1236C1.39952 11.0252 1.4543 10.9357 1.5272 10.8622L12.1936 0.195853ZM2.58184 11.6942L1.72053 14.2808L4.30579 13.4182L14.3895 3.33443L12.6656 1.61048L2.58184 11.6942Z"
                         fill="#2A9D8F"
                       />
@@ -167,6 +159,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                     type="password"
                     id="Password"
                     placeholder="******"
+                    name="password"
                     value={values.password}
                     onChange={handleChange}
                     required
@@ -181,8 +174,8 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M12.1936 0.195853C12.2555 0.133771 12.3291 0.0845147 12.4101 0.050907C12.4911 0.0172993 12.5779 0 12.6656 0C12.7533 0 12.8401 0.0172993 12.9211 0.050907C13.0021 0.0845147 13.0756 0.133771 13.1376 0.195853L15.8041 2.86245C15.8662 2.92437 15.9155 2.99794 15.9491 3.07893C15.9827 3.15992 16 3.24675 16 3.33443C16 3.42212 15.9827 3.50895 15.9491 3.58994C15.9155 3.67093 15.8662 3.7445 15.8041 3.80642L5.13777 14.4728C5.06427 14.5457 4.97479 14.6005 4.87644 14.6328L0.876552 15.9661C0.759199 16.005 0.633332 16.0105 0.513018 15.9821C0.392705 15.9536 0.282685 15.8922 0.195258 15.8047C0.10783 15.7173 0.0464374 15.6073 0.0179438 15.487C-0.0105498 15.3667 -0.0050223 15.2408 0.0339079 15.1234L1.36721 11.1236C1.39952 11.0252 1.4543 10.9357 1.5272 10.8622L12.1936 0.195853ZM2.58184 11.6942L1.72053 14.2808L4.30579 13.4182L14.3895 3.33443L12.6656 1.61048L2.58184 11.6942Z"
                         fill="#2A9D8F"
                       />
@@ -204,6 +197,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                   <input
                     className="mt-1 p-2 w-20 rounded-md border-gray-400 bg-neutral shadow-sm sm:text-sm"
                     placeholder="+44"
+                    name="phoneCode"
                     value={values.phoneCode}
                     onChange={handleChange}
                     type="tel"
@@ -214,6 +208,7 @@ const ProfileInfo: React.FC<ProfileInfoProps> = ({ onSubmit }) => {
                     required
                     type="tel"
                     id="phone"
+                    name="phoneNumber"
                     value={values.phoneNumber}
                     onChange={handleChange}
                     placeholder="1234567"
