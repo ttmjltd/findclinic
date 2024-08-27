@@ -34,6 +34,17 @@ export interface ClinicData {
     treatment: string;
 }
 
+export interface ClinicDetailsTypes {
+  params: any;
+
+  
+}
+
+export interface BreadCrumTypes {
+  clinicName: string
+  
+}
+
 export interface ProfileInfoProps {
   onSubmit: (values: ProfileInfoValues) => void;
 }
