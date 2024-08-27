@@ -8,6 +8,7 @@ export interface ClinicData {
   export interface ButtonProps {
     label: string;
     icon?: any;
+    variation: string;
   }
   export interface DropdownProps {
     placeholder:string
