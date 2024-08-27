@@ -1,4 +1,4 @@
-export interface ClinicData {
+export interface ClinicDataTypes {
     id: number;
     type: string;
     image: string;
