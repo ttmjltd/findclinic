@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { FaStar } from 'react-icons/fa'
 import { BreadCrumTypes } from '../types'
+import { StarFC } from '../_atoms/Icons'
 
 const ClinicCard: React.FC<BreadCrumTypes> = ({ clinicName }) => { //BreadCrum Types used until ClinicCardTypes Created
   return (
@@ -23,7 +23,7 @@ const ClinicCard: React.FC<BreadCrumTypes> = ({ clinicName }) => { //BreadCrum T
           <div className='flex items-center mt-1'>
             <span className='mr-2 bg-primary text-white text-xs p-1 rounded-md'>5.0</span>
             {[5, 5, 5, 5, 5].map((_, index) => (
-              <span key={index} className='text-primary text-xs'><FaStar /></span>
+              <span key={index} className='text-primary text-xs'><StarFC /></span>
             ))}
             <span className='ml-2 text-xs md:text-sm'>49 Reviews</span>
             <span className='ml-2 text-xs md:text-sm'>Location</span>
