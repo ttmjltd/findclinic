@@ -40,14 +40,14 @@ export const ArrowDownFC = () => (
 
 export const ArrowUpFC = () => (
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M3.54297 17L11.9825 7.4L20.0001 17" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M3.54297 17L11.9825 7.4L20.0001 17" stroke="#2A9D8F" strokeWidth="2" strokeLinecap="round"/>
 </svg>
 )
 
 export const TickFC = () => (
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <g clip-path="url(#clip0_624_4859)">
-    <path d="M6.5 11.8043L11 16.6957L19 8" stroke="#2A9D8F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6.5 11.8043L11 16.6957L19 8" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </g>
   <defs>
     <clipPath id="clip0_624_4859">
