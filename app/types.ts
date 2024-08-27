@@ -58,3 +58,16 @@ export interface ProfileInfoValues {
   phoneNumber: string;
   address: string;
 }
+export interface Service {
+  name: string;
+  icon: React.ComponentType;
+}
+
+export interface Clinic {
+  name: string;
+  rating: number;
+  reviews: number;
+  location: string;
+  treatments: string[];
+  services: Service[];
+}

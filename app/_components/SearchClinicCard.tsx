@@ -8,8 +8,9 @@ import {
   FaStethoscope,
   FaLanguage,
 } from "react-icons/fa";
+import { Clinic } from "../types";
 
-const clinics = [
+const clinics: Clinic[] = [
   {
     name: "Mayo Health Clinic",
     rating: 5.0,
@@ -89,9 +90,9 @@ const clinics = [
   },
 ];
 
-const SearchClinicCard = () => {
+const SearchClinicCard: React.FC = () => {
   return (
-    <div className="p-4 w-4/3 mt-20">
+    <div className="p-4 mt-20 sm:w-4/6">
       <h1 className="text-2xl font-bold text-center mb-8 text-secondary">
         Here are the best clinics for you
       </h1>
@@ -99,56 +100,57 @@ const SearchClinicCard = () => {
         {clinics.map((clinic, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-md flex items-center"
+            className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col sm:flex-row"
           >
-            <div className="w-1/4">
+            <div className="sm:w-1/4 w-2/4">
               <Image
                 src="/doctor-working.avif"
                 alt={clinic.name}
                 width={300}
                 height={400}
+                className="rounded-lg"
               />
             </div>
-            <div className="w-1/2 px-4">
-              <h1 className="text-4xl text-secondary font-bold text-center">
+            <div className="sm:w-1/2 px-4 space-y-3">
+              <h1 className="sm:text-3xl text-secondary font-bold text-xl">
                 {clinic.name}
               </h1>
-              <div className="flex items-center my-2 text-xs">
-                <span className="text-yellow-500 flex items-center mr-2">
+              <div className="flex mb-10 text-xs flex-col sm:flex-row items-center">
+                <span>{clinic.rating}</span>
+                <span className="text-yellow-500 flex items-center m-2">
                   {Array.from({ length: 5 }, (_, i) => (
                     <FaStar key={i} />
                   ))}
                 </span>
-                <span>{clinic.rating}</span>
                 <span className="mx-2">|</span>
                 <span>{clinic.reviews} reviews</span>
-                <span className="ml-auto flex items-center">
+                <span className="ml-4 flex items-center">
                   <FaMapMarkerAlt className="mr-1" /> {clinic.location}
                 </span>
               </div>
-              <div className="text-xs space-y-1 flex flex-wrap">
+              <div className="text-xs flex flex-wrap items-center">
                 {clinic.treatments.map((treatment, i) => (
                   <div
                     key={i}
-                    className="text-blue-700 bg-blue-100 py-1 rounded m-1 px-1 w-[calc(50%-0.5rem)]"
+                    className="text-blue-700 bg-blue-100 rounded-lg m-1 px-3 h-6 text-center flex items-center"
                   >
                     {treatment}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="w-1/4 space-y-2 pl-8">
+            <div className="m:w-1/4 space-y-8 pl-8">
               {clinic.services.map((service, i) => (
-                <div key={i} className="flex items-center">
-                  <service.icon className="mr-2" />
-                  <span>{service.name}</span>
+                <div key={i} className="flex items-center text-xs m:text-lg">
+                  <service.icon />
+                  <span className="ml-5">{service.name}</span>
                 </div>
               ))}
             </div>
-            <div className="mb-56">
+            <div className="sm:ml-auto mt-4 sm:mt-0">
               <FaHeart
                 className="text-white text-l cursor-pointer"
-                style={{ stroke: "#2A9D8F", strokeWidth: 40, fill: "white" }}
+                style={{ stroke: "#2A9D8F", strokeWidth: 60, fill: "white" }}
               />
             </div>
           </div>

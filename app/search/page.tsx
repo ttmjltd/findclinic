@@ -2,6 +2,7 @@ import Link from "next/link";
 import SearchComponent from "../_components/SearchComponent";
 import SearchClinicCard from "../_components/SearchClinicCard";
 
+
 const page = () => {
   return (
     <div className="flex flex-col items-center">
@@ -12,8 +13,8 @@ const page = () => {
       <SearchComponent />
       <div className="text-neutralDark underline text-center mt-10">
         <Link href={"#"}>Advanced Search</Link>
-        <SearchClinicCard />
       </div>
+        <SearchClinicCard />
     </div>
   );
 };
