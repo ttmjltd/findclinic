@@ -12,7 +12,7 @@ const SearchComponent = () => {
         <Dropdown placeholder={"Location"} />
       </div>
       <div>
-        <Button label={"Search"} icon={<FiSearch />} />
+        <Button label={"Search"} icon={<FiSearch />} variation="narrow-light" />
       </div>
     </div>
   );

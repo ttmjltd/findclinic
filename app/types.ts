@@ -7,7 +7,8 @@ export interface ClinicData {
   }
   export interface ButtonProps {
     label: string;
-    icon: any;
+    icon?: any;
+    variation: string;
   }
   export interface DropdownProps {
     placeholder:string
@@ -32,4 +33,28 @@ export interface ClinicData {
     email: string;
     phone: string;
     treatment: string;
+}
+
+export interface ClinicDetailsTypes {
+  params: any;
+
+  
+}
+
+export interface BreadCrumTypes {
+  clinicName: string
+  
+}
+
+export interface ProfileInfoProps {
+  onSubmit: (values: ProfileInfoValues) => void;
+}
+
+export interface ProfileInfoValues {
+  name: string;
+  email: string;
+  password: string;
+  phoneCode: string;
+  phoneNumber: string;
+  address: string;
 }
