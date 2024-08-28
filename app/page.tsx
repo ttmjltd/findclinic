@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import FormComponent from "./_components/FormComponent";
 import OptionalCards from "./_components/OptionalCards";
-import DashboardServices from "./_components/DashboardServices";
 
 const ClinicGallery = dynamic(() => import("./_components/ClinicGallery"), {
   ssr: false,
@@ -14,7 +13,6 @@ export default function Home() {
       <ClinicGallery />
       <OptionalCards />
       <FormComponent />
-      <DashboardServices />
     </main>
   );
 }
