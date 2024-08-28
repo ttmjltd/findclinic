@@ -43,13 +43,15 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <button
-            className="hidden sm:block px-4 py-2 mx-8 font-inter font-semibold bg-accent text-white text-lg rounded-xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-[#ADE8F4] hover:to-[#2A9D8F] transition-colors
+          <Link href="/register-clinic">
+            <button
+              className="hidden sm:block px-4 py-2 mx-8 font-inter font-semibold bg-accent text-white text-lg rounded-xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-[#ADE8F4] hover:to-[#2A9D8F] transition-colors
              whitespace-nowrap"
-            type="button"
-          >
-            Register your clinic
-          </button>
+              type="button"
+            >
+              Register your clinic
+            </button>
+          </Link>
           <button
             className="relative mr-4 h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center align-middle font-epilogue text-xs font-medium transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:hidden"
             type="button"

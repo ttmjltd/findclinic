@@ -1,35 +1,56 @@
 export interface ClinicData {
-    id: number;
-    type: string;
-    image: string;
-    alt: string;
-    title: string;
-  }
-  export interface ButtonProps {
-    label: string;
-    icon: any;
-  }
-  export interface DropdownProps {
-    placeholder:string
-  }
-  export interface InputProps {
-    value:any,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
-    label:string,
-   
+  id: number;
+  type: string;
+  image: string;
+  alt: string;
+  title: string;
+}
+export interface ButtonProps {
+  label: string;
+  icon: any;
+}
+export interface DropdownProps {
+  placeholder: string;
+}
+export interface InputProps {
+  value: any;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  label: string;
+}
+export interface CheckboxProps {
+  value: any;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  label: string;
+  checked: boolean;
+}
+export interface PatientFormState {
+  fullName: string;
+  email: string;
+  phone: string;
+  treatment: string;
+}
 
-  }
-  export interface CheckboxProps {
-    value:any,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
-    label:string,
-    checked:boolean,
-    
+export interface FacebookPictureData {
+  height: number;
+  is_silhouette: boolean;
+  url: string;
+  width: number;
+}
 
-  }
-  export interface PatientFormState {
-    fullName: string;
-    email: string;
-    phone: string;
-    treatment: string;
+export interface FacebookPicture {
+  data: FacebookPictureData;
+}
+
+export interface FacebookLoginResponse {
+  name: string;
+  email: string;
+  picture?: FacebookPicture | null;
+  id: string;
+  userID: string;
+  expiresIn: number;
+  accessToken: string;
+  signedRequest: string;
+  graphDomain: string;
+  data_access_expiration_time: number;
+  status?: string;
 }
