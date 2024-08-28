@@ -14,7 +14,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({ platform, onClick }) => {
       case "Google":
         return "bg-neutral text-neutralDark hover:bg-neutralDark hover:text-white";
       case "Facebook":
-        return "bg-neutral text-neutralDark hover:bg-[var(--color-primary)] hover:text-white";
+        return "bg-neutral text-neutralDark hover:bg-[var(--color-navy)] hover:text-white";
       case "X":
         return "bg-neutral text-neutralDark hover:bg-black hover:text-white";
       default:
@@ -27,7 +27,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({ platform, onClick }) => {
       case "Google":
         return <FcGoogle className="mr-2 text-lg" />;
       case "Facebook":
-        return <FaFacebookF className="mr-2 text-lg" />;
+        return <FaFacebookF className="mr-2 text-lg text-[var(--color-blue)]" />;
       case "X":
         return <XIcon className="mr-2 text-lg" />;
       default:

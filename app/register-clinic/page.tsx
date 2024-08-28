@@ -203,7 +203,7 @@ const RegisterClinicPage = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-start">
       {/* Page Heading */}
-      <h1 className="text-4xl font-bold text-secondary text-center mb-8 mt-12 md:mt-24">
+      <h1 className="text-2xl md:text-4xl font-bold text-secondary text-center mb-8 mt-12 md:mt-24">
         Reach thousands of potential patients <br /> and grow your clinic&apos;s
         client base.
       </h1>
@@ -241,7 +241,7 @@ const RegisterClinicPage = () => {
                   <input
                     value={form.countryCode.replace("+", "")}
                     onChange={(e) => handleInputChange(e, "countryCode")}
-                    className="w-[50px] md:w-[70px] bg-transparent outline-none"
+                    className="w-[30px] md:w-[30px] bg-transparent outline-none"
                     type="tel"
                     inputMode="numeric"
                     pattern="\d*"
@@ -342,7 +342,7 @@ const RegisterClinicPage = () => {
                   <input
                     value={form.mobileCountryCode.replace("+", "")}
                     onChange={(e) => handleInputChange(e, "mobileCountryCode")}
-                    className="w-[50px] md:w-[70px] bg-transparent outline-none"
+                    className="w-[30px] md:w-[30px] bg-transparent outline-none"
                     type="tel"
                     inputMode="numeric"
                     pattern="\d*"

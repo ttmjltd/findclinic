@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "./_components/Navbar";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-const epilogue = Epilogue({ subsets: ["latin"], weight: ["400", "700"] });
+const epilogue = Epilogue({ subsets: ["latin"], weight: ["400", "700"], style: ["normal", "italic"] });
 
 const inter = Inter({ subsets: ["latin"] });
 
