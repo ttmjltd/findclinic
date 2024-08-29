@@ -2,11 +2,7 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter as XIcon } from "react-icons/fa6";
-
-interface SocialButtonProps {
-  platform: "Google" | "Facebook" | "X";
-  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-}
+import { SocialButtonProps } from "../types";
 
 const SocialButton: React.FC<SocialButtonProps> = ({ platform, onClick }) => {
   const getButtonStyles = () => {

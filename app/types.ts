@@ -108,3 +108,8 @@ export interface ToggleSwitchProps {
   checked: boolean;
   onChange: () => void;
 }
+
+export interface SocialButtonProps {
+  platform: "Google" | "Facebook" | "X";
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}
