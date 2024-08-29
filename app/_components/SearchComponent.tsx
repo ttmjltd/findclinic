@@ -1,6 +1,6 @@
 import Button from "../_atoms/Button";
 import Dropdown from "../_atoms/Dropdown";
-import { FiSearch } from "react-icons/fi";
+import { SearchFC } from "../_atoms/Icons";
 
 const SearchComponent = () => {
   return (
@@ -12,7 +12,7 @@ const SearchComponent = () => {
         <Dropdown placeholder={"Location"} />
       </div>
       <div>
-        <Button label={"Search"} icon={<FiSearch />} variation="narrow-light" />
+        <Button label={"Search"} icon={<SearchFC/>} variation="narrow-light" />
       </div>
     </div>
   );
