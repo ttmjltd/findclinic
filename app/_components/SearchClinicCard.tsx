@@ -24,7 +24,7 @@ const SearchClinicCard: React.FC = () => {
                 className="rounded-lg"
               />
             </div>
-            <div className="sm:w-1/2 px-4 space-y-3 text-center">
+            <div className="sm:w-1/2 px-4 space-y-3 text-center lg:text-start">
               <h1 className="lg:text-3xl text-secondary font-bold text-xl">
                 {clinic.name}
               </h1>
@@ -34,7 +34,7 @@ const SearchClinicCard: React.FC = () => {
                 </span>
                 <span className="flex items-center m-2">
                   {Array.from({ length: 5 }, (_, i) => (
-                    <StarFC color="#0077B6" key={1} />
+                    <StarFC color="#0077B6" key={i} />
                   ))}
                 </span>
                 <span className="mx-2">|</span>
@@ -43,7 +43,7 @@ const SearchClinicCard: React.FC = () => {
                   <MapMarkerFC className="mr-2" /> {clinic.location}
                 </span>
               </div>
-              <div className="text-xs flex flex-wrap items-center">
+              <div className="text-xs flex flex-col lg:flex-row lg:flex-wrap items-center">
                 {clinic.treatments.map((treatment, i) => (
                   <div
                     key={i}
