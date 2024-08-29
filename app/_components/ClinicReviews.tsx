@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { FaStar } from 'react-icons/fa'
+import { StarFC } from '../_atoms/Icons'
 
 const ClinicReviews = () => {
   return (
@@ -13,7 +13,7 @@ const ClinicReviews = () => {
           <div className='font-bold text-center mt-4'>Adam D.</div>
           <div className='flex justify-center mt-2'>
             {[5, 5, 5, 5, 5].map((_, index) => (
-              <span key={index} className='text-primary text-xs'><FaStar/></span>
+              <span key={index} className='text-primary text-xs'><StarFC color="#2A9D8F"/></span>
             ))}
           </div>
           <div className='mt-4 text-sm'>
@@ -26,7 +26,7 @@ const ClinicReviews = () => {
           <div className='font-bold text-center mt-4'>John D.</div>
           <div className='flex justify-center mt-2'>
             {[5, 5, 5, 5, 5].map((_, index) => (
-              <span key={index} className='text-primary text-xs'><FaStar/></span>
+              <span key={index} className='text-primary text-xs'><StarFC color="#2A9D8F"/></span>
             ))}
           </div>
           <div className='mt-4 text-sm'>
@@ -39,7 +39,7 @@ const ClinicReviews = () => {
           <div className='font-bold text-center mt-4'>Peter M.</div>
           <div className='flex justify-center mt-2'>
             {[5, 5, 5, 5, 5].map((_, index) => (
-              <span key={index} className='text-primary text-xs'><FaStar/></span>
+              <span key={index} className='text-primary text-xs'><StarFC color="#2A9D8F"/></span>
             ))}
           </div>
           <div className='mt-4 text-sm'>
