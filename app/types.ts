@@ -80,3 +80,25 @@ export interface ProfileInfoValues {
   phoneNumber: string;
   address: string;
 }
+
+export interface Service {
+  name: string;
+  icon: JSX.Element;
+}
+
+export interface Clinic {
+  name: string;
+  rating: number;
+  reviews: number;
+  location: string;
+  treatments: string[];
+  services: Service[];
+}
+
+export interface StarProps {
+  color: string;
+}
+
+export interface MapMarkerFCProps {
+  className?: string;
+}
