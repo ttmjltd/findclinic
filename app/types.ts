@@ -102,3 +102,9 @@ export interface StarProps {
 export interface MapMarkerFCProps {
   className?: string;
 }
+
+export interface ToggleSwitchProps {
+  className?: string;
+  checked: boolean;
+  onChange: () => void;
+}

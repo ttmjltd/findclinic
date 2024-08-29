@@ -4,25 +4,11 @@ import Input from "../_atoms/Input";
 import Checkbox from "../_atoms/Checkbox";
 import SocialButton from "../_atoms/SocialButton";
 import { useState, useEffect } from "react";
-import { Switch } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import { useGoogleLogin } from "@react-oauth/google";
 import { ReactFacebookLoginInfo } from "react-facebook-login";
 import axios from "axios";
 import { generateCodeVerifier, generateCodeChallenge } from "../../utils/pkce";
-
-// Custom styled switch component
-const ThemedSwitch = styled(Switch)(({ theme }) => ({
-  "& .MuiSwitch-switchBase.Mui-checked": {
-    color: "var(--color-secondary)",
-    "&:hover": {
-      backgroundColor: "rgba(42, 157, 143, 0.08)",
-    },
-  },
-  "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
-    backgroundColor: "var(--color-secondary)",
-  },
-}));
+import ToggleSwitch from "../_atoms/ToggleSwitch";
 
 const RegisterClinicPage = () => {
   const [form, setForm] = useState({
@@ -248,6 +234,7 @@ const RegisterClinicPage = () => {
                   />
                 </div>
                 <Input
+                  label=""
                   value={form.phone}
                   onChange={(e) => handleInputChange(e, "phone")}
                   type="tel"
@@ -326,10 +313,9 @@ const RegisterClinicPage = () => {
               <label className="text-[14px] font-semibold text-neutralDark mr-2">
                 Email Address
               </label>
-              <ThemedSwitch
+              <ToggleSwitch
                 checked={isPhoneNumber}
                 onChange={togglePhoneNumber}
-                color="primary"
               />
               <label className="text-[14px] font-semibold text-neutralDark ml-2">
                 Phone Number
@@ -350,6 +336,7 @@ const RegisterClinicPage = () => {
                 </div>
               )}
               <Input
+                label=""
                 value={form.emailOrPhone}
                 onChange={(e) => handleInputChange(e, "emailOrPhone")}
                 className="w-full"
