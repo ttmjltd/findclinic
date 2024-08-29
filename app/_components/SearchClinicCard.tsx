@@ -13,7 +13,7 @@ const SearchClinicCard: React.FC = () => {
         {data.map((clinic: Clinic, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col sm:flex-row"
+            className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col lg:flex-row"
           >
             <div className="sm:w-1/4 w-2/4">
               <Image
@@ -24,8 +24,8 @@ const SearchClinicCard: React.FC = () => {
                 className="rounded-lg"
               />
             </div>
-            <div className="sm:w-1/2 px-4 space-y-3">
-              <h1 className="sm:text-3xl text-secondary font-bold text-xl">
+            <div className="sm:w-1/2 px-4 space-y-3 text-center">
+              <h1 className="lg:text-3xl text-secondary font-bold text-xl">
                 {clinic.name}
               </h1>
               <div className="flex mb-10 text-xs flex-col sm:flex-row items-center">
@@ -54,7 +54,7 @@ const SearchClinicCard: React.FC = () => {
                 ))}
               </div>
             </div>
-            <div className="m:w-1/4 space-y-8 pl-8">
+            <div className="m:w-1/4 space-y-8">
               {clinic.services.map((service, i) => (
                 <div key={i} className="flex items-center text-xs m:text-lg">
                   {service.icon}
