@@ -1,94 +1,7 @@
 import Image from "next/image";
-import {
-  FaMapMarkerAlt,
-  FaStar,
-  FaHeart,
-  FaCar,
-  FaHotel,
-  FaStethoscope,
-  FaLanguage,
-} from "react-icons/fa";
+import { data } from "../_mocks_/ClinicSearchData";
 import { Clinic } from "../types";
-
-const clinics: Clinic[] = [
-  {
-    name: "Mayo Health Clinic",
-    rating: 5.0,
-    reviews: 49,
-    location: "Ankara",
-    treatments: [
-      "NS Face Lift",
-      "Hair Transplant",
-      "Laser Eye",
-      "Dental Implant",
-      "Eye Lift",
-      "Rhinoplasty",
-    ],
-    services: [
-      { name: "Airport Transfer", icon: FaCar },
-      { name: "Hotel Reservation", icon: FaHotel },
-      { name: "Doctor Consultation", icon: FaStethoscope },
-      { name: "Translation Services", icon: FaLanguage },
-    ],
-  },
-  {
-    name: "Johns Hopkins Clinic",
-    rating: 4.8,
-    reviews: 30,
-    location: "Istanbul",
-    treatments: [
-      "Cancer Treatment",
-      "Orthopedic Surgery",
-      "Heart Surgery",
-      "Neurosurgery",
-      "Pediatric Care",
-    ],
-    services: [
-      { name: "Airport Transfer", icon: FaCar },
-      { name: "Hotel Reservation", icon: FaHotel },
-      { name: "Doctor Consultation", icon: FaStethoscope },
-      { name: "Translation Services", icon: FaLanguage },
-    ],
-  },
-  {
-    name: "Cleveland Health Clinic",
-    rating: 4.9,
-    reviews: 60,
-    location: "Izmir",
-    treatments: [
-      "Cardiac Rehabilitation",
-      "Physical Therapy",
-      "Cosmetic Surgery",
-      "Gastroenterology",
-      "Neurology",
-    ],
-    services: [
-      { name: "Airport Transfer", icon: FaCar },
-      { name: "Hotel Reservation", icon: FaHotel },
-      { name: "Doctor Consultation", icon: FaStethoscope },
-      { name: "Translation Services", icon: FaLanguage },
-    ],
-  },
-  {
-    name: "Massachusetts General",
-    rating: 4.7,
-    reviews: 55,
-    location: "Antalya",
-    treatments: [
-      "General Surgery",
-      "Psychiatry",
-      "Pediatrics",
-      "Oncology",
-      "Transplant Surgery",
-    ],
-    services: [
-      { name: "Airport Transfer", icon: FaCar },
-      { name: "Hotel Reservation", icon: FaHotel },
-      { name: "Doctor Consultation", icon: FaStethoscope },
-      { name: "Translation Services", icon: FaLanguage },
-    ],
-  },
-];
+import { LikeButtonFC, MapMarkerFC, StarFC } from "../_atoms/Icons";
 
 const SearchClinicCard: React.FC = () => {
   return (
@@ -97,7 +10,7 @@ const SearchClinicCard: React.FC = () => {
         Here are the best clinics for you
       </h1>
       <div className="space-y-8">
-        {clinics.map((clinic, index) => (
+        {data.map((clinic: Clinic, index) => (
           <div
             key={index}
             className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col sm:flex-row"
@@ -116,16 +29,18 @@ const SearchClinicCard: React.FC = () => {
                 {clinic.name}
               </h1>
               <div className="flex mb-10 text-xs flex-col sm:flex-row items-center">
-                <span>{clinic.rating}</span>
-                <span className="text-yellow-500 flex items-center m-2">
+                <span className="bg-sky-600 text-white w-5 text-center font-thin">
+                  {clinic.rating}
+                </span>
+                <span className="flex items-center m-2">
                   {Array.from({ length: 5 }, (_, i) => (
-                    <FaStar key={i} />
+                    <StarFC color="#0077B6" key={1} />
                   ))}
                 </span>
                 <span className="mx-2">|</span>
                 <span>{clinic.reviews} reviews</span>
                 <span className="ml-4 flex items-center">
-                  <FaMapMarkerAlt className="mr-1" /> {clinic.location}
+                  <MapMarkerFC className="mr-2" /> {clinic.location}
                 </span>
               </div>
               <div className="text-xs flex flex-wrap items-center">
@@ -142,16 +57,13 @@ const SearchClinicCard: React.FC = () => {
             <div className="m:w-1/4 space-y-8 pl-8">
               {clinic.services.map((service, i) => (
                 <div key={i} className="flex items-center text-xs m:text-lg">
-                  <service.icon />
+                  {service.icon}
                   <span className="ml-5">{service.name}</span>
                 </div>
               ))}
             </div>
             <div className="sm:ml-auto mt-4 sm:mt-0">
-              <FaHeart
-                className="text-white text-l cursor-pointer"
-                style={{ stroke: "#2A9D8F", strokeWidth: 60, fill: "white" }}
-              />
+              <LikeButtonFC />
             </div>
           </div>
         ))}

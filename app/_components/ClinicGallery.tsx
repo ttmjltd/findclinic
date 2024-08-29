@@ -26,9 +26,9 @@ const ClinicGallery: React.FC = () => {
           <div className="flex -ml-4">
             {data.map((item: ClinicDataTypes) => (
               <div key={item.id} className="min-w-[calc(100%/3)] pl-4">
-                <Link href={`/clinic-details/${item.title.split(' ')                   // Metni boşluklardan ayırarak diziye çevirir
+                <Link href={`/clinic-details/${item.title.split(' ')
         .map(word => 
-            word.charAt(0).toLowerCase() + word.slice(1).toLowerCase())  // Her kelimenin tamamını küçük harfe çevirir
+            word.charAt(0).toLowerCase() + word.slice(1).toLowerCase())
         .join('-')}`}>
                   <div className="relative">
                       <Image

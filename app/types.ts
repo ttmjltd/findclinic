@@ -60,7 +60,7 @@ export interface ProfileInfoValues {
 }
 export interface Service {
   name: string;
-  icon: React.ComponentType;
+  icon: JSX.Element;
 }
 
 export interface Clinic {
@@ -70,4 +70,10 @@ export interface Clinic {
   location: string;
   treatments: string[];
   services: Service[];
+}
+export interface StarProps {
+  color: string;
+}
+export interface MapMarkerFCProps {
+  className?: string;
 }
