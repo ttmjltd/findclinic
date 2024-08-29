@@ -17,6 +17,10 @@ export interface InputProps {
   value: any;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
+  className?: string;
+  type?: "text" | "email" | "password" | "tel";
+  pattern?: string;
+  inputMode?: "text" | "email" | "search" | "tel" | "url" | "none" | "numeric" | "decimal";
 }
 export interface CheckboxProps {
   value: any;

@@ -1,14 +1,7 @@
 import React, { ChangeEvent } from "react";
+import { InputProps } from "../types";
 
-const Input: React.FC<{
-  label?: string;
-  value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
-  type?: "text" | "email" | "password" | "tel";
-  pattern?: string;
-  inputMode?: "text" | "email" | "search" | "tel" | "url" | "none" | "numeric" | "decimal";
-}> = ({
+const Input: React.FC<InputProps> = ({
   label,
   value,
   onChange,
