@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { data } from "../_mocks_/ClinicCarouselData";
-import { ClinicData } from "../types";
+import { ClinicDataTypes } from "../types";
 import Link from "next/link";
 
 const ClinicGallery: React.FC = () => {
@@ -24,11 +24,11 @@ const ClinicGallery: React.FC = () => {
       <div className="relative sm:w-[60%] w-[98%]">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-4">
-            {data.map((item: ClinicData) => (
+            {data.map((item: ClinicDataTypes) => (
               <div key={item.id} className="min-w-[calc(100%/3)] pl-4">
-                <Link href={`/clinic-details/${item.title.split(' ')                   // Metni boşluklardan ayırarak diziye çevirir
+                <Link href={`/clinic-details/${item.title.split(' ')
         .map(word => 
-            word.charAt(0).toLowerCase() + word.slice(1).toLowerCase())  // Her kelimenin tamamını küçük harfe çevirir
+            word.charAt(0).toLowerCase() + word.slice(1).toLowerCase())
         .join('-')}`}>
                   <div className="relative">
                       <Image

@@ -1,4 +1,4 @@
-export interface ClinicData {
+export interface ClinicDataTypes {
     id: number;
     type: string;
     image: string;
@@ -7,7 +7,7 @@ export interface ClinicData {
   }
   export interface ButtonProps {
     label: string;
-    icon: any;
+    icon?: any;
     variation: string;
   }
   export interface DropdownProps {
@@ -44,4 +44,36 @@ export interface ClinicDetailsTypes {
 export interface BreadCrumTypes {
   clinicName: string
   
+}
+
+export interface ProfileInfoProps {
+  onSubmit: (values: ProfileInfoValues) => void;
+}
+
+export interface ProfileInfoValues {
+  name: string;
+  email: string;
+  password: string;
+  phoneCode: string;
+  phoneNumber: string;
+  address: string;
+}
+export interface Service {
+  name: string;
+  icon: JSX.Element;
+}
+
+export interface Clinic {
+  name: string;
+  rating: number;
+  reviews: number;
+  location: string;
+  treatments: string[];
+  services: Service[];
+}
+export interface StarProps {
+  color: string;
+}
+export interface MapMarkerFCProps {
+  className?: string;
 }

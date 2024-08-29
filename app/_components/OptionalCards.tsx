@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import { data } from "../_mocks_/ClinicCarouselData";
-import { ClinicData } from "../types";
+import { ClinicDataTypes } from "../types";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const OptionalCards: React.FC = () => {
@@ -37,7 +37,7 @@ const OptionalCards: React.FC = () => {
           className="flex overflow-x-scroll pb-10 hide-scroll-bar"
         >
           <div className="flex flex-nowrap">
-            {data.map((item: ClinicData) => (
+            {data.map((item: ClinicDataTypes) => (
               <div key={item.id} className="inline-block px-3">
                 <div className="w-64 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <Image
