@@ -1,4 +1,4 @@
-export interface ClinicData {
+export interface ClinicDataTypes {
     id: number;
     type: string;
     image: string;
@@ -57,4 +57,23 @@ export interface ProfileInfoValues {
   phoneCode: string;
   phoneNumber: string;
   address: string;
+}
+export interface Service {
+  name: string;
+  icon: JSX.Element;
+}
+
+export interface Clinic {
+  name: string;
+  rating: number;
+  reviews: number;
+  location: string;
+  treatments: string[];
+  services: Service[];
+}
+export interface StarProps {
+  color: string;
+}
+export interface MapMarkerFCProps {
+  className?: string;
 }
