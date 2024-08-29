@@ -1,6 +1,6 @@
-import { ClinicData } from "../types";
+import { ClinicDataTypes } from "../types";
 
-export const data: ClinicData[] = [
+export const data: ClinicDataTypes[] = [
   {
     id: 1,
     type: "image",
