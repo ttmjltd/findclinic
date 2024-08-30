@@ -77,3 +77,11 @@ export interface StarProps {
 export interface MapMarkerFCProps {
   className?: string;
 }
+
+export interface Comment {
+  title: string;
+  text: string;
+  name: string;
+  image: string;
+  reverse?: boolean;
+}
