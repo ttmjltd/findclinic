@@ -18,16 +18,15 @@ export interface ClinicDataTypes {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     label:string,
    
-
   }
+
   export interface CheckboxProps {
     value:any,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     label:string,
     checked:boolean,
-    
-
   }
+  
   export interface PatientFormState {
     fullName: string;
     email: string;
@@ -76,4 +75,9 @@ export interface StarProps {
 }
 export interface MapMarkerFCProps {
   className?: string;
+}
+export interface FooterLink {
+  label: string;
+  href: string;
+
 }
