@@ -113,3 +113,11 @@ export interface SocialButtonProps {
   platform: "Google" | "Facebook" | "X";
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
+
+export interface ClinicDataTypes {
+  id: number;
+  type: string;
+  image: string;
+  alt: string;
+  title: string;
+}
