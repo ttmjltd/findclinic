@@ -1,14 +1,25 @@
 import Image from 'next/image';
 import { comments } from '../_mocks_/TestimonialsData';
 
+
+
+
 const Testimonials: React.FC = () => {
   return (
-    <div className="flex flex-col gap-8 p-5 m-28">
+<div className="container mx-auto py-8 ">
+ <div className="w-[900px] h-[675px]  m-4 flex flex-col gap-2 pt-8 ">
+  <span className="text-2xl text-secondary text-center font-bold">
+  What our patients say
+  </span>
+ 
+ 
+
       {comments.map((comment, index) => (
         <div
           key={index}
           className={`flex items-center gap-6 ${comment.reverse ? 'flex-row-reverse' : ''} flex-row`}
         >
+          
           <Image
             src={comment.image}
             alt={`Yorum ${index + 1}`}
@@ -16,9 +27,15 @@ const Testimonials: React.FC = () => {
             height={128}
             className="object-cover rounded-lg"
           />
-          <p className="text-gray-800 text-base">{comment.text}</p>
+          
+          <div>
+          <p className="text-gray-800 text-base">{comment.text}</p><br/>
+          <p className="text-gray-800 text-base">{comment.name}</p>
+           </div>
         </div>
+       
       ))}
+    </div> 
     </div>
   );
 };

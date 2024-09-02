@@ -3,23 +3,23 @@ import { Comment } from "../types";
 export const comments: Comment[] = [
   {
     title: "Birinci Yorum",
-    text: "Bu ilk yorum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut diam sed elit pretium placerat. Nulla ac augue arcu. Integer nec odio nisi.",
-    name: "John Doe",
-    image: "/culture.webp",
+    text: "FindClinics made it so easy to find the right doctor for my specific needs. The platform is user-friendly, and within minutes, I had several options to choose from. I highly recommend HealthWay for anyone seeking reliable healthcare.",
+    name: "Sarah M.",
+    image: "/t1.png",
     reverse: true, 
   },
   {
     title: "İkinci Yorum",
-    text: "Bu ikinci yorum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sem et nunc tincidunt sollicitudin.",
-    name: "Jane Doe",
-    image: "/advisor.png",
+    text: "Thanks to FindClinics, I discovered a clinic that offered exactly the treatment I was looking for. The detailed information and reviews helped me make an informed decision. I couldn’t be happier with the results!",
+    name: "Emly T.",
+    image: "/t2.png",
     reverse: false, 
   },
   {
     title: "Üçüncü Yorum",
-    text: "Bu üçüncü yorum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel dui at nisi facilisis ullamcorper.",
-    name: "Alice Smith",
-    image: "/mission.jpg",
+    text: "I was struggling to find a specialist in my area, but FindClinics connected me with a top-rated clinic in no time. The whole process was seamless, and I’m extremely satisfied with the care I received.",
+    name: "Amy R.",
+    image: "/t3.png",
     reverse: true, 
   },
 ];
