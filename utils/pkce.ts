@@ -1,5 +1,3 @@
-// Required for Twitter OAuth 2.0 PKCE (Proof Key for Code Exchange)
-
 export function generateCodeVerifier(): string {
   const array = new Uint32Array(56 / 2);
   window.crypto.getRandomValues(array);
