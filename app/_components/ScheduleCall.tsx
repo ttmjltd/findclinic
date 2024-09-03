@@ -1,22 +1,7 @@
-"use client";
-import { useState } from "react";
-import { PatientFormState } from "../types";
 import Image from "next/image";
 import ScheduleCallForm from "./ScheduleCallForm";
 
 const ScheduleCall = () => {
-  const [form, setForm] = useState<PatientFormState>({
-    fullName: "",
-    email: "",
-    phone: "",
-    treatment: "",
-  });
-  const [terms, setTerms] = useState<boolean>(false);
-  const [subscribe, setSubscribe] = useState<boolean>(false);
-  const handleOnChange = (e: any, stateName: string) => {
-    setForm((prev) => ({ ...prev, [stateName]: e.target.value }));
-  };
-
   return (
     <div className="w-full h-screen flex justify-center">
       <div className="w-[900px] h-[675px] bg-white rounded m-4 flex flex-col gap-2 pt-8 ">
