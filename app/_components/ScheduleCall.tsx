@@ -1,11 +1,10 @@
 "use client";
 import { useState } from "react";
 import { PatientFormState } from "../types";
-import Input from "../_atoms/Input";
-import Checkbox from "../_atoms/Checkbox";
 import Image from "next/image";
+import ScheduleCallForm from "./ScheduleCallForm";
 
-const FormComponent = () => {
+const ScheduleCall = () => {
   const [form, setForm] = useState<PatientFormState>({
     fullName: "",
     email: "",
@@ -28,40 +27,7 @@ const FormComponent = () => {
           Fill out the form and your personal health advisor will reach you!
         </span>
         <div className="flex gap-12 p-8">
-          <div className="w-[434px] h-[532px] p-7 flex flex-col gap-3">
-            <Input
-              label="Full Name"
-              value={form?.fullName}
-              onChange={(e) => handleOnChange(e, "fullName")}
-            />
-            <Input
-              label="Email Address"
-              value={form?.email}
-              onChange={(e) => handleOnChange(e, "email")}
-            />
-            <Input
-              label="Phone Number"
-              value={form?.phone}
-              onChange={(e) => handleOnChange(e, "phone")}
-            />
-            <Input
-              label="Treatment ?"
-              value={form?.treatment}
-              onChange={(e) => handleOnChange(e, "treatment")}
-            />
-            <Checkbox
-              label="Accept the registration terms"
-              onChange={(e) => setTerms(e.target.checked)}
-              value={terms}
-              checked={terms}
-            />
-            <Checkbox
-              label="Subscribe to our newsletter"
-              onChange={(e) => setSubscribe(e.target.checked)}
-              value={subscribe}
-              checked={subscribe}
-            />
-          </div>
+          <ScheduleCallForm />
           <div className="w-[342px] relative">
             <div className="bg-secondary  w-[320px] rounded h-[310px] opacity-60 absolute bottom-[145px] left-0 "></div>
             <Image
@@ -82,4 +48,4 @@ const FormComponent = () => {
   );
 };
 
-export default FormComponent;
+export default ScheduleCall;
