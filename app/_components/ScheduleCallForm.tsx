@@ -19,7 +19,7 @@ const ScheduleCallForm: React.FC = () => {
     setForm((prev: any) => ({ ...prev, [stateName]: e.target.value }));
   };
   return (
-    <form className="md:w-[434px] md:h-[532px] p-7 flex flex-col gap-3 bg-white mx-auto">
+    <form className="md:w-[434px] p-7 flex flex-col gap-3 bg-white mx-auto">
       <Input
         label="Full Name"
         value={form?.fullName}
@@ -56,7 +56,7 @@ const ScheduleCallForm: React.FC = () => {
         value={subscribe}
         checked={subscribe}
       />
-      <div className=" mt-6 flex justify-center">
+      <div className=" mt-2 flex justify-center">
         <Button label="Schedule a call now!" variation="broad-dark" />
       </div>
     </form>
