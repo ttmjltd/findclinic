@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main>
       <ClinicGallery />
-      <OptionalCards/>
-      <FormComponent/>
+      <OptionalCards />
+      <FormComponent />
     </main>
   );
 }
