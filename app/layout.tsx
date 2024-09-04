@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Epilogue, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
+import Footer from "./_components/Footer";
 
-const epilogue = Epilogue({ subsets: ["latin"], weight: ["400", "700"] });
+const epilogue = Epilogue({ subsets: ["latin"], weight: ["300", "400", "600", "700"] });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${epilogue.className} ${inter.className} font-epilogue`}>
+      <body className={`${epilogue.className} ${inter.className} font-epilogue flex flex-col min-h-screen`}>
         <Navbar/>
-        <div>
-          <div className="w-full">{children}</div>
-        </div>
+        <main className="flex-grow w-full">
+          {children}
+        </main>
+        <Footer/>
       </body>
     </html>
   );

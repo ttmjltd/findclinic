@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      'epilogue': ['Epilogue', 'sans-serif'],
+      'epilogue': ['Epilogue'],
       'inter': ['Inter', 'sans-serif'],
     },
     extend: {
