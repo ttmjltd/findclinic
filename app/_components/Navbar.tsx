@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Navbar: React.FC = () => {
@@ -5,15 +6,15 @@ const Navbar: React.FC = () => {
     <nav className="block w-auto max-w-screen-xxl my-6 py-3 mx-6 xl:mx-20 text-primary bg-white border rounded-xl  backdrop-blur-xl backdrop-saturate-200">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-1 md:gap-20">
-          <img
+          <Image
             src="/Logo1findclinics.png"
-            alt="company logo"
-            className="mx-4 relative w-15 h-11 left-[15px] hidden lg:block"
+            alt="company logo" width={230} height={55}
+            className="mx-4 relative left-[15px] hidden lg:block"
           />
-          <img
+          <Image
             src="/small-logo.png"
-            alt="company logo"
-            className="mx-4 block cursor-pointer w-15 h-10 lg:hidden"
+            alt="company logo" width={100} height={25}
+            className="mx-4 block cursor-pointer lg:hidden"
           />
 
           <div className="hidden md:flex items-center justify-center w-full h-full gap-8 text-base">

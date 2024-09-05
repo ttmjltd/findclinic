@@ -27,6 +27,7 @@ export interface CheckboxProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
   checked: boolean;
+  className?: string;
 }
 export interface PatientFormState {
   fullName: string;
@@ -114,10 +115,7 @@ export interface SocialButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-export interface ClinicDataTypes {
-  id: number;
-  type: string;
-  image: string;
-  alt: string;
-  title: string;
+export interface FooterLink {
+  label: string;
+  href: string;
 }
