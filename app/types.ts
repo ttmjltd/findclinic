@@ -79,5 +79,8 @@ export interface MapMarkerFCProps {
 export interface FooterLink {
   label: string;
   href: string;
+}
+export interface DashboardLocationProps {
+  mapLink: string;
 
 }
