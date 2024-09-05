@@ -2,7 +2,9 @@
 import React from "react";
 
 import ProfileInfo from "../_components/ProfileInfo";
+import DashboardServices from "../_components/DashboardServices";
 import { ProfileInfoValues } from "../types";
+import DashboardTreatments from "../_components/DashboardTreatments";
 
 const DashboardPage = () => {
   const handleSubmit = (values: ProfileInfoValues) => {
@@ -15,6 +17,8 @@ const DashboardPage = () => {
         <p>Reach thousands of potential patients</p>
       </div>
       <ProfileInfo onSubmit={handleSubmit} />
+      <DashboardServices />
+      <DashboardTreatments />
     </div>
   );
 };
