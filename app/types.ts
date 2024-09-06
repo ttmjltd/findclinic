@@ -84,7 +84,7 @@ export interface Comment {
   name: string;
   image: string;
   reverse?: boolean;
-
+}
 export interface FooterLink {
   label: string;
   href: string;
