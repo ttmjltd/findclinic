@@ -5,6 +5,7 @@ import ProfileInfo from "../_components/ProfileInfo";
 import DashboardServices from "../_components/DashboardServices";
 import { ProfileInfoValues } from "../types";
 import DashboardTreatments from "../_components/DashboardTreatments";
+import DashboardPrices from "../_components/DashboardPrices";
 
 const DashboardPage = () => {
   const handleSubmit = (values: ProfileInfoValues) => {
@@ -19,6 +20,7 @@ const DashboardPage = () => {
       <ProfileInfo onSubmit={handleSubmit} />
       <DashboardServices />
       <DashboardTreatments />
+      <DashboardPrices />
     </div>
   );
 };
