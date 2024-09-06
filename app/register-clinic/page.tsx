@@ -99,7 +99,6 @@ const RegisterClinicPage = () => {
         const postLoginRedirectUri =
           process.env.NEXT_PUBLIC_GOOGLE_POST_LOGIN_REDIRECT_URI || "";
         const response = await axios.get(`${redirectUri}?code=${code}`);
-        console.log("Logged in successfully:", response.data);
         window.location.href = postLoginRedirectUri;
       } catch (error) {
         console.error("Google login failed:", error);
@@ -122,7 +121,6 @@ const RegisterClinicPage = () => {
         process.env.NEXT_PUBLIC_FACEBOOK_POST_LOGIN_REDIRECT_URI || "";
       const { accessToken } = response;
       const res = await axios.get(`${redirectUri}?access_token=${accessToken}`);
-      console.log("Logged in successfully:", res.data);
       window.location.href = postLoginRedirectUri;
     } catch (error) {
       console.error("Facebook login failed:", error);
@@ -131,7 +129,6 @@ const RegisterClinicPage = () => {
 
   // Handle Twitter login
   const handleTwitterLogin = async () => {
-    console.log("handleTwitterLogin called");
     const rootUrl = "https://twitter.com/i/oauth2/authorize";
     const redirectUri = process.env.NEXT_PUBLIC_TWITTER_REDIRECT_URI || "";
     const clientId = process.env.NEXT_PUBLIC_TWITTER_CLIENT_ID || "";
@@ -140,7 +137,6 @@ const RegisterClinicPage = () => {
     const codeChallenge = await generateCodeChallenge(codeVerifier);
 
     localStorage.setItem("pkce_code_verifier", codeVerifier);
-    console.log("Code verifier saved to localStorage");
 
     const options = {
       redirect_uri: redirectUri,
@@ -154,7 +150,6 @@ const RegisterClinicPage = () => {
 
     const qs = new URLSearchParams(options).toString();
     const authUrl = `${rootUrl}?${qs}`;
-    console.log("Auth URL:", authUrl);
 
     window.location.href = authUrl;
   };
