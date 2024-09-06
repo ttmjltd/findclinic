@@ -81,3 +81,9 @@ export interface FooterLink {
   href: string;
 
 }
+
+export interface PriceItemProps {
+  service: string;
+  minPrice: string;
+  maxPrice: string;
+}
