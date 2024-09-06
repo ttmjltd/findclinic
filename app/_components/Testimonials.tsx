@@ -4,7 +4,7 @@ import { comments } from "../_mocks_/TestimonialsData";
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="container mx-auto my-10 flex flex-col gap-10 content-center items-center w-3/6 p-6">
+    <div className="container mx-auto my-10 flex flex-col gap-10 content-center items-center sm:w-3/6 w-full p-6">
       <span className="text-2xl text-secondary text-center font-bold">
         What our patients say
       </span>
@@ -13,15 +13,15 @@ const Testimonials: React.FC = () => {
         <div
           key={index}
           className={`flex items-center gap-6 ${
-            comment.reverse ? "flex-row-reverse" : ""
-          } flex-row`}
+            comment.reverse ? "sm:flex-row-reverse" : "sm:flex-row"
+          } flex-col`}
         >
           <Image
             src={comment.image}
             alt={`Yorum ${index + 1}`}
             width={228}
             height={128}
-            className="object-cover rounded-lg"
+            className="object-cover rounded-lg w-full sm:w-auto"
           />
 
           <div>
