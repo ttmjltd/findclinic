@@ -12,7 +12,7 @@ const DashboardLocation: React.FC = () => {
     }
 
     return (
-        <div className='sm:w-2/3 w-full'>
+        <div className='sm:w-2/3 w-full sm:ml-9'>
             <h1>Location</h1>
             <p>Enter your clinic&#39;s location link</p>
             <div className='flex flex-col md:flex-row'>
