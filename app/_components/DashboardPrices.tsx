@@ -1,3 +1,4 @@
+import React from 'react'
 import { PenFC } from "../_atoms/Icons";
 import { PriceItemProps } from "../types";
 
