@@ -89,10 +89,6 @@ export interface FooterLink {
   label: string;
   href: string;
 }
-export interface Comment {
-  title: string;
-  text: string;
-  name: string;
-  image: string;
-  reverse?: boolean;
+export interface DashboardLocationProps {
+  mapLink: string;
 }
