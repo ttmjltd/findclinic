@@ -5,14 +5,17 @@ export interface ClinicDataTypes {
   alt: string;
   title: string;
 }
+
 export interface ButtonProps {
   label: string;
   icon?: any;
   variation: string;
 }
+
 export interface DropdownProps {
   placeholder: string;
 }
+
 export interface InputProps {
   value: any;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -22,6 +25,7 @@ export interface InputProps {
   pattern?: string;
   inputMode?: "text" | "email" | "search" | "tel" | "url" | "none" | "numeric" | "decimal";
 }
+
 export interface CheckboxProps {
   value: any;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -29,6 +33,7 @@ export interface CheckboxProps {
   checked: boolean;
   className?: string;
 }
+
 export interface PatientFormState {
   fullName: string;
   email: string;
@@ -115,7 +120,19 @@ export interface SocialButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
+export interface Comment {
+  title: string;
+  text: string;
+  name: string;
+  image: string;
+  reverse?: boolean;
+}
+
 export interface FooterLink {
   label: string;
   href: string;
+}
+
+export interface DashboardLocationProps {
+  mapLink: string;
 }
