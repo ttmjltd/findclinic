@@ -136,3 +136,10 @@ export interface FooterLink {
 export interface DashboardLocationProps {
   mapLink: string;
 }
+
+export interface AccordionItemProps {
+  title: string;
+  children: React.ReactNode;
+  isOpen: boolean;
+  onToggle: () => void;
+}
