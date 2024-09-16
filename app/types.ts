@@ -19,7 +19,6 @@ export interface ClinicDataTypes {
     label:string,
    
   }
-
   export interface CheckboxProps {
     value:any,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
