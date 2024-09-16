@@ -24,11 +24,7 @@ const page: React.FC<ClinicDetailsTypes> = ({ params }) => {
         <ClinicDescription />
 
         <div className=" mt-4 md:mt-8 flex justify-center lg:justify-start">
-          <Button
-            label="Schedule a call now!"
-            icon={null}
-            variation="broad-dark"
-          />
+          <Button label="Schedule a call now!" variation="broad-dark" />
         </div>
         <ClinicServices />
         <GoogleMap mapLink={mapLink} />
