@@ -8,7 +8,7 @@ export interface ClinicDataTypes {
 
 export interface ButtonProps {
   label: string;
-  icon?: any;
+  icon?: JSX.Element;
   variation: string;
 }
 
@@ -23,7 +23,15 @@ export interface InputProps {
   className?: string;
   type?: "text" | "email" | "password" | "tel";
   pattern?: string;
-  inputMode?: "text" | "email" | "search" | "tel" | "url" | "none" | "numeric" | "decimal";
+  inputMode?:
+    | "text"
+    | "email"
+    | "search"
+    | "tel"
+    | "url"
+    | "none"
+    | "numeric"
+    | "decimal";
 }
 
 export interface CheckboxProps {
@@ -132,8 +140,17 @@ export interface FooterLink {
 export interface DashboardLocationProps {
   mapLink: string;
 }
+
+export interface Service {
+  id: number;
+  name: string;
+  icon: JSX.Element;
+  alt: string;
+}
+
 export interface PriceItemProps {
   service: string;
   minPrice: string;
   maxPrice: string;
+
 }
