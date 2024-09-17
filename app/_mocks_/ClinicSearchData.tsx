@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Clinic } from "../types";
+import { ClinicProps } from "../types";
 
-export const data: Clinic[] = [
+export const data: ClinicProps[] = [
   {
     name: "Mayo Health Clinic",
     rating: 5.0,
