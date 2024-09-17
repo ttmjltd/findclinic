@@ -122,12 +122,10 @@ export interface ToggleSwitchProps {
   checked: boolean;
   onChange: () => void;
 }
-
 export interface SocialButtonProps {
   platform: "Google" | "Facebook" | "X";
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
-
 export interface Comment {
   title: string;
   text: string;
@@ -135,12 +133,10 @@ export interface Comment {
   image: string;
   reverse?: boolean;
 }
-
 export interface FooterLink {
   label: string;
   href: string;
 }
-
 export interface DashboardLocationProps {
   mapLink: string;
 }
@@ -150,4 +146,11 @@ export interface Service {
   name: string;
   icon: JSX.Element;
   alt: string;
+}
+
+export interface PriceItemProps {
+  service: string;
+  minPrice: string;
+  maxPrice: string;
+
 }
