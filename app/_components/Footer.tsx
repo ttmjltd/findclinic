@@ -46,22 +46,31 @@ const footerLinks: { [key: string]: FooterLink } = {
 };
 const Footer: React.FC = () => {
   return (
-    <div className="container w-full max-w-[1150px] min-h-[208px] mx-auto bg-white text-primary leading-4 border rounded-xl backdrop-blur-xl backdrop-saturate-200 mt-10 py-4 flex flex-col sm:flex-row justify-between items-start">
-      <div className="flex items-start w-full sm:w-full ">
-        <section className="flex flex-col items-start ml-6 mt-6 ">
+    <section className="container w-full mx-auto bg-white text-primary leading-4 border rounded-xl backdrop-blur-xl backdrop-saturate-200 mt-10 py-4 flex flex-col sm:flex-row justify-between items-start sm:w-2/3 sm:h-2/6">
+      <div className="flex flex-col sm:flex-row items-start w-full sm:w-full sm:justify-between">
+        <div className="flex sm:flex-col sm:items-start ml-6 mt-6 items-center">
+          <Image
+            width={100}
+            height={30}
+            src="/Logo2findclinics.png"
+            alt="find clinics logo small"
+            className="block sm:hidden w-2/5 h-auto mr-auto"
+          />
+
           <Image
             width={230}
             height={45}
             src="/Logo1findclinics.png"
             alt="find clinics logo"
+            className="hidden sm:block w-full h-auto"
           />
-          <div className="mt-10">
+          <div className="sm:mt-10 sm:ml-0 ml-auto">
             <p className="text-primary mb-4">info@healthway.co.uk</p>
             <p className="text-primary">+447564123765</p>
           </div>
-        </section>
+        </div>
 
-        <section className="flex items-start ml-6">
+        <div className="flex items-start ml-6 sm:w-3/4">
           <div className="hidden md:block w-px h-36 border border-[#2A9D8F] m-4 my-6 mr-6"></div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 my-10 gap-2 w-full">
@@ -78,17 +87,11 @@ const Footer: React.FC = () => {
               </ul>
             ))}
           </div>
-        </section>
+        </div>
       </div>
 
-      {/* Icons Section (Stacked on mobile) */}
-      <section className="flex flex-col items-center md:flex-row absolute bottom-4 right-6 mr-9 mb-6 space-x-2">
-        <Image
-          src="/linkedin.png"
-          alt="linkedin icon"
-          width={24}
-          height={24}
-        />
+      <div className="flex sm:flex-col items-center md:flex-row absolute bottom-6 space-x-2 sm:right-10 right-3">
+        <Image src="/linkedin.png" alt="linkedin icon" width={24} height={24} />
         <Image
           src="/facebook.png"
           alt="facebook icon"
@@ -110,8 +113,8 @@ const Footer: React.FC = () => {
           height={24}
           className="bg-[#2A9D8F] rounded-sm p-1"
         />
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
