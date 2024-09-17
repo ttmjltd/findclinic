@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { data } from "../_mocks_/ClinicSearchData";
-import { Clinic } from "../types";
+import { ClinicProps } from "../types";
 import { LikeButtonFC, MapMarkerFC, StarFC } from "../_atoms/Icons";
 
 const SearchClinicCard: React.FC = () => {
@@ -10,7 +10,7 @@ const SearchClinicCard: React.FC = () => {
         Here are the best clinics for you
       </h1>
       <div className="space-y-8">
-        {data.map((clinic: Clinic, index) => (
+        {data.map((clinic: ClinicProps, index) => (
           <div
             key={index}
             className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col lg:flex-row relative"
