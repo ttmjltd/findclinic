@@ -95,18 +95,18 @@ export interface ProfileInfoValues {
   address: string;
 }
 
-export interface Service {
+export interface ClinicService {
   name: string;
   icon: JSX.Element;
 }
 
-export interface Clinic {
+export interface ClinicProps {
   name: string;
   rating: number;
   reviews: number;
   location: string;
   treatments: string[];
-  services: Service[];
+  services: ClinicService[];
 }
 
 export interface StarProps {
