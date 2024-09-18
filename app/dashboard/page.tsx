@@ -5,6 +5,7 @@ import ProfileInfo from "../_components/ProfileInfo";
 import DashboardServices from "../_components/DashboardServices";
 import { ProfileInfoValues } from "../types";
 import DashboardTreatments from "../_components/DashboardTreatments";
+import DashboardPrices from "../_components/DashboardPrices";
 import DashboardLocation from "../_components/DashboardLocation";
 import AccordionItem from "../_components/AccordionItem";
 
@@ -21,9 +22,12 @@ const DashboardPage = () => {
 
   return (
     <div>
+      {/* Header Section */}
       <div className="text-center text-3xl text-secondary p-5">
         <p>Reach thousands of potential patients</p>
       </div>
+
+      {/* Accordion Items */}
       <AccordionItem
         title="Profile Info"
         isOpen={openIndex === 0}
@@ -31,6 +35,7 @@ const DashboardPage = () => {
       >
         <ProfileInfo onSubmit={handleSubmit} />
       </AccordionItem>
+
       <AccordionItem
         title="Services"
         isOpen={openIndex === 1}
@@ -38,6 +43,7 @@ const DashboardPage = () => {
       >
         <DashboardServices />
       </AccordionItem>
+
       <AccordionItem
         title="Treatments"
         isOpen={openIndex === 2}
@@ -45,10 +51,19 @@ const DashboardPage = () => {
       >
         <DashboardTreatments />
       </AccordionItem>
+
       <AccordionItem
-        title="Location"
+        title="Prices"
         isOpen={openIndex === 3}
         onToggle={() => handleAccordionToggle(3)}
+      >
+        <DashboardPrices />
+      </AccordionItem>
+
+      <AccordionItem
+        title="Location"
+        isOpen={openIndex === 4}
+        onToggle={() => handleAccordionToggle(4)}
       >
         <DashboardLocation />
       </AccordionItem>

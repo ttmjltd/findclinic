@@ -8,7 +8,7 @@ export interface ClinicDataTypes {
 
 export interface ButtonProps {
   label: string;
-  icon?: any;
+  icon?: JSX.Element;
   variation: string;
 }
 
@@ -23,7 +23,15 @@ export interface InputProps {
   className?: string;
   type?: "text" | "email" | "password" | "tel";
   pattern?: string;
-  inputMode?: "text" | "email" | "search" | "tel" | "url" | "none" | "numeric" | "decimal";
+  inputMode?:
+    | "text"
+    | "email"
+    | "search"
+    | "tel"
+    | "url"
+    | "none"
+    | "numeric"
+    | "decimal";
 }
 
 export interface CheckboxProps {
@@ -87,18 +95,18 @@ export interface ProfileInfoValues {
   address: string;
 }
 
-export interface Service {
+export interface ClinicService {
   name: string;
   icon: JSX.Element;
 }
 
-export interface Clinic {
+export interface ClinicProps {
   name: string;
   rating: number;
   reviews: number;
   location: string;
   treatments: string[];
-  services: Service[];
+  services: ClinicService[];
 }
 
 export interface StarProps {
@@ -114,12 +122,10 @@ export interface ToggleSwitchProps {
   checked: boolean;
   onChange: () => void;
 }
-
 export interface SocialButtonProps {
   platform: "Google" | "Facebook" | "X";
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
-
 export interface Comment {
   title: string;
   text: string;
@@ -127,12 +133,10 @@ export interface Comment {
   image: string;
   reverse?: boolean;
 }
-
 export interface FooterLink {
   label: string;
   href: string;
 }
-
 export interface DashboardLocationProps {
   mapLink: string;
 }
@@ -142,4 +146,17 @@ export interface AccordionItemProps {
   children: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
+}
+export interface Service {
+  id: number;
+  name: string;
+  icon: JSX.Element;
+  alt: string;
+}
+
+export interface PriceItemProps {
+  service: string;
+  minPrice: string;
+  maxPrice: string;
+
 }
