@@ -7,6 +7,7 @@ import { ProfileInfoValues } from "../types";
 import DashboardTreatments from "../_components/DashboardTreatments";
 import DashboardPrices from "../_components/DashboardPrices";
 import DashboardLocation from "../_components/DashboardLocation";
+import DashboardPrices from "../_components/DashboardPrices";
 
 const DashboardPage = () => {
   const handleSubmit = (values: ProfileInfoValues) => {
@@ -23,6 +24,7 @@ const DashboardPage = () => {
       <DashboardTreatments />
       <DashboardPrices />
       <DashboardLocation/>
+      <DashboardPrices />
     </div>
   );
 };
