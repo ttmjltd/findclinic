@@ -151,3 +151,9 @@ export interface Service {
   icon: JSX.Element;
   alt: string;
 }
+
+export interface PriceItemProps {
+  service: string;
+  minPrice: string;
+  maxPrice: string;
+}
