@@ -122,12 +122,10 @@ export interface ToggleSwitchProps {
   checked: boolean;
   onChange: () => void;
 }
-
 export interface SocialButtonProps {
   platform: "Google" | "Facebook" | "X";
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
-
 export interface Comment {
   title: string;
   text: string;
@@ -135,7 +133,6 @@ export interface Comment {
   image: string;
   reverse?: boolean;
 }
-
 export interface FooterLink {
   label: string;
   href: string;
