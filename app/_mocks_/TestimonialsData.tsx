@@ -11,7 +11,7 @@ export const comments: Comment[] = [
   {
     title: "İkinci Yorum",
     text: "Thanks to FindClinics, I discovered a clinic that offered exactly the treatment I was looking for. The detailed information and reviews helped me make an informed decision. I couldn’t be happier with the results!",
-    name: "Emly T.",
+    name: "Emily T.",
     image: "/t2.png",
     reverse: false, 
   },
