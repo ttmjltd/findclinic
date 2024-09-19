@@ -141,6 +141,12 @@ export interface DashboardLocationProps {
   mapLink: string;
 }
 
+export interface AccordionItemProps {
+  title: string;
+  children: React.ReactNode;
+  isOpen: boolean;
+  onToggle: () => void;
+}
 export interface Service {
   id: number;
   name: string;
