@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
         </section>
 
         <section className="flex items-start ml-6">
-          <div className="hidden md:block w-px h-36 border border-[#2A9D8F] m-4 my-6 mr-6"></div>
+          <div className="hidden md:block w-px h-36 border border-accent m-4 my-6 mr-6"></div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 my-10 gap-2 w-full">
             {Object.entries(footerLinks).map(([key, link]) => (
@@ -101,14 +101,14 @@ const Footer: React.FC = () => {
           alt="instagram icon"
           width={24}
           height={24}
-          className="bg-[#2A9D8F] rounded-sm p-1"
+          className="bg-accent rounded-sm p-1"
         />
         <Image
           src="/Youtube.png"
           alt="youtube icon"
           width={24}
           height={24}
-          className="bg-[#2A9D8F] rounded-sm p-1"
+          className="bg-accent rounded-sm p-1"
         />
       </section>
     </div>
