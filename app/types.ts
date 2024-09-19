@@ -152,5 +152,4 @@ export interface PriceItemProps {
   service: string;
   minPrice: string;
   maxPrice: string;
-
 }
