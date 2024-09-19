@@ -50,13 +50,13 @@ const ClinicGallery: React.FC = () => {
         </div>
         <button
           onClick={scrollPrev}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 ml-2"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-5 ml-2"
         >
           <FaArrowLeft size={20} />
         </button>
         <button
           onClick={scrollNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 mr-2"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-5 mr-2"
         >
           <FaArrowRight size={20} />
         </button>
