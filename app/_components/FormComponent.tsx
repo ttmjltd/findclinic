@@ -62,14 +62,6 @@ const FormComponent = () => {
               value={subscribe}
               checked={subscribe}
             />
-            {/* 
-            <Image
-              src="/advisor.png"
-              alt="advisor-image"
-              width={350}
-              height={400}
-              className="object-cover"
-            /> */}
           </div>
           <div className=" mt-12 md:mt-8 flex justify-center lg:hidden">
             <Button label="Schedule a call now!" variation="broad-dark" />
