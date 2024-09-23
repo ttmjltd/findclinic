@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
           alt="instagram icon"
           width={24}
           height={24}
-          className="bg-accent rounded-sm p-1
+          className="bg-accent rounded-sm p-1"
         />
         <Image
           src="/Youtube.png"
