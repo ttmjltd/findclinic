@@ -1,22 +1,16 @@
 import React from "react";
+import { DescriptionType } from "../types";
 
-const ClinicDescription = () => {
+const ClinicDescription: React.FC<DescriptionType> = ({ description }) => {
   return (
     <div className="text-xl md:text-base mt-6 md:mt-12 lg:px-4 md:px-0 text-justify">
-      <p className="xs:mb-6 lg:mb-4">
-        Mayo is a health clinic approved by the Turkish Ministry of Health and
-        holding the &quot;International Health Tourism Authorization
-        Certificate&quot;.
-      </p>
-      <p className="xs:mb-6 lg:mb-4">
-        Non-surgical treatments and hair transplantation are the most preferred
-        treatments of Mayo Health Clinic. It offers comprehensive services in
-        various fields such as rhinoplasty and liposuction surgery.
-      </p>
-      <p>
-        Supported by a wide network of doctors and hospitals, Mayo Health Clinic
-        cooperates with expert clinics using the most up-to-date technologies.
-      </p>
+      {description.map((des, index) => (
+        <p key={index}>
+          {des.children.map((child, idx) => (
+            <span key={idx}>{child.text}</span>  // Sadece text'i render ediyoruz
+          ))}
+        </p>
+      ))}
     </div>
   );
 };

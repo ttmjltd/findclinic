@@ -5,7 +5,7 @@ const Checkbox: React.FC<CheckboxProps & { className?: string }> = ({ label, val
     <div className={`flex gap-1 ${className}`}>
       <input
         type="checkbox"
-        name={value}
+        name={value ? value : undefined }
         value={value}
         onChange={onChange}
         checked={checked}

@@ -141,6 +141,11 @@ export interface DashboardLocationProps {
   mapLink: string;
 }
 
+export interface DescriptionType {
+  description: { children: { text: string }[] }[];  // Eğer her bir öğe bir dizi ve alt öğeler içeriyorsa
+}
+
+
 export interface AccordionItemProps {
   title: string;
   children: React.ReactNode;
