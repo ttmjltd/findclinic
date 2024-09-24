@@ -25,7 +25,7 @@ const FormComponent = () => {
         <span className="text-2xl text-secondary text-center font-bold">
           Schedule a Call Today!
         </span>
-        <span className="text-xl text-neutralDark text-center ">
+        <span className="sm:text-lg md:text-xl text-neutralDark text-center">
           Fill out the form and your personal health advisor will reach you!
         </span>
         <div className="flex  flex-col lg:flex-row lg:gap-12 p-8">
