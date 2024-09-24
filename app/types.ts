@@ -142,8 +142,9 @@ export interface DashboardLocationProps {
 }
 
 export interface DescriptionType {
-  description: { children: { text: string }[] }[];  // Eğer her bir öğe bir dizi ve alt öğeler içeriyorsa
+  description: { children: { text: string | { children?: { text: string }[] } }[] }[];
 }
+
 
 
 export interface AccordionItemProps {

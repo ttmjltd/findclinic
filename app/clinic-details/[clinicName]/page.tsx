@@ -10,7 +10,7 @@ import ClinicVideo from "../../_components/ClinicVideo";
 import { getClinicsByName } from "@/app/_utils/GlobalApi";
 import { Clinic } from "../../apiTypes";
 
-const Page: React.FC<ClinicDetailsTypes> = async ({ params }) => {
+const Page: React.FC<Clinic> = async ({ params }) => {
   const clinicName = params.clinicName
     .split("-")
     .map((name: string) => name.charAt(0).toUpperCase() + name.slice(1))
@@ -19,22 +19,28 @@ const Page: React.FC<ClinicDetailsTypes> = async ({ params }) => {
   const mapLink =
   data[0].attributes.MapEmbedCode;
   const description = data[0].attributes.ClinicDefination;
+  const descriptionTransformed = description.map((text: string) => ({
+    children: [{ text }],
+  }));
+  const videoData = data[0].attributes.VideoEmbed;
+  const services = data[0].attributes.Services;
 
   return (
     <div className="mx-8 md:mx-36  max-w-full">
-      <div className="max-w-full md:max-w-2xl ">
+      <div className="max-w-full md:max-w-2xl ">        
         <BreadCrum clinicName={clinicName} />
         <ClinicCard clinicName={clinicName}  />
-        <ClinicDescription description={description} />
+        <ClinicDescription description={descriptionTransformed} />
 
         <div className=" mt-4 md:mt-8 flex justify-center lg:justify-start">
           <Button label="Schedule a call now!" variation="broad-dark" />
         </div>
-        <ClinicServices />
-        <GoogleMap mapLink={mapLink} />
+        <ClinicServices services={services} />
+        {mapLink && <GoogleMap mapLink={mapLink} />}
       </div>
-      <ClinicReviews />
-      <ClinicVideo />
+      {/* Reviews are already static */}
+      <ClinicReviews /> 
+      <ClinicVideo videoData={videoData} />
     </div>
   );
 };

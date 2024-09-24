@@ -1,14 +1,32 @@
-import React from 'react'
+import React from 'react';
 
-const ClinicVideo = () => {
+const ClinicVideo = ({ videoData }) => {
+  const parsedData = JSON.parse(videoData);
+
+  // URL'yi işleyen fonksiyon, hem youtu.be hem de youtube.com/watch?v=... formatlarını destekler
+  const getEmbedUrl = (url) => {
+    // Eğer URL 'youtu.be' formatındaysa
+    if (url.includes('youtu.be')) {
+      return url.replace('youtu.be/', 'youtube.com/embed/').split('?')[0];
+    }
+    // Eğer URL 'youtube.com/watch?v=' formatındaysa
+    else if (url.includes('youtube.com/watch')) {
+      const videoId = url.split('v=')[1].split('&')[0]; // video ID'sini ayırıyoruz
+      return `https://www.youtube.com/embed/${videoId}`; // embed formatına dönüştürüyoruz
+    }
+    return url; // Herhangi başka bir format varsa orijinal URL'yi döndürüyoruz
+  };
+
+  const embedUrl = getEmbedUrl(parsedData.url);
+
   return (
     <div className='mt-6 md:mt-12 w-full'>
       <div className='w-full max-w-[672px]'>
-        <h3 className='text-secondary font-bold text-lg md:text-xl'>Mayo Health Clinic Says</h3>
+        <h3 className='text-secondary font-bold text-lg md:text-xl'>{parsedData.title}</h3>
         <div className='relative w-full' style={{ paddingBottom: '56.25%' }}> {/* Aspect Ratio 16:9 */}
           <iframe
-            src="https://www.youtube.com/embed/TgYY6cRazHM"
-            title="Mayo Clinic in Minnesota Virtual Tour for Prospective Residents"
+            src={embedUrl} // Dinamik embed URL
+            title={parsedData.title} // Video başlığı
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -17,7 +35,7 @@ const ClinicVideo = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ClinicVideo
+export default ClinicVideo;

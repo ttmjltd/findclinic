@@ -1,4 +1,5 @@
 // clinicTypes.ts
+
 export interface ClinicAttributes {
     ClinicName: string;
     ClinicCountry: string;
@@ -17,6 +18,7 @@ export interface ClinicAttributes {
   
   export interface Clinic {
     id: number;
+    params: { [key: string]: string };
     attributes: ClinicAttributes;
   }
   
