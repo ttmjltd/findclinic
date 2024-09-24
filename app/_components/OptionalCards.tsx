@@ -27,7 +27,7 @@ const OptionalCards: React.FC = () => {
       </h2>
       <div className="relative">
         <button
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 ml-4"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-5 ml-4"
           onClick={() => scroll("left")}
         >
           <FaArrowLeft size={20} />
@@ -67,7 +67,7 @@ const OptionalCards: React.FC = () => {
           </div>
         </div>
         <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 mr-2"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-5 mr-2"
           onClick={() => scroll("right")}
         >
           <FaArrowRight size={20} />
