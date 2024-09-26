@@ -7,13 +7,16 @@ const API_KEY: string | undefined = process.env.NEXT_PUBLIC_STRAPI_API_KEY;
 const BASE_URL: string = "https://panel.findclinics.co.uk/api";
 
 // fetchData fonksiyonu için parametre ve dönüş tiplerini belirleyelim
-const fetchData = async (endpoint: string, options: RequestInit = {}): Promise<any> => {
+const fetchData = async (
+  endpoint: string,
+  options: RequestInit = {}
+): Promise<any> => {
   // Default options için tip tanımlamamız gerek yok, çünkü TypeScript bunu otomatik olarak çıkarır
   const defaultOptions: RequestInit = {
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",
-      'Referrer-Policy': 'no-referrer-when-downgrade',
+      "Referrer-Policy": "no-referrer-when-downgrade",
       Authorization: `Bearer ${API_KEY}`,
     },
   };
@@ -39,22 +42,19 @@ const fetchData = async (endpoint: string, options: RequestInit = {}): Promise<a
 const getClinics = async (): Promise<Clinic[]> => {
   const data = await fetchData(`/clinics?populate=*`);
   return data;
-  
 };
 
 const getAClinic = async (id: number): Promise<Clinic[]> => {
-    const data = await fetchData(`/clinics/${id}?populate=*`);
-    return data;
-  };
-
-  const getClinicsByName = async (clinicName: string): Promise<Clinic[]> => {
-    const data = await fetchData(`/clinics?populate=*&filters[ClinicName][$eq]=${clinicName}`);
-    return data.data;
-  };
-  
-// Fonksiyonları export ediyoruz
-export {
-  getClinics,
-  getAClinic,
-  getClinicsByName
+  const data = await fetchData(`/clinics/${id}?populate=*`);
+  return data;
 };
+
+const getClinicsByName = async (clinicName: string): Promise<Clinic[]> => {
+  const data = await fetchData(
+    `/clinics?populate=*&filters[ClinicName][$eq]=${clinicName}`
+  );
+  return data.data;
+};
+
+// Fonksiyonları export ediyoruz
+export { getClinics, getAClinic, getClinicsByName };

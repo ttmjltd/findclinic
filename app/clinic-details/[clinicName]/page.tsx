@@ -8,16 +8,22 @@ import ClinicDescription from "../../_components/ClinicDescription";
 import ClinicServices from "../../_components/ClinicServices";
 import ClinicVideo from "../../_components/ClinicVideo";
 import { getClinicsByName } from "@/app/_utils/GlobalApi";
-import { Clinic } from "../../apiTypes";
+import { Clinic } from "@/app/apiTypes";
+// import { Clinic } from "@/app/apiTypes";
+// import { Clinic  } from "";
+// Define the page props type
+interface PageProps {
+  clinicName: string;
+  data: Clinic[];
+}
 
-const Page: React.FC<Clinic> = async ({ params }) => {
+const Page = async ({ params }: { params: { clinicName: string } }) => {
   const clinicName = params.clinicName
     .split("-")
     .map((name: string) => name.charAt(0).toUpperCase() + name.slice(1))
     .join(" ");
-  const data: Clinic[] = await getClinicsByName(clinicName)
-  const mapLink =
-  data[0].attributes.MapEmbedCode;
+  const data: Clinic[] = await getClinicsByName(clinicName);
+  const mapLink = data[0].attributes.MapEmbedCode;
   const description = data[0].attributes.ClinicDefination;
   const descriptionTransformed = description.map((text: string) => ({
     children: [{ text }],
@@ -27,9 +33,9 @@ const Page: React.FC<Clinic> = async ({ params }) => {
 
   return (
     <div className="mx-8 md:mx-36  max-w-full">
-      <div className="max-w-full md:max-w-2xl ">        
+      <div className="max-w-full md:max-w-2xl ">
         <BreadCrum clinicName={clinicName} />
-        <ClinicCard clinicName={clinicName}  />
+        <ClinicCard clinicName={clinicName} />
         <ClinicDescription description={descriptionTransformed} />
 
         <div className=" mt-4 md:mt-8 flex justify-center lg:justify-start">
@@ -39,8 +45,8 @@ const Page: React.FC<Clinic> = async ({ params }) => {
         {mapLink && <GoogleMap mapLink={mapLink} />}
       </div>
       {/* Reviews are already static */}
-      <ClinicReviews /> 
-      <ClinicVideo videoData={videoData} />
+      <ClinicReviews />
+      {videoData && <ClinicVideo videoData={videoData} />}
     </div>
   );
 };

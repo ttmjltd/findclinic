@@ -3,12 +3,14 @@ import React from "react";
 import { BreadCrumTypes } from "../types";
 import { StarFC } from "../_atoms/Icons";
 import { getClinicsByName } from "../_utils/GlobalApi";
-import { Clinic } from "../apiTypes"; // Arayüzü buradan import edin
+import { Clinic } from "../apiTypes";
+
+// import { Clinic } from "../apiTypes"; // Arayüzü buradan import edin
 
 const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
   // BreadCrumTypes kullanılıyor, ClinicCardTypes yerine geçici olarak
   const data: Clinic[] = await getClinicsByName(clinicName);
-  
+
   return (
     <div className="flex flex-col  md:flex-row mt-4 md:mt-10 w-full md:w-fit">
       <div className="rounded-xl overflow-hidden">
@@ -40,16 +42,14 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
           </div>
         </div>
         <div className="grid xs:grid-cols-3 gap-2">
-          {data[0].attributes.Services.map(
-            (service: string, index:number) => (
-              <span
-                key={index}
-                className="text-xs md:text-sm text-white bg-primary rounded-xl py-2 md:px-2 text-center xs:mt-2 lg:mt-0"
-              >
-                {service}
-              </span>
-            )
-          )}
+          {data[0].attributes.Services.map((service: string, index: number) => (
+            <span
+              key={index}
+              className="text-xs md:text-sm text-white bg-primary rounded-xl py-2 md:px-2 text-center xs:mt-2 lg:mt-0"
+            >
+              {service}
+            </span>
+          ))}
         </div>
       </div>
     </div>
