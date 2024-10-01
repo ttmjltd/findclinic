@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { data } from "../_mocks_/ClinicSearchData";
-import { Clinic } from "../types";
+import { ClinicProps } from "../types";
 import { LikeButtonFC, MapMarkerFC, StarFC } from "../_atoms/Icons";
 
 const SearchClinicCard: React.FC = () => {
@@ -10,12 +10,15 @@ const SearchClinicCard: React.FC = () => {
         Here are the best clinics for you
       </h1>
       <div className="space-y-8">
-        {data.map((clinic: Clinic, index) => (
+        {data.map((clinic: ClinicProps, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col lg:flex-row"
+            className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col lg:flex-row relative"
           >
-            <div className="sm:w-1/4 w-2/4">
+            <div className="absolute top-2 right-3">
+              <LikeButtonFC />
+            </div>
+            <div className="m:w-1/4 ">
               <Image
                 src="/doctor-working.avif"
                 alt={clinic.name}
@@ -24,11 +27,11 @@ const SearchClinicCard: React.FC = () => {
                 className="rounded-lg"
               />
             </div>
-            <div className="sm:w-1/2 px-4 space-y-3 text-center lg:text-start">
+            <div className="m:w-1/2 px-4 space-y-3 text-center lg:text-start">
               <h1 className="lg:text-3xl text-secondary font-bold text-xl">
                 {clinic.name}
               </h1>
-              <div className="flex mb-10 text-xs flex-col sm:flex-row items-center">
+              <div className="flex mb-10 text-xs sm:flex-row items-center justify-center">
                 <span className="bg-sky-600 text-white w-5 text-center font-thin">
                   {clinic.rating}
                 </span>
@@ -43,27 +46,24 @@ const SearchClinicCard: React.FC = () => {
                   <MapMarkerFC className="mr-2" /> {clinic.location}
                 </span>
               </div>
-              <div className="text-xs flex flex-col lg:flex-row lg:flex-wrap items-center">
+              <div className="text-xs flex flex-row flex-wrap items-center container justify-center">
                 {clinic.treatments.map((treatment, i) => (
                   <div
                     key={i}
-                    className="text-blue-700 bg-blue-100 rounded-lg m-1 px-3 h-6 text-center flex items-center"
+                    className="text-blue-700 bg-blue-100 rounded-lg m-2 px-3 h-8 flex items-center justify-center w-2/5"
                   >
                     {treatment}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="m:w-1/4 space-y-8">
+            <div className="w-2/5 space-y-1 lg:space-y-6 flex flex-col justify-center items-start">
               {clinic.services.map((service, i) => (
                 <div key={i} className="flex items-center text-xs m:text-lg">
                   {service.icon}
-                  <span className="ml-5">{service.name}</span>
+                  <span className="sm:ml-6 ml-8">{service.name}</span>
                 </div>
               ))}
-            </div>
-            <div className="sm:ml-auto mt-4 sm:mt-0">
-              <LikeButtonFC />
             </div>
           </div>
         ))}
