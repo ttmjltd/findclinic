@@ -8,10 +8,11 @@ const PatientPopUp: React.FC = () => {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
 
   useEffect(() => {
-    let timer: number | NodeJS.Timeout;
+    let timer: number;
     let isPopupShown = sessionStorage.getItem("isPopupShown") ? true : false;
-    if (!isPopupShown) {
-      timer = setTimeout(() => {
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile && !isPopupShown) {
+      timer = window.setTimeout(() => {
         dialogRef.current?.showModal();
         sessionStorage.setItem("isPopupShown", "true");
       }, 5000);
