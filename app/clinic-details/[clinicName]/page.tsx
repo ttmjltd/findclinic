@@ -1,5 +1,4 @@
 import BreadCrum from "../../_atoms/BreadCrum";
-import { ClinicDetailsTypes } from "../../types";
 import Button from "../../_atoms/Button";
 import ClinicReviews from "../../_components/ClinicReviews";
 import GoogleMap from "../../_components/GoogleMap";
@@ -9,13 +8,7 @@ import ClinicServices from "../../_components/ClinicServices";
 import ClinicVideo from "../../_components/ClinicVideo";
 import { getClinicsByName } from "@/app/_utils/GlobalApi";
 import { Clinic } from "@/app/apiTypes";
-// import { Clinic } from "@/app/apiTypes";
-// import { Clinic  } from "";
-// Define the page props type
-interface PageProps {
-  clinicName: string;
-  data: Clinic[];
-}
+
 
 const Page = async ({ params }: { params: { clinicName: string } }) => {
   const clinicName = params.clinicName

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { Clinic } from "../apiTypes";
-
 
 const ClinicServices = ({services} : {services: string[]}) => {
   return (
