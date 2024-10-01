@@ -9,7 +9,8 @@ const TreatmentsCounter: React.FC = () => {
           <span className="mr-2">
             <Image
               src="/medical-assistant.gif"
-              width={40} height={40}
+              width={40}
+              height={40}
               className="sm:w-[61px] sm:h-[61px]"
               alt="medical assistant"
               unoptimized
@@ -17,7 +18,9 @@ const TreatmentsCounter: React.FC = () => {
           </span>
 
           <div className=" ">
-            <p className="text-primary font-extrabold text-sm md:text-lg">3490</p>
+            <p className="text-primary font-extrabold text-sm md:text-lg">
+              3490
+            </p>
             <p className="w-16 md:text-base text-primary font-medium text-xs">
               Registered Patients
             </p>
@@ -28,7 +31,8 @@ const TreatmentsCounter: React.FC = () => {
           <span className="mr-2">
             <Image
               src="/heartbeat.gif"
-              width={40} height={40}
+              width={40}
+              height={40}
               className="sm:w-[61px] sm:h-[61px]"
               alt="heartbeat"
               unoptimized
@@ -36,7 +40,9 @@ const TreatmentsCounter: React.FC = () => {
           </span>
 
           <div className="">
-            <p className="text-primary font-extrabold text-sm md:text-lg">250</p>
+            <p className="text-primary font-extrabold text-sm md:text-lg">
+              250
+            </p>
             <p className="w-16 md:text-base text-primary font-medium text-xs">
               Verified Clinics
             </p>
@@ -47,10 +53,11 @@ const TreatmentsCounter: React.FC = () => {
           <span className="mr-2">
             <Image
               src="/stethoscope.gif"
-              width={80} height={80}
+              width={80}
+              height={80}
               className="sm:w-[61px] sm:h-[61px]"
               alt="stethoscope"
-              
+              unoptimized
             />
           </span>
 

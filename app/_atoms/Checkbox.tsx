@@ -1,11 +1,17 @@
 import { CheckboxProps } from "../types";
 
-const Checkbox: React.FC<CheckboxProps & { className?: string }> = ({ label, value, onChange, checked, className }) => {
+const Checkbox: React.FC<CheckboxProps & { className?: string }> = ({
+  label,
+  value,
+  onChange,
+  checked,
+  className,
+}) => {
   return (
     <div className={`flex gap-1 ${className}`}>
       <input
         type="checkbox"
-        name={value}
+        name={value.toString()}
         value={value}
         onChange={onChange}
         checked={checked}
