@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
-import FormComponent from "./_components/FormComponent";
 import OptionalCards from "./_components/OptionalCards";
+import PatientPopUp from "./_components/PatientPopUp";
+import ScheduleCall from "./_components/ScheduleCall";
 import Testimonials from "./_components/Testimonials";
 import TreatmentCounter from "./_components/TreatmentCounter";
 import Link from "next/link";
@@ -14,7 +15,8 @@ const ClinicGallery = dynamic(() => import("./_components/ClinicGallery"), {
 export default function Home() {
   return (
     <main>
-       <h1 className="text-4xl text-secondary font-bold text-center mt-20">
+      <PatientPopUp />
+      <h1 className="text-4xl text-secondary font-bold text-center mt-20">
         Welcome to the easiest clinic search platform
       </h1>
       <h1 className="text-xl text-secondary font-bold text-center mt-2">
@@ -24,11 +26,11 @@ export default function Home() {
       <div className="text-neutralDark underline text-center mt-10 mb-44">
         <Link href={"#"}>Advanced Search</Link>
       </div>
-      <TreatmentCounter/>
+      <TreatmentCounter />
       <ClinicGallery />
-      <OptionalCards/>
-      <Testimonials/>
-      <FormComponent/>
+      <OptionalCards />
+      <Testimonials />
+      <ScheduleCall />
     </main>
   );
 }
