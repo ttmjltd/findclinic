@@ -3,7 +3,7 @@ import React from "react";
 
 const TreatmentsCounter: React.FC = () => {
   return (
-    <div className="container bg-slate-50 rounded-lg mx-auto p-3">
+    <div className="container bg-slate-50 rounded-lg mx-auto p-3 w-5/6">
       <div className="px-5 flex  flex-row items-center justify-between gap-8 text-xs">
         <div className="flex items-center">
           <span className="mr-2">
