@@ -19,7 +19,7 @@ const ScheduleCallForm: React.FC = () => {
     setForm((prev: any) => ({ ...prev, [stateName]: e.target.value }));
   };
   return (
-    <form className="md:w-[434px] p-7 flex flex-col gap-3 bg-white mx-auto">
+    <form className="w-full lg:w-[434px] lg:h-[532px] lg:p-7 flex flex-col gap-3">
       <Input
         label="Full Name"
         value={form?.fullName}
