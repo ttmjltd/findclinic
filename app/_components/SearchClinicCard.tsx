@@ -50,7 +50,7 @@ const SearchClinicCard: React.FC = () => {
                 {clinic.treatments.map((treatment, i) => (
                   <div
                     key={i}
-                    className="text-blue-700 bg-blue-100 rounded-lg m-2 px-3 h-8 flex items-center justify-center w-2/5"
+                    className="text-blue-700 bg-blue-100 rounded-lg m-2 px-3 h-8 flex items-center justify-center"
                   >
                     {treatment}
                   </div>

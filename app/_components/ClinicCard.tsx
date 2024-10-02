@@ -4,9 +4,8 @@ import { BreadCrumTypes } from "../types";
 import { StarFC } from "../_atoms/Icons";
 
 const ClinicCard: React.FC<BreadCrumTypes> = ({ clinicName }) => {
-  //BreadCrum Types used until ClinicCardTypes Created
   return (
-    <div className="flex flex-col  md:flex-row mt-4 md:mt-10 w-full md:w-fit">
+    <div className="flex flex-col md:flex-row mt-4 md:mt-10 w-full md:w-fit">
       <div className="rounded-xl overflow-hidden">
         <Image
           src={"/mayo-clinic.jpeg"}
@@ -21,7 +20,7 @@ const ClinicCard: React.FC<BreadCrumTypes> = ({ clinicName }) => {
           <span className="text-secondary xs:text-3xl text-lg md:text-2xl font-bold">
             {clinicName}
           </span>
-          <div className="flex items-center mt-3 lg:mt-1">
+          <div className="flex items-center my-3 lg:mt-1">
             <span className="mr-2 bg-primary text-white text-xs p-1 rounded-md">
               5.0
             </span>
@@ -30,16 +29,20 @@ const ClinicCard: React.FC<BreadCrumTypes> = ({ clinicName }) => {
                 <StarFC color="#0077B6" />
               </span>
             ))}
-            <span className="ml-2 text-xs md:text-sm">49 Reviews</span>
-            <span className="ml-2 text-xs md:text-sm">Location</span>
+            <span className="ml-5 text-xs md:text-sm text-primary">
+              49 Reviews
+            </span>
+            <span className="ml-5 text-xs md:text-sm  text-primary">
+              Location
+            </span>
           </div>
         </div>
-        <div className="grid  xs:grid-cols-3 gap-2">
+        <div className="text-xs flex flex-row flex-wrap items-center container gap-3">
           {["NS Face Lift", "Hair Transplant", "Eye Lift", "Laser Eye"].map(
             (service, index) => (
               <span
                 key={index}
-                className="text-xs md:text-sm text-white bg-primary rounded-xl py-2 md:px-2 text-center xs:mt-2 lg:mt-0"
+                className="text-xs md:text-sm text-white bg-primary rounded-lg py-1 px-2 text-center xs:mt-2 lg:mt-0"
               >
                 {service}
               </span>
