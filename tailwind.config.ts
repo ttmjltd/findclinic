@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     fontFamily: {
       'epilogue': ['Epilogue'],
-      'inter': ['Inter', 'sans-serif'],
     },
     extend: {
       backgroundImage: {
