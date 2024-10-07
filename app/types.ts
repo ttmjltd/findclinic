@@ -7,7 +7,7 @@ export interface ClinicDataTypes {
 }
 
 export interface ButtonProps {
-  label: string;
+  label: string | JSX.Element;
   icon?: JSX.Element;
   variation: string;
 }
@@ -20,6 +20,7 @@ export interface InputProps {
   value: any;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
+  placeholder?: string;
   className?: string;
   type?: "text" | "email" | "password" | "tel";
   pattern?: string;
