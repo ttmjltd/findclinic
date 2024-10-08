@@ -1,5 +1,4 @@
 import React from 'react'
-import BreadCrum from '../_atoms/BreadCrum'
 
 const page = () => {
   return (
