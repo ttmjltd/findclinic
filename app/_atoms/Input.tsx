@@ -13,9 +13,9 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       {label && (
-        <span className="text-[14px] font-semibold text-neutralDark">
+        <label className="text-[14px] font-semibold text-neutralDark">
           {label}
-        </span>
+        </label>
       )}
       <input
         type={type}

@@ -1,6 +1,14 @@
 import Image from "next/image";
 
 const ClinicServices = ({services} : {services: string[]}) => {
+ const iconsData:any = { "Airport Transfer" : "/services/car-no-bg.gif", 
+                      "Private Chauffeur" : "/services/car2-no-bg.gif", 
+                      "Translation Services" : "/services/english-no-bg.gif", 
+                      "Hotel Reservation" : "/services/hotel-bell-no-bg.gif",  
+                      "Doctor Consultation" : "/services/doctor-no-bg.gif"
+
+ }
+
   return (
     <div className="mt-12">
       <h3 className="text-secondary font-bold">Services</h3>
@@ -11,7 +19,7 @@ const ClinicServices = ({services} : {services: string[]}) => {
             <span className="mr-2">
               
               <Image
-                src={service === "Airport Transfer" ? "/services/car-no-bg.gif" : service === "Private Chauffeur" ? "/services/car2-no-bg.gif" : service === "Translation Services" ? "/services/english-no-bg.gif" : service === "Hotel Reservation" ? "/services/hotel-bell-no-bg.gif" : service === "Doctor Consultation" ? "/services/doctor-no-bg.gif" : "" }
+                src={iconsData[service]}
                 width="32"
                 height="32"
                 alt="car"

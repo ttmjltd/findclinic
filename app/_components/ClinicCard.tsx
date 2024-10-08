@@ -5,16 +5,12 @@ import { StarFC } from "../_atoms/Icons";
 import { getClinicsByName } from "../_utils/GlobalApi";
 import { Clinic } from "../apiTypes";
 
-// import { Clinic } from "../apiTypes"; // Arayüzü buradan import edin
-
 const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
-  // BreadCrumTypes kullanılıyor, ClinicCardTypes yerine geçici olarak
   const data: Clinic[] = await getClinicsByName(clinicName);
 
   return (
     <div className="flex flex-col  md:flex-row mt-4 md:mt-10 w-full md:w-fit">
       <div className="rounded-xl overflow-hidden">
-        {/* {console.log("data: ", data[0].attributes)} */}
         <Image
           src={"/mayo-clinic.jpeg"}
           alt="mayo-clinic"

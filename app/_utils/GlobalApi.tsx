@@ -24,7 +24,7 @@ const fetchData = async (
   const finalOptions: RequestInit = { ...defaultOptions, ...options };
   const url: string = `${BASE_URL}${endpoint}`;
 
-  try {
+  try {    
     const res = await fetch(url, finalOptions);
     if (!res.ok) {
       throw new Error(`Error: ${res.status} ${res.statusText}`);
@@ -52,6 +52,7 @@ const getClinicsByName = async (clinicName: string): Promise<Clinic[]> => {
   const data = await fetchData(
     `/clinics?populate=*&filters[ClinicName][$eq]=${clinicName}`
   );
+  
   return data.data;
 };
 
