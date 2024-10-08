@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 import { data } from "../_mocks_/ClinicCarouselData";
 import { ClinicDataTypes } from "../types";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { StarFC } from "../_atoms/Icons";
 
 const OptionalCards: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -52,13 +53,16 @@ const OptionalCards: React.FC = () => {
                       {item.title}
                     </h3>
                   </div>
-                  <div className="m-3 flex flex-wrap gap-2">
-                    <span className="whitespace-nowrap rounded-full bg-blue-100 px-2.5 py-0.5 text-xs text-blue-600">
-                      Hair Transplant
+                  <div className="flex items-center px-3 my-3 lg:mt-1">
+                    <span className="text-2xl">
+                      <StarFC color="#2A9D8F" />
+                    </span>
+                    <span className="mr-2 text-secondary text-sm p-1 rounded-md">
+                      4.8
                     </span>
 
-                    <span className="whitespace-nowrap rounded-full bg-blue-100 px-2.5 py-0.5 text-xs text-blue-600">
-                      Dental Care
+                    <span className="ml-5 text-xs md:text-sm text-primary">
+                      (250 Reviews)
                     </span>
                   </div>
                 </div>

@@ -17,7 +17,7 @@ const TreatmentsCounter: React.FC = () => {
             />
           </span>
 
-          <div className=" ">
+          <div className="">
             <p className="text-primary font-extrabold text-sm md:text-lg">
               3490
             </p>

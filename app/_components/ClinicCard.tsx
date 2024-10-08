@@ -9,7 +9,7 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
   const data: Clinic[] = await getClinicsByName(clinicName);
 
   return (
-    <div className="flex flex-col  md:flex-row mt-4 md:mt-10 w-full md:w-fit">
+    <div className="flex flex-col md:flex-row mt-4 md:mt-10 w-full md:w-fit">
       <div className="rounded-xl overflow-hidden">
         <Image
           src={"/mayo-clinic.jpeg"}
@@ -24,7 +24,7 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
           <span className="text-secondary xs:text-3xl text-lg md:text-2xl font-bold">
             {data[0]?.attributes?.ClinicName}
           </span>
-          <div className="flex items-center mt-3 lg:mt-1">
+          <div className="flex items-center my-3 lg:mt-1">
             <span className="mr-2 bg-primary text-white text-xs p-1 rounded-md">
               5.0
             </span>
@@ -33,8 +33,12 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
                 <StarFC color="#0077B6" />
               </span>
             ))}
-            <span className="ml-2 text-xs md:text-sm">49 Reviews</span>
-            <span className="ml-2 text-xs md:text-sm">Location</span>
+            <span className="ml-5 text-xs md:text-sm text-primary">
+              49 Reviews
+            </span>
+            <span className="ml-5 text-xs md:text-sm  text-primary">
+              Location
+            </span>
           </div>
         </div>
         <div className="grid xs:grid-cols-3 gap-2">
