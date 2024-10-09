@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           />
 
           <div className="hidden md:flex items-center justify-center w-full h-full gap-8 text-base">
-            <ul className="inline-flex font-epilogue gap-8">
+            <ul className="inline-flex gap-8">
               <li className="block p-2 antialiased leading-normal hover:rounded-l hover:bg-bgWhite hover:rounded-lg">
                 <Link href="/" className="flex items-center hover:underline">
                   Home
