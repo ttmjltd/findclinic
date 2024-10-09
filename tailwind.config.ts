@@ -15,13 +15,13 @@ const config: Config = {
         
       },
       colors: {
-        primary: '#012757',
+        primary: '#0077B6',
         secondary: '#2A9D8F',
-        accent: '#2A9D8F',
+        accent: '#ADE8F4',
         neutral: '#EEF4FD',
         neutralDark: '#012757',
         bgWhite: '#EEF4FD'
-        // Diğer renkler...
+        
       },
       screens: {
         'xs': {'max': '450px'},
