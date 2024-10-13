@@ -1,3 +1,5 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import OptionalCards from "./_components/OptionalCards";
 import PatientPopUp from "./_components/PatientPopUp";
@@ -6,6 +8,8 @@ import Testimonials from "./_components/Testimonials";
 import TreatmentCounter from "./_components/TreatmentCounter";
 import Link from "next/link";
 import SearchComponent from "./_components/SearchComponent";
+import { clinics } from "./_mocks_/ClinicCarouselData";
+import { blogPostsData } from "./_mocks_/BlogMocks";
 
 const ClinicGallery = dynamic(() => import("./_components/ClinicGallery"), {
   ssr: false,
@@ -28,8 +32,17 @@ export default function Home() {
       </div>
       <TreatmentCounter />
       <ClinicGallery />
-      <OptionalCards />
+      <OptionalCards
+        data={clinics}
+        text="Explore other options"
+        type="clinic"
+      />
       <Testimonials />
+      <OptionalCards
+        data={blogPostsData}
+        text="What our clinics say"
+        type="blogPost"
+      />
       <ScheduleCall />
     </main>
   );
