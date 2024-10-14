@@ -7,7 +7,6 @@
   --color-secondary: #2a9d8f;
   --color-accent: #ade8f4;
   --color-neutral: #eef4fd;
-  --color-neutralDark: #012757;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,10 +15,6 @@
     --color-secondary: #2a9d8f;
     --color-accent: #ade8f4;
     --color-neutral: #eef4fd;
-    --color-neutralDark: #012757;
-    --color-blue: #0167f9;
-    --color-brightNavy: #0275b4;
-    --color-navy: #013bb3;
   }
 }
 

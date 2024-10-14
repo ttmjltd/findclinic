@@ -21,6 +21,9 @@ const config: Config = {
         neutralDark: "#012757",
         bgWhite: "#EEF4FD",
         brightNavy: "#0275b4",
+        blue: "#0167f9",
+        navy: "#013bb3",
+
         // Diğer renkler...
       },
       screens: {
