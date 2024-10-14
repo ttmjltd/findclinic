@@ -10,6 +10,7 @@ const config: Config = {
     fontFamily: {
       epilogue: ["Epilogue"],
       inter: ["Inter", "sans-serif"],
+      'epilogue': ['Epilogue'],
     },
     extend: {
       backgroundImage: {},
@@ -22,6 +23,12 @@ const config: Config = {
         bgWhite: "#EEF4FD",
         brightNavy: "#0275b4",
         // Diğer renkler...
+        primary: '#0077B6',
+        secondary: '#2A9D8F',
+        accent: '#ADE8F4',
+        neutral: '#EEF4FD',
+        neutralDark: '#012757',
+        bgWhite: '#EEF4FD'
       },
       screens: {
         xs: { max: "450px" },

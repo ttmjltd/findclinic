@@ -79,7 +79,7 @@ const HamburgerMenu: React.FC = () => {
           menuOpen ? "fixed" : "hidden"
         }`}
       >
-        <div className="flex w-[60%] mt-8 mb-5 items-center justify-between">
+        <div className="flex w-[90%] mt-8 mb-5 items-center justify-between">
           <Image
             src="/small-logo.png"
             alt="company logo"
