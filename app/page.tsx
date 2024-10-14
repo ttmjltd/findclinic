@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <main>
       <PatientPopUp />
-      <h1 className=" text-3xl md:text-4xl text-secondary font-bold text-center mt-20 mx-1 ">
+      <h1 className=" text-2xl md:text-4xl text-secondary font-bold text-center mt-20 mx-1 ">
         Welcome to the easiest clinic search platform
       </h1>
-      <h1 className="text-xl text-secondary md:font-bold text-center mt-10 md:mt-2">
+      <h1 className="text-xl text-secondary md:font-bold text-center mt-8 md:mt-2">
         Let&apos;s find the best clinic for you!
       </h1>
       <SearchComponent />
