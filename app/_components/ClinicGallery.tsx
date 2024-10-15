@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { data } from "../_mocks_/ClinicCarouselData";
+import { featuredClinics } from "../_mocks_/ClinicCarouselData";
 import { ClinicDataTypes } from "../types";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ const ClinicGallery: React.FC = () => {
         Featured Clinics
       </h1>
       <div className="flex flex-wrap justify-center sm:justify-start">
-        {data.map((item: ClinicDataTypes) => (
+        {featuredClinics.map((item: ClinicDataTypes) => (
           <div
             key={item.id}
             className="w-full sm:w-1/3 flex-grow-0 sm:flex-grow pl-4 mb-4 sm:mb-0"

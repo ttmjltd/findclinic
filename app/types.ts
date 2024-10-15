@@ -1,9 +1,21 @@
 export interface ClinicDataTypes {
   id: number;
-  type: string;
+  type?: string;
   image: string;
   alt: string;
   title: string;
+  rating?: number;
+  reviews?: number;
+}
+
+export interface BlogPostDataTypes {
+  id: number;
+  title: string;
+  image: string;
+  alt: string;
+  date: string;
+  rating?: number;
+  reviews?: number;
 }
 
 export interface ButtonProps {
@@ -143,10 +155,10 @@ export interface DashboardLocationProps {
 }
 
 export interface DescriptionType {
-  description: { children: { text: string | { children?: { text: string }[] } }[] }[];
+  description: {
+    children: { text: string | { children?: { text: string }[] } }[];
+  }[];
 }
-
-
 
 export interface AccordionItemProps {
   title: string;
