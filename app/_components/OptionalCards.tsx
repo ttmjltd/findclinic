@@ -41,7 +41,7 @@ const OptionalCards: React.FC<OptionalCardsProps> = ({ data, text, type }) => {
                       />
                     </div>
                     <div className="pl-3 py-4 space-y-2 flex justify-between items-center">
-                      <h3 className="mt-0.5 text-start text-base font-medium text-primary">
+                      <h3 className="mt-0.5 text-start text-lg font-medium text-neutralDark">
                         {item.title}
                       </h3>
                       <div className="inline-flex space-x-2 pr-2">
@@ -51,14 +51,12 @@ const OptionalCards: React.FC<OptionalCardsProps> = ({ data, text, type }) => {
                     </div>
                     {"rating" in item && (
                       <div className="flex items-center pl-3 mb-3 lg:mt-1">
-                        <span className="text-2xl">
+                        <span>
                           <StarFC color="#2A9D8F" />
                         </span>
-                        <span className="mr-2 text-primary text-sm px-1">
+                        <span className="mr-2 text-neutralDark px-1">
                           {item.rating}{" "}
-                          <span className="ml-1 md:text-sm">
-                            ({item.reviews} Reviews)
-                          </span>
+                          <span className="ml-1">({item.reviews} Reviews)</span>
                         </span>
                       </div>
                     )}
