@@ -17,7 +17,7 @@ const OptionalCards: React.FC<OptionalCardsProps> = ({ data, text, type }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container lg:max-w-4xl 2xl:max-w-7xl mx-auto py-8">
       <h2 className="text-2xl text-center text-secondary font-bold mb-4">
         {text}
       </h2>
