@@ -1,3 +1,5 @@
+import { only } from "node:test";
+
 export interface ClinicAttributes {
   ClinicName: string;
   ClinicCountry: string;
@@ -10,8 +12,19 @@ export interface ClinicAttributes {
   publishedAt: string;
   VideoEmbed: string | null;
   MapEmbedCode: string | null;
-  ClinicImages: object;
-  ClinicMainImage: object;
+  ClinicImages: ImageData[];
+  ClinicMainImage: ImageData;
+}
+
+export interface ImageData {
+  data: {
+    id: number;
+    attributes: {
+      url: string;
+      alternativeText?: string;
+      caption?: string;
+    };
+  };
 }
 
 export interface Clinic {
