@@ -1,33 +1,16 @@
-"use client";
-
 import Image from "next/image";
-import { data } from "../_mocks_/ClinicCarouselData";
-import { Clinic } from "../apiTypes";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { getClinics } from "../_utils/GlobalApi";
+import { Clinic } from "../apiTypes";
 
-const ClinicGallery: React.FC = () => {
-  const [clinics, setClinics] = useState<Clinic[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const fetchClinicsData = async () => {
-      try {
-        const fetchedClinics = await getClinics();
-        setClinics(fetchedClinics);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching clinic data:", error);
-        setLoading(false);
-      }
-    };
 
-    fetchClinicsData();
-  }, []);
 
-  if (loading) {
-    return <p>Loading clinics...</p>;
+const ClinicGallery: React.FC = async() => {
+  const clinics: Clinic[] = await getClinics();
+
+  if (!clinics || clinics.length === 0) {
+    return <p>No clinics available at the moment.</p>;
   }
 
   return (
@@ -36,37 +19,47 @@ const ClinicGallery: React.FC = () => {
         Featured Clinics
       </h1>
       <div className="flex flex-wrap justify-center sm:justify-start">
-        {clinics.map((clinic: Clinic) => (
-          <div
-            key={clinic.id}
-            className="w-full sm:w-1/3 flex-grow-0 sm:flex-grow pl-4 mb-4 sm:mb-0"
-          >
-            <Link
-              href={`/clinic-details/${clinic.attributes.ClinicName.split(" ")
-                .map(
-                  (word) =>
-                    word.charAt(0).toLowerCase() + word.slice(1).toLowerCase()
-                )
-                .join("-")}`}
+        {clinics?.map((clinic) => {
+          // Safeguard against missing data
+          const clinicImage = clinic?.attributes?.ClinicMainImage?.data?.attributes;
+          const clinicName = clinic?.attributes?.ClinicName;
+
+          return (
+            <div
+              key={clinic.id}
+              className="w-full sm:w-1/3 flex-grow-0 sm:flex-grow pl-4 mb-4 sm:mb-0"
             >
-              <div className="relative w-2/3 h-[280px] sm:w-full sm:h-[388px] mx-auto">
-                <Image
-                  src={clinic.attributes.ClinicMainImage.data.attributes.url}
-                  alt={
-                    clinic.attributes.ClinicMainImage.data.attributes
-                      .alternativeText || clinic.attributes.ClinicName
-                  }
-                  width={320}
-                  height={388}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <div className="absolute bottom-0 w-full bg-white bg-opacity-50 text-primary p-4 text-center rounded-b-lg text-base xs:text-[10px]">
-                  {clinic.attributes.ClinicName}
+              <Link
+                href={`/clinic-details/${clinicName
+                  .split(" ")
+                  .map(
+                    (word) =>
+                      word.charAt(0).toLowerCase() + word.slice(1).toLowerCase()
+                  )
+                  .join("-")}`}
+              >
+                <div className="relative w-2/3 h-[280px] sm:w-full sm:h-[388px] mx-auto">
+                  {clinicImage ? (
+                    <Image
+                      src={clinicImage.url}
+                      alt={clinicImage.alternativeText || clinicName}
+                      width={320}
+                      height={388}
+                      className="rounded-lg object-cover w-full h-full"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
+                      <span>No Image Available</span>
+                    </div>
+                  )}
+                  <div className="absolute bottom-0 w-full bg-white bg-opacity-50 text-primary p-4 text-center rounded-b-lg text-base xs:text-[10px]">
+                    {clinicName}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
