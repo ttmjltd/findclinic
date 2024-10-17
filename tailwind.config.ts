@@ -8,25 +8,27 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      'epilogue': ['Epilogue'],
+      epilogue: ["Epilogue"],
+      inter: ["Inter", "sans-serif"],
     },
     extend: {
-      backgroundImage: {
-        
-      },
+      backgroundImage: {},
       colors: {
-        primary: '#0077B6',
-        secondary: '#2A9D8F',
-        accent: '#ADE8F4',
-        neutral: '#EEF4FD',
-        neutralDark: '#012757',
-        bgWhite: '#EEF4FD'
-        
+        primary: "#012757",
+        secondary: "#2A9D8F",
+        accent: "#2A9D8F",
+        neutral: "#EEF4FD",
+        neutralDark: "#012757",
+        bgWhite: "#EEF4FD",
+        brightNavy: "#0275b4",
+        blue: "#0167f9",
+        navy: "#013bb3",
+
+        // Diğer renkler...
       },
       screens: {
-        'xs': {'max': '450px'},
+        xs: { max: "450px" },
       },
-
     },
   },
   plugins: [],

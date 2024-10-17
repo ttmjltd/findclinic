@@ -5,6 +5,7 @@ const Input: React.FC<InputProps> = ({
   label,
   value,
   onChange,
+  placeholder,
   className,
   type = "text",
   pattern,
@@ -21,9 +22,10 @@ const Input: React.FC<InputProps> = ({
         type={type}
         value={value}
         onChange={onChange}
-        className="w-full rounded p-3 h-12 bg-[#EEF4FD] text-secondary outline-none"
+        className="w-full rounded p-3 h-10 bg-[#EEF4FD] text-secondary outline-none placeholder-brightNavy"
         pattern={pattern}
         inputMode={inputMode}
+        placeholder={placeholder}
       />
     </div>
   );

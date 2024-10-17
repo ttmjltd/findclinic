@@ -3,52 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0077B6;
-  --color-secondary: #2A9D8F;
-  --color-accent: #ADE8F4;
-  --color-neutral: #EEF4FD;
-  --color-neutralDark: #012757;
+  --color-primary: #0077b6;
+  --color-secondary: #2a9d8f;
+  --color-accent: #ade8f4;
+  --color-neutral: #eef4fd;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #0077B6;
-    --color-secondary: #2A9D8F;
-    --color-accent: #ADE8F4;
-    --color-neutral: #EEF4FD;
-    --color-neutralDark: #012757;
-    --color-blue: #0167F9;
-    --color-brightNavy: #0275B4;
-    --color-navy: #013BB3;
-
-    
+    --color-primary: #0077b6;
+    --color-secondary: #2a9d8f;
+    --color-accent: #ade8f4;
+    --color-neutral: #eef4fd;
   }
 }
 
-html, body {
+html,
+body {
   height: 100%; /* Sayfanın tamamını kapsaması için */
   margin: 0; /* Varsayılan marginleri kaldırmak için */
 }
 
 body {
   background: linear-gradient(
-    to bottom right, /* Sol üstten sağ alta doğru */
-    var(--color-accent), /* Başlangıç rengi */
-    var(--color-neutral) 45% /* Bitiş rengi */
+    to bottom right,
+    /* Sol üstten sağ alta doğru */ var(--color-accent),
+    /* Başlangıç rengi */ var(--color-neutral) 45% /* Bitiş rengi */
   );
-  
+
   background-repeat: no-repeat; /* Arka planın tekrarlanmasını önler */
   background-attachment: fixed; /* Arka planı sabitler, kaydırmayı önler */
   background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
 }
 
 .hide-scroll-bar {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hide-scroll-bar::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 
 @layer utilities {
