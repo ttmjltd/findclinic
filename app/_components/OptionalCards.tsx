@@ -45,8 +45,8 @@ const OptionalCards: React.FC<OptionalCardsProps> = ({ data, text, type }) => {
                         {item.title}
                       </h3>
                       <div className="inline-flex space-x-2 pr-2">
-                        {type === "clinic" && <CompareButtonFC />}
-                        <LikeButtonFC />
+                        {/* {type === "clinic" && <CompareButtonFC />} TODO: Implementation is postponed */}
+                        {/* <LikeButtonFC /> TODO: When patients have accounts can be implemented */}
                       </div>
                     </div>
                     {"rating" in item && (
