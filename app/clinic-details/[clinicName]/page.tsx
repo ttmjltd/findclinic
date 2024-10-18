@@ -26,13 +26,13 @@ const Page = async ({ params }: { params: { clinicName: string } }) => {
   const services = data[0].attributes.Services;
 
   return (
-    <div className="mx-8 md:mx-36  max-w-full">
+    <div className="mx-8 md:mx-36 max-w-full">
       <div className="max-w-full md:max-w-2xl ">
         <BreadCrum clinicName={clinicName} />
         <ClinicCard clinicName={clinicName} />
         <ClinicDescription description={descriptionTransformed} />
 
-        <div className=" mt-4 md:mt-8 flex justify-center lg:justify-start">
+        <div className="mt-4 md:mt-8 flex justify-center lg:justify-start lg:ml-3">
           <Button label="Schedule a call now!" variation="broad-dark" />
         </div>
         <ClinicServices services={services} />

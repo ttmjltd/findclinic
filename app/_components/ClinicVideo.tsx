@@ -29,7 +29,7 @@ const ClinicVideo: React.FC<ClinicVideoProps> = ({ videoData }) => {
   return (
     <div className="mt-6 md:mt-12 w-full">
       <div className="w-full max-w-[672px]">
-        <h3 className="text-secondary font-bold text-lg md:text-xl">
+        <h3 className="text-secondary font-bold text-lg md:text-xl mb-3">
           {parsedData.title}
         </h3>
         <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>

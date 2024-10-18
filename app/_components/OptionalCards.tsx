@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useRef } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { CompareButtonFC, LikeButtonFC, StarFC } from "../_atoms/Icons";
 import { BlogPostDataTypes, ClinicDataTypes } from "../types";
 
