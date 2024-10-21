@@ -32,7 +32,7 @@ const SearchClinicCard: React.FC = () => {
                 {clinic.name}
               </h1>
               <div className="flex mb-10 sm:flex-row items-center">
-                <span className="bg-sky-600 text-white text-center text-xxs px-1 py-2">
+                <span className="bg-primary text-white text-center text-xxs px-1 py-1 rounded-sm">
                   {clinic.rating}
                 </span>
                 <span className="flex items-center m-2">
