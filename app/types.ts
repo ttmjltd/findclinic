@@ -126,7 +126,7 @@ export interface ClinicService {
 
 export interface ClinicProps {
   name: string;
-  rating: number;
+  rating: string;
   reviews: number;
   location: string;
   treatments: string[];
