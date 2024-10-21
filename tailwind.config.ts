@@ -29,6 +29,9 @@ const config: Config = {
       screens: {
         xs: { max: "450px" },
       },
+      fontSize: {
+        xxs: ["10.79px", "11.06px"],
+      },
     },
   },
   plugins: [],
