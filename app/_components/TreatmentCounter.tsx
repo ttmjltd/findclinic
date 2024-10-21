@@ -18,10 +18,10 @@ const TreatmentsCounter: React.FC = () => {
           </span>
 
           <div className="">
-            <p className="text-primary font-extrabold text-sm md:text-lg">
+            <p className="text-neutralDark  font-extrabold text-sm md:text-lg">
               3490
             </p>
-            <p className="w-16 md:text-base text-primary font-medium text-xs">
+            <p className="w-16 md:text-base text-neutralDark  font-medium text-xs">
               Registered Patients
             </p>
           </div>
@@ -40,10 +40,10 @@ const TreatmentsCounter: React.FC = () => {
           </span>
 
           <div className="">
-            <p className="text-primary font-extrabold text-sm md:text-lg">
+            <p className="text-neutralDark  font-extrabold text-sm md:text-lg">
               250
             </p>
-            <p className="w-16 md:text-base text-primary font-medium text-xs">
+            <p className="w-16 md:text-base text-neutralDark  font-medium text-xs">
               Verified Clinics
             </p>
           </div>
@@ -62,8 +62,10 @@ const TreatmentsCounter: React.FC = () => {
           </span>
 
           <div className="">
-            <p className="text-primary font-extrabold text-sm md:text-lg">80</p>
-            <p className="w-16 md:text-base text-primary font-medium text-xs">
+            <p className="text-neutralDark  font-extrabold text-sm md:text-lg">
+              80
+            </p>
+            <p className="w-16 md:text-base text-neutralDark  font-medium text-xs">
               Specialist Doctors
             </p>
           </div>
