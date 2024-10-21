@@ -8,6 +8,7 @@ import DashboardTreatments from "../_components/DashboardTreatments";
 import DashboardPrices from "../_components/DashboardPrices";
 import DashboardLocation from "../_components/DashboardLocation";
 import AccordionItem from "../_components/AccordionItem";
+import DoctorsCard from "../_components/DoctorsCard";
 
 const DashboardPage = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -53,17 +54,25 @@ const DashboardPage = () => {
       </AccordionItem>
 
       <AccordionItem
-        title="Prices"
+        title="Doctors"
         isOpen={openIndex === 3}
         onToggle={() => handleAccordionToggle(3)}
+      >
+        <DoctorsCard />
+      </AccordionItem>
+
+      <AccordionItem
+        title="Prices"
+        isOpen={openIndex === 4}
+        onToggle={() => handleAccordionToggle(4)}
       >
         <DashboardPrices />
       </AccordionItem>
 
       <AccordionItem
         title="Location"
-        isOpen={openIndex === 4}
-        onToggle={() => handleAccordionToggle(4)}
+        isOpen={openIndex === 5}
+        onToggle={() => handleAccordionToggle(5)}
       >
         <DashboardLocation />
       </AccordionItem>
