@@ -1,5 +1,3 @@
-"use client";
-
 import dynamic from "next/dynamic";
 import OptionalCards from "./_components/OptionalCards";
 import PatientPopUp from "./_components/PatientPopUp";
