@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React, { useRef } from "react";
 import { CompareButtonFC, LikeButtonFC, StarFC } from "../_atoms/Icons";
