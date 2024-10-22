@@ -2,6 +2,7 @@ import { Clinic } from "../apiTypes";
 
 const API_KEY: string | undefined = process.env.NEXT_PUBLIC_STRAPI_API_KEY;
 const BASE_URL: string = "https://panel.findclinics.co.uk/api";
+export const IMAGE_URL: string = "https://panel.findclinics.co.uk";
 
 const fetchData = async (
   endpoint: string,

@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getClinics } from "../_utils/GlobalApi";
+import { getClinics, IMAGE_URL } from "../_utils/GlobalApi";
 import { Clinic } from "../apiTypes";
 
-
-
-
-const ClinicGallery: React.FC = async() => {
+const ClinicGallery = async () => {
   const clinics: Clinic[] = await getClinics();
 
   if (!clinics || clinics.length === 0) {
@@ -21,7 +18,8 @@ const ClinicGallery: React.FC = async() => {
       <div className="flex flex-wrap justify-center sm:justify-start">
         {clinics?.map((clinic) => {
           // Safeguard against missing data
-          const clinicImage = clinic?.attributes?.ClinicMainImage?.data?.attributes;
+          const clinicImage =
+            clinic?.attributes?.ClinicMainImage?.data?.attributes;
           const clinicName = clinic?.attributes?.ClinicName;
 
           return (
@@ -39,19 +37,18 @@ const ClinicGallery: React.FC = async() => {
                   .join("-")}`}
               >
                 <div className="relative w-2/3 h-[280px] sm:w-full sm:h-[388px] mx-auto">
-                  {clinicImage ? (
-                    <Image
-                      src={clinicImage.url}
-                      alt={clinicImage.alternativeText || clinicName}
-                      width={320}
-                      height={388}
-                      className="rounded-lg object-cover w-full h-full"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
-                      <span>No Image Available</span>
-                    </div>
-                  )}
+                  <Image
+                    src={
+                      clinicImage
+                        ? IMAGE_URL + clinicImage.url
+                        : "/culture.webp"
+                    }
+                    alt={clinicImage?.alternativeText || clinicName}
+                    width={320}
+                    height={388}
+                    className="rounded-lg object-cover w-full h-full"
+                  />
+
                   <div className="absolute bottom-0 w-full bg-white bg-opacity-50 text-primary p-4 text-center rounded-b-lg text-base xs:text-[10px]">
                     {clinicName}
                   </div>
