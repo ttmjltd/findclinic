@@ -11,11 +11,11 @@ const ClinicServices = ({services} : {services: string[]}) => {
 
   return (
     <div className="mt-12">
-      <h3 className="text-secondary font-bold">Services</h3>
+      <h3 className="text-secondary text-xl font-bold">Services</h3>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 mt-4 gap-2 ">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-4 gap-4 ">
         {services.map((service, index:number) => (
-          <span key={index} className="flex text-xs mr-4 items-center">
+          <span key={index} className="flex text-primary bg-white rounded-lg text-sm mr-4 px-1 items-center justify-center">
             <span className="mr-2">
               
               <Image

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { BreadCrumTypes } from "../types";
-import { StarFC } from "../_atoms/Icons";
+import { MapPinFC, StarFC } from "../_atoms/Icons";
 import { getClinicsByName } from "../_utils/GlobalApi";
 import { Clinic } from "../apiTypes";
 
@@ -9,23 +9,23 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
   const data: Clinic[] = await getClinicsByName(clinicName);
 
   return (
-    <div className="flex flex-col md:flex-row mt-4 md:mt-10 w-full md:w-fit">
-      <div className="rounded-xl overflow-hidden">
+    <div className="flex flex-col md:flex-row mt-4 md:mt-10 w-full lg:ml-3">
+      <div className="flex-none w-full md:w-5/12 rounded-xl overflow-hidden h-full">
         <Image
           src={"/mayo-clinic.jpeg"}
           alt="mayo-clinic"
-          width={283}
+          width={285}
           height={171}
           className="w-full md:w-[283px] h-[171px] object-cover object-[50%_25%] rounded-xl "
         />
       </div>
-      <div className="grid my-2 md:m-2">
+      <div className="flex-grow my-2 md:m-2 h-full pl-2">
         <div className="w-full mb-2 xs:mt-2 lg:mt-0">
           <span className="text-secondary xs:text-3xl text-lg md:text-2xl font-bold">
             {data[0]?.attributes?.ClinicName}
           </span>
-          <div className="flex items-center my-3 lg:mt-1">
-            <span className="mr-2 bg-neutralDark text-white text-xs p-1 rounded-md">
+          <div className="flex items-center my-3 lg:mt-1 pt-2">
+            <span className="mr-2 bg-primary text-white text-xs p-1 rounded-md">
               5.0
             </span>
             {[5, 5, 5, 5, 5].map((_, index) => (
@@ -36,16 +36,20 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
             <span className="ml-5 text-xs md:text-sm text-neutralDark">
               49 Reviews
             </span>
-            <span className="ml-5 text-xs md:text-sm  text-neutralDark">
+            <span className="ml-5 text-xs md:text-sm  text-primary">
+              <span className="inline-block transform scale-75 mr-3 w-2 h-4">
+                <MapPinFC />
+              </span>
               Location
             </span>
           </div>
         </div>
-        <div className="grid xs:grid-cols-3 gap-2">
+        <div className="flex flex-wrap gap-2.5 my-2 lg:pt-3">
           {data[0].attributes.Services.map((service: string, index: number) => (
             <span
               key={index}
-              className="text-xs md:text-sm text-white bg-neutralDark rounded-xl py-2 md:px-2 text-center xs:mt-2 lg:mt-0"
+              className="text-[11px] text-white bg-primary rounded-lg px-2 py-1 flex items-center justify-center whitespace-nowrap"
+              style={{ minWidth: "100px" }} // Set a minimum width to prevent overlap
             >
               {service}
             </span>
