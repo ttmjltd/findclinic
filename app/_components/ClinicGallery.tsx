@@ -33,7 +33,7 @@ const ClinicGallery: React.FC = () => {
                   height={388}
                   className="rounded-lg object-cover w-full h-full"
                 />
-                <div className="absolute bottom-0 w-full bg-white bg-opacity-50 text-primary p-4 text-center rounded-b-lg text-base xs:text-[10px]">
+                <div className="absolute bottom-0 w-full bg-white bg-opacity-50 text-neutralDark p-4 text-center rounded-b-lg text-base xs:text-[10px]">
                   {item.title}
                 </div>
               </div>

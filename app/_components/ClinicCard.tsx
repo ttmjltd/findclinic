@@ -25,15 +25,15 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
             {data[0]?.attributes?.ClinicName}
           </span>
           <div className="flex items-center my-3 lg:mt-1 pt-2">
-            <span className="mr-2 bg-[#0077B6] text-white text-xs p-1 rounded-md">
+            <span className="mr-2 bg-primary text-white text-xs p-1 rounded-md">
               5.0
             </span>
             {[5, 5, 5, 5, 5].map((_, index) => (
-              <span key={index} className="text-primary text-xs">
+              <span key={index} className=" text-neutralDark text-xs">
                 <StarFC color="#0077B6" />
               </span>
             ))}
-            <span className="ml-5 text-xs md:text-sm text-primary">
+            <span className="ml-5 text-xs md:text-sm text-neutralDark">
               49 Reviews
             </span>
             <span className="ml-5 text-xs md:text-sm  text-primary">
@@ -48,7 +48,7 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
           {data[0].attributes.Services.map((service: string, index: number) => (
             <span
               key={index}
-              className="text-[11px] text-white bg-[#0077B6] rounded-lg px-2 py-1 flex items-center justify-center whitespace-nowrap"
+              className="text-[11px] text-white bg-primary rounded-lg px-2 py-1 flex items-center justify-center whitespace-nowrap"
               style={{ minWidth: "100px" }} // Set a minimum width to prevent overlap
             >
               {service}

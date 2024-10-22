@@ -23,7 +23,7 @@ const PatientPopUp: React.FC = () => {
   return (
     <dialog
       ref={dialogRef}
-      className="rounded-xl backdrop:bg-primary backdrop:opacity-30"
+      className="rounded-xl backdrop:bg-neutralDark backdrop:opacity-30"
     >
       <div className="flex justify-end px-3 pt-3">
         <button
@@ -40,7 +40,7 @@ const PatientPopUp: React.FC = () => {
         <h2 className=" text-secondary text-2xl font-bold pb-2">
           Schedule a Call Today!
         </h2>
-        <p className="text-primary w-[437px] px-7">
+        <p className="text-neutralDark  w-[437px] px-7">
           Fill out the form and your personal health advisor will reach you!
         </p>
       </div>
