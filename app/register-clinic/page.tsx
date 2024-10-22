@@ -251,7 +251,7 @@ const RegisterClinicPage = () => {
               onChange={(e) => handleInputChange(e, "country")}
               className="mb-2"
             />
-            <div className="flex items-center gap-4 mb-2 mt-2 text-[14px] text-primary">
+            <div className="flex items-center gap-4 mb-2 mt-2 text-[14px] text-neutralDark ">
               <label className="flex items-center cursor-pointer gap-2">
                 <Checkbox
                   className="gap-2 items-center"
@@ -263,7 +263,7 @@ const RegisterClinicPage = () => {
               </label>
             </div>
             <div className="flex items-center gap-4 mb-2">
-              <label className="flex items-center cursor-pointer gap-2 text-[14px] text-primary">
+              <label className="flex items-center cursor-pointer gap-2 text-[14px] text-neutralDark ">
                 <Checkbox
                   className="gap-2 items-center"
                   checked={form.subscribe}
@@ -274,7 +274,7 @@ const RegisterClinicPage = () => {
               </label>
             </div>
             <button
-              className="w-[95%] mx-auto mt-4 px-4 py-2 font-medium bg-accent text-white text-lg rounded-xl focus:outline-none focus:shadow-outline bg-gradient-to-b  hover:from-accent hover:to-secondary transition-colors"
+              className="w-[95%] mx-auto mt-4 px-4 py-2 font-medium bg-secondary text-white text-lg rounded-xl focus:outline-none focus:shadow-outline bg-gradient-to-b  hover:from-accent hover:to-secondary transition-colors"
               type="button"
             >
               Register
@@ -292,7 +292,7 @@ const RegisterClinicPage = () => {
         </div>
 
         {/* Middle Divider (Only visible on Desktop) */}
-        <div className="hidden md:block w-[1.5px] bg-primary h-auto"></div>
+        <div className="hidden md:block w-[1.5px] bg-neutralDark h-auto"></div>
 
         {/* Right Column - Sign In */}
         <div
@@ -349,7 +349,7 @@ const RegisterClinicPage = () => {
               className="mb-4"
             />
             <button
-              className="w-full px-4 py-2 mb-2 font-semibold bg-accent text-white text-lg rounded-xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-accent hover:to-secondary transition-colors"
+              className="w-full px-4 py-2 mb-2 font-semibold bg-secondary text-white text-lg rounded-xl focus:outline-none focus:shadow-outline bg-gradient-to-b hover:from-accent hover:to-secondary transition-colors"
               type="button"
             >
               Sign in
