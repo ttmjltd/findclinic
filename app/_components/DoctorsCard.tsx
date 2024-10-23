@@ -26,7 +26,7 @@ const DoctorsCard: React.FC = () => {
                 <h2 className="font-semibold text-lg">{item.fullName}</h2>
                 <p className="text-gray-500">{item.treatment}</p>
                 <div className="flex items-center justify-start mt-2">
-                  <span className="text-accent mr-2 text-2xl">★</span>
+                  <span className="text-secondary mr-2 text-2xl">★</span>
                   <p className="text-sm font-medium">
                     {item.rating} ({item.reviews} reviews)
                   </p>
