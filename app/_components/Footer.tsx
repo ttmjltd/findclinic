@@ -46,7 +46,7 @@ const footerLinks: { [key: string]: FooterLink } = {
 };
 const Footer: React.FC = () => {
   return (
-    <section className="md:container w-full mx-auto bg-white text-primary leading-4 border sm:rounded-xl backdrop-blur-xl backdrop-saturate-200 mt-10 py-4 flex flex-col md:flex-row justify-between items-start md:w-2/3 md:h-2/6">
+    <section className="md:container w-full mx-auto bg-white text-neutralDark  leading-4 border sm:rounded-xl backdrop-blur-xl backdrop-saturate-200 mt-10 py-4 flex flex-col md:flex-row justify-between items-start md:w-2/3 md:h-2/6">
       <div className="flex flex-col md:flex-row items-start w-full md:w-full md:justify-between">
         <div className="flex md:flex-col md:items-start md:ml-6 mt-6 items-center md:w-1/4 w-5/6 mx-auto">
           <Image
@@ -65,13 +65,13 @@ const Footer: React.FC = () => {
             className="hidden md:block w-full h-auto"
           />
           <div className="md:mt-10 md:ml-0 ml-auto">
-            <p className="text-primary mb-4">info@healthway.co.uk</p>
-            <p className="text-primary">+447564123765</p>
+            <p className="text-neutralDark  mb-4">info@healthway.co.uk</p>
+            <p className="text-neutralDark ">+447564123765</p>
           </div>
         </div>
 
         <div className="flex items-start ml-6 w-full">
-          <div className="hidden md:block w-px h-36 border border-[#2A9D8F] m-4 my-6 mr-6"></div>
+          <div className="hidden md:block w-px h-36 border border-secondary m-4 my-6 mr-6"></div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 my-10 gap-2 w-full">
             {Object.entries(footerLinks).map(([key, link]) => (
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
                 <li>
                   <a
                     href={link.href}
-                    className="text-primary font-normal text-base hover:underline"
+                    className="text-neutralDark  font-normal text-base hover:underline"
                   >
                     {link.label}
                   </a>
@@ -97,21 +97,21 @@ const Footer: React.FC = () => {
           alt="facebook icon"
           width={24}
           height={24}
-          className="bg-[#2A9D8F] rounded-md p-0.5"
+          className="bg-secondary rounded-md p-0.5"
         />
         <Image
           src="/instagram.png"
           alt="instagram icon"
           width={24}
           height={24}
-          className="bg-[#2A9D8F] rounded-md p-1"
+          className="bg-secondary rounded-md p-1"
         />
         <Image
           src="/Youtube.png"
           alt="youtube icon"
           width={24}
           height={24}
-          className="bg-[#2A9D8F] rounded-md p-1"
+          className="bg-secondary rounded-md p-1"
         />
       </div>
     </section>

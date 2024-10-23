@@ -25,18 +25,18 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
             {data[0]?.attributes?.ClinicName}
           </span>
           <div className="flex items-center my-3 lg:mt-1">
-            <span className="mr-2 bg-primary text-white text-xs p-1 rounded-md">
+            <span className="mr-2 bg-neutralDark text-white text-xs p-1 rounded-md">
               5.0
             </span>
             {[5, 5, 5, 5, 5].map((_, index) => (
-              <span key={index} className="text-primary text-xs">
+              <span key={index} className=" text-neutralDark text-xs">
                 <StarFC color="#0077B6" />
               </span>
             ))}
-            <span className="ml-5 text-xs md:text-sm text-primary">
+            <span className="ml-5 text-xs md:text-sm text-neutralDark">
               49 Reviews
             </span>
-            <span className="ml-5 text-xs md:text-sm  text-primary">
+            <span className="ml-5 text-xs md:text-sm  text-neutralDark">
               Location
             </span>
           </div>
@@ -45,7 +45,7 @@ const ClinicCard: React.FC<BreadCrumTypes> = async ({ clinicName }) => {
           {data[0].attributes.Services.map((service: string, index: number) => (
             <span
               key={index}
-              className="text-xs md:text-sm text-white bg-primary rounded-xl py-2 md:px-2 text-center xs:mt-2 lg:mt-0"
+              className="text-xs md:text-sm text-white bg-neutralDark rounded-xl py-2 md:px-2 text-center xs:mt-2 lg:mt-0"
             >
               {service}
             </span>
