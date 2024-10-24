@@ -8,6 +8,17 @@ export interface ClinicDataTypes {
   reviews?: number;
 }
 
+export interface DoctorDataTypes {
+  id: number;
+  type?: string;
+  image: string;
+  alt: string;
+  fullName: string;
+  treatment: string;
+  rating?: number;
+  reviews?: number;
+}
+
 export interface BlogPostDataTypes {
   id: number;
   title: string;
