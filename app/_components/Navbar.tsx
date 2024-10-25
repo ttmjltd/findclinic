@@ -7,6 +7,7 @@ const Navbar: React.FC = () => {
     <nav className="block w-auto max-w-screen-xxl my-6 py-3 mx-6 xl:mx-20 text-neutralDark  lg:bg-white lg:rounded-xl  lg:backdrop-blur-xl lg:backdrop-saturate-200">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-1 md:gap-20">
+          <Link href="/">
           <Image
             src="/Logo1findclinics.png"
             alt="company logo"
@@ -21,6 +22,7 @@ const Navbar: React.FC = () => {
             height={25}
             className="mr-8 block cursor-pointer lg:hidden"
           />
+          </Link>
 
           <div className="hidden md:flex items-center justify-center w-full h-full gap-8 text-base">
             <ul className="inline-flex gap-8">
@@ -38,12 +40,6 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li className="block p-2 antialiased leading-normal hover:rounded-l hover:bg-neutral hover:rounded-lg">
-                <Link
-                  href="/contactus"
-                  className="flex items-center hover:underline whitespace-nowrap"
-                >
-                  Contact Us
-                </Link>
               </li>
             </ul>
           </div>
