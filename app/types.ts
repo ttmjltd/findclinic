@@ -22,6 +22,7 @@ export interface ButtonProps {
   label: string | JSX.Element;
   icon?: JSX.Element;
   variation: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export interface DropdownProps {
@@ -31,6 +32,8 @@ export interface DropdownProps {
 export interface InputProps {
   value: any;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
   placeholder?: string;
   className?: string;

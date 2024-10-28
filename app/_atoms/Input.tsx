@@ -5,6 +5,8 @@ const Input: React.FC<InputProps> = ({
   label,
   value,
   onChange,
+  onFocus,
+  onBlur,
   placeholder,
   className,
   type = "text",
@@ -22,6 +24,8 @@ const Input: React.FC<InputProps> = ({
         type={type}
         value={value}
         onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
         className="w-full rounded p-3 h-10 bg-[#EEF4FD] text-secondary outline-none placeholder-brightNavy"
         pattern={pattern}
         inputMode={inputMode}

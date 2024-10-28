@@ -9,13 +9,11 @@ import ClinicVideo from "../../_components/ClinicVideo";
 import { getClinicsByName } from "@/app/_utils/GlobalApi";
 import { Clinic } from "@/app/apiTypes";
 
-
 const Page = async ({ params }: { params: { clinicName: string } }) => {
-  
   const clinicName = params.clinicName
-  .split("-")
-  .map((name: string) => name.charAt(0).toUpperCase() + name.slice(1))
-  .join(" ");
+    .split("-")
+    .map((name: string) => name.charAt(0).toUpperCase() + name.slice(1))
+    .join(" ");
   const data: Clinic[] = await getClinicsByName(clinicName);
   const mapLink = data[0].attributes.MapEmbedCode;
   const description = data[0].attributes.ClinicDefination;
