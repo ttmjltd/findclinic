@@ -1,50 +1,35 @@
-export interface ClinicDataTypes {
+interface BaseContentType {
   id: number;
-  type?: string;
+  title: string;
   image: string;
   alt: string;
-  title: string;
   rating?: number;
   reviews?: number;
 }
 
-export interface DoctorDataTypes {
-  id: number;
+export interface ClinicDataTypes extends BaseContentType {
   type?: string;
-  image: string;
-  alt: string;
+}
+
+export interface DoctorDataTypes extends BaseContentType {
   fullName: string;
   treatment: string;
-  rating?: number;
-  reviews?: number;
+  type?: string;
 }
 
-export interface BlogPostDataTypes {
-  id: number;
-  title: string;
-  image: string;
-  alt: string;
+export interface BlogPostDataTypes extends BaseContentType {
   date: string;
-  rating?: number;
-  reviews?: number;
 }
 
-export interface ButtonProps {
-  label: string | JSX.Element;
-  icon?: JSX.Element;
-  variation: string;
-}
-
-export interface DropdownProps {
-  placeholder: string;
-}
-
-export interface InputProps {
+interface BaseFormElementProps {
   value: any;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
-  placeholder?: string;
   className?: string;
+}
+
+export interface InputProps extends BaseFormElementProps {
+  placeholder?: string;
   type?: "text" | "email" | "password" | "tel";
   pattern?: string;
   inputMode?:
@@ -58,36 +43,35 @@ export interface InputProps {
     | "decimal";
 }
 
-export interface CheckboxProps {
-  value: any;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  label: string;
+export interface CheckboxProps extends BaseFormElementProps {
   checked: boolean;
-  className?: string;
 }
 
-export interface PatientFormState {
-  fullName: string;
-  email: string;
-  phone: string;
-  treatment: string;
+export interface ButtonProps {
+  label: string | JSX.Element;
+  icon?: JSX.Element;
+  variation: string;
 }
 
-export interface FacebookPictureData {
-  height: number;
-  is_silhouette: boolean;
-  url: string;
-  width: number;
+export interface SocialButtonProps {
+  platform: "Google" | "Facebook" | "X";
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  label?: string;
+  variation?: string;
 }
 
-export interface FacebookPicture {
-  data: FacebookPictureData;
-}
 
 export interface FacebookLoginResponse {
   name: string;
   email: string;
-  picture?: FacebookPicture | null;
+  picture?: {
+    data: {
+      height: number;
+      is_silhouette: boolean;
+      url: string;
+      width: number;
+    };
+  } | null;
   id: string;
   userID: string;
   expiresIn: number;
@@ -98,16 +82,23 @@ export interface FacebookLoginResponse {
   status?: string;
 }
 
+export interface DropdownProps {
+  placeholder: string;
+}
+
+export interface PatientFormState {
+  fullName: string;
+  email: string;
+  phone: string;
+  treatment: string;
+}
+
 export interface ClinicDetailsTypes {
   params: any;
 }
 
 export interface BreadCrumTypes {
   clinicName: string;
-}
-
-export interface ProfileInfoProps {
-  onSubmit: (values: ProfileInfoValues) => void;
 }
 
 export interface ProfileInfoValues {
@@ -117,6 +108,10 @@ export interface ProfileInfoValues {
   phoneCode: string;
   phoneNumber: string;
   address: string;
+}
+
+export interface ProfileInfoProps {
+  onSubmit: (values: ProfileInfoValues) => void;
 }
 
 export interface ClinicService {
@@ -146,10 +141,7 @@ export interface ToggleSwitchProps {
   checked: boolean;
   onChange: () => void;
 }
-export interface SocialButtonProps {
-  platform: "Google" | "Facebook" | "X";
-  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-}
+
 export interface Comment {
   title: string;
   text: string;
@@ -157,10 +149,12 @@ export interface Comment {
   image: string;
   reverse?: boolean;
 }
+
 export interface FooterLink {
   label: string;
   href: string;
 }
+
 export interface DashboardLocationProps {
   mapLink: string;
 }
@@ -177,6 +171,7 @@ export interface AccordionItemProps {
   isOpen: boolean;
   onToggle: () => void;
 }
+
 export interface Service {
   id: number;
   name: string;

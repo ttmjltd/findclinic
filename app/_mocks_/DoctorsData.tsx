@@ -10,6 +10,7 @@ export const doctorsData: DoctorDataTypes[] = [
     treatment: "Hair Transplant Surgeon",
     rating: 4.7,
     reviews: 120,
+    title: "Hair Transplant Surgeon",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const doctorsData: DoctorDataTypes[] = [
     treatment: "Dental Transplant Specialist",
     rating: 4.9,
     reviews: 200,
+    title: "Dental Transplant Specialist",
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const doctorsData: DoctorDataTypes[] = [
     treatment: "Plastic Surgeon",
     rating: 4.6,
     reviews: 80,
+    title: "Plastic Surgeon",
   },
   {
     id: 3,
@@ -40,5 +43,6 @@ export const doctorsData: DoctorDataTypes[] = [
     treatment: "Plastic Surgeon",
     rating: 4.6,
     reviews: 80,
+    title: "Plastic Surgeon",
   },
 ];
