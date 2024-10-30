@@ -14,6 +14,7 @@ export interface ClinicDataTypes extends BaseContentType {
 export interface DoctorDataTypes extends BaseContentType {
   fullName: string;
   treatment: string;
+  type?: string;
 }
 
 export interface BlogPostDataTypes extends BaseContentType {
@@ -52,10 +53,13 @@ export interface ButtonProps {
   variation: string;
 }
 
-export interface SocialButtonProps extends ButtonProps {
+export interface SocialButtonProps {
   platform: "Google" | "Facebook" | "X";
-  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  label?: string;
+  variation?: string;
 }
+
 
 export interface FacebookLoginResponse {
   name: string;
