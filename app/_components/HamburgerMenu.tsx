@@ -75,11 +75,11 @@ const HamburgerMenu: React.FC = () => {
       </button>
       <nav
         ref={menuRef}
-        className={`fixed right-0 top-0 bottom-0 w-[85%] bg-white rounded-xl sm:hidden h-screen p-6 ease-in duration-300 z-100 overflow-hidden ${
+        className={`fixed right-0 top-0 bottom-0 w-[85%] bg-white rounded-xl sm:hidden h-min-screen p-6 ease-in duration-300 z-100 overflow-hidden ${
           menuOpen ? "fixed" : "hidden"
         }`}
       >
-        <div className="flex w-[90%] mt-8 mb-5 items-center justify-between">
+        <div className="flex w-[90%] mt-5 mb-4 items-center justify-between">
           <Image
             src="/small-logo.png"
             alt="company logo"
@@ -91,7 +91,7 @@ const HamburgerMenu: React.FC = () => {
             <ExitCrossFC />
           </div>
         </div>
-        <div className="flex-col py-4 overflow-hidden">
+        <div className="flex-col py-3 overflow-hidden">
           <ul className="text-md gap-2">
             {linkGroups.map((group, index) => (
               <div key={index}>{renderLinks(group)}</div>
