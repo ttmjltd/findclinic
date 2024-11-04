@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import Button from "../_atoms/Button";
 import Input from "../_atoms/Input";
 import { SearchFC } from "../_atoms/Icons";
@@ -92,7 +92,10 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-row items-center md:items-stretch bg-white w-fit p-4 mx-5 md:mx-auto mt-10 border-neutral rounded-xl">
+    <form
+      onSubmit={handleSearch}
+      className="flex flex-row items-center md:items-stretch bg-white w-fit p-4 mx-5 md:mx-auto mt-10 border-neutral rounded-xl"
+    >
       <div className="mb-1 md:mb-0 ">
         <Input
           type="text"
@@ -144,7 +147,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
           className="mr-2 md:mr-4 w-[90px] md:w-fit"
         />
         {isLocationDropdownVisible && (
-          <div className="absolute z-10 bg-white border-neutral rounded-lg shadow-md max-h-48 owerflow-y-auto w-52">
+          <div className="absolute z-10 bg-white border-neutral rounded-lg shadow-md max-h-48 overflow-y-auto w-52">
             {filteredLocations.length > 0 ? (
               filteredLocations.map((location, id) => (
                 <div
@@ -168,9 +171,10 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
           icon={<SearchFC />}
           variation="narrow-light"
           onClick={handleSearch}
+          type="submit"
         />
       </div>
-    </div>
+    </form>
   );
 };
 

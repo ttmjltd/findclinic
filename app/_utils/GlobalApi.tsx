@@ -52,4 +52,19 @@ const getClinicsByName = async (clinicName: string): Promise<Clinic[]> => {
   return data.data;
 };
 
-export { getClinics, getAClinic, getClinicsByName };
+const searchedClinics = async (
+  treatment?: string,
+  location?: string
+): Promise<Clinic[]> => {
+  let query = `/clinics?populate=*`;
+  if (treatment) {
+    query += `&filters[Treatments][$containsi]=${treatment}`;
+  }
+  if (location) {
+    query += `&filters[ClinicCity][$eq]=${location}`;
+  }
+  const data = await fetchData(query);
+  return data.data;
+};
+
+export { getClinics, getAClinic, getClinicsByName, searchedClinics };

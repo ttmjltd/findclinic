@@ -23,6 +23,7 @@ export interface ButtonProps {
   icon?: JSX.Element;
   variation: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  type: "button" | "submit" | "reset";
 }
 
 export interface DropdownProps {

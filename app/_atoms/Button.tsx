@@ -1,6 +1,12 @@
 import { ButtonProps } from "../types";
 
-const Button: React.FC<ButtonProps> = ({ label, icon, variation, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  label,
+  icon,
+  variation,
+  onClick,
+  type,
+}) => {
   return (
     <button
       className={
@@ -15,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({ label, icon, variation, onClick }) => {
           : ""
       }
       onClick={onClick}
+      type={type}
     >
       {icon ? <span className="mr-2 size-5">{icon}</span> : ""}
 

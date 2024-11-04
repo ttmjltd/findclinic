@@ -13,7 +13,7 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
   data,
   mockData = [],
 }) => {
-  const iconsData: any = {
+  const iconsData: Record<string, string> = {
     "Airport Transfer": "/services/car-no-bg.gif",
     "Private Chauffeur": "/services/car2-no-bg.gif",
     "Translation Services": "/services/english-no-bg.gif",
