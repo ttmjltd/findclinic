@@ -1,7 +1,6 @@
 import { Clinic } from "../apiTypes";
 
 const API_KEY: string | undefined = process.env.NEXT_PUBLIC_STRAPI_API_KEY;
-
 const BASE_URL: string = "https://panel.findclinics.co.uk/api";
 export const IMAGE_URL: string = "https://panel.findclinics.co.uk";
 
@@ -13,7 +12,6 @@ const fetchData = async (
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",
-      "Referrer-Policy": "no-referrer-when-downgrade",
       Authorization: `Bearer ${API_KEY}`,
     },
   };
@@ -48,7 +46,6 @@ const getClinicsByName = async (clinicName: string): Promise<Clinic[]> => {
   const data = await fetchData(
     `/clinics?populate=*&filters[ClinicName][$eq]=${clinicName}`
   );
-
   return data.data;
 };
 
@@ -64,6 +61,7 @@ const searchedClinics = async (
     query += `&filters[ClinicCity][$eq]=${location}`;
   }
   const data = await fetchData(query);
+
   return data.data;
 };
 

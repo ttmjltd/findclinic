@@ -54,7 +54,7 @@ const HamburgerMenu: React.FC = () => {
       {links.map(({ href, label }) => (
         <Link href={href} key={href}>
           <li
-            className="py-3 text-primary font-normal leading-4 transition hover:underline hover:rounded-l hover:bg-bgWhite hover:rounded-lg cursor-pointer"
+            className="py-3 text-neutralDark  font-normal leading-4 transition hover:underline hover:rounded-l hover:bg-neutral hover:rounded-lg cursor-pointer"
             onClick={() => setMenuOpen(false)}
           >
             {label}
@@ -68,18 +68,18 @@ const HamburgerMenu: React.FC = () => {
     <div className="flex items-center gap-4 relative z-10">
       <button
         onClick={toggleMenu}
-        className="block rounded p-2.5 text-accent transition hover:bg-bgWhite md:hidden"
+        className="block rounded p-2.5 text-secondary transition hover:bg-neutral md:hidden"
       >
         <span className="sr-only">Toggle menu</span>
         <HamburgerMenuButton />
       </button>
       <nav
         ref={menuRef}
-        className={`fixed right-0 top-0 bottom-0 w-[85%] bg-white rounded-xl sm:hidden h-screen p-6 ease-in duration-300 z-100 overflow-hidden ${
+        className={`fixed right-0 top-0 bottom-0 w-[85%] bg-white rounded-xl sm:hidden h-min-screen p-6 ease-in duration-300 z-100 overflow-hidden ${
           menuOpen ? "fixed" : "hidden"
         }`}
       >
-        <div className="flex w-[90%] mt-8 mb-5 items-center justify-between">
+        <div className="flex w-[90%] mt-5 mb-4 items-center justify-between">
           <Image
             src="/small-logo.png"
             alt="company logo"
@@ -91,15 +91,15 @@ const HamburgerMenu: React.FC = () => {
             <ExitCrossFC />
           </div>
         </div>
-        <div className="flex-col py-4 overflow-hidden">
+        <div className="flex-col py-3 overflow-hidden">
           <ul className="text-md gap-2">
             {linkGroups.map((group, index) => (
               <div key={index}>{renderLinks(group)}</div>
             ))}
           </ul>
           <div className="pt-6 text-md leading-4">
-            <p className="text-primary mb-4">info@healthway.co.uk</p>
-            <p className="text-primary">+447564123765</p>
+            <p className="text-neutralDark  mb-4">info@healthway.co.uk</p>
+            <p className="text-neutralDark ">+447564123765</p>
           </div>
         </div>
         <div className="flex flex-row items-center justify-start absolute mb-6 space-x-3 pt-6">
@@ -114,21 +114,21 @@ const HamburgerMenu: React.FC = () => {
             alt="facebook icon"
             width={32}
             height={32}
-            className="bg-accent rounded-sm p-0.5"
+            className="bg-secondary rounded-sm p-0.5"
           />
           <Image
             src="/instagram.png"
             alt="instagram icon"
             width={32}
             height={32}
-            className="bg-accent rounded-sm p-1"
+            className="bg-secondary rounded-sm p-1"
           />
           <Image
             src="/Youtube.png"
             alt="youtube icon"
             width={32}
             height={32}
-            className="bg-accent rounded-sm p-1"
+            className="bg-secondary rounded-sm p-1"
           />
         </div>
       </nav>

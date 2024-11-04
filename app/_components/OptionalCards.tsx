@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { CompareButtonFC, LikeButtonFC, StarFC } from "../_atoms/Icons";
 import { BlogPostDataTypes, ClinicDataTypes } from "../types";
 
@@ -46,8 +45,8 @@ const OptionalCards: React.FC<OptionalCardsProps> = ({ data, text, type }) => {
                         {item.title}
                       </h3>
                       <div className="inline-flex space-x-2 pr-2">
-                        {type === "clinic" && <CompareButtonFC />}
-                        <LikeButtonFC />
+                        {/* {type === "clinic" && <CompareButtonFC />} TODO: Implementation is postponed */}
+                        {/* <LikeButtonFC /> TODO: When patients have accounts can be implemented */}
                       </div>
                     </div>
                     {"rating" in item && (

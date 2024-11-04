@@ -22,7 +22,7 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
   };
 
   return (
-    <div className="p-4 mt-20 sm:w-4/6">
+    <div className="p-4 mt-20 max-w-5xl">
       <h1 className="text-2xl font-bold text-center mb-8 text-secondary">
         Here are the best clinics for you
       </h1>
@@ -33,11 +33,12 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
           return (
             <div
               key={id}
-              className="bg-white p-6 rounded-lg shadow-md flex items-center flex-col lg:flex-row relative"
+              className="bg-white p-6 rounded-lg shadow-md flex flex-col lg:flex-row relative"
             >
-              <div className="absolute top-2 right-3">
-                <LikeButtonFC />
-              </div>
+            
+            {/* <div className="absolute top-2 right-3">
+              <LikeButtonFC />
+            </div> TODO: When patients have accounst it can be implemented */}
               <div className="m:w-1/4  max-h-48 max-w-56">
                 <Image
                   src={
@@ -52,12 +53,12 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
                   className="rounded-lg object-cover max-h-44"
                 />
               </div>
-              <div className="m:w-1/2 px-4 space-y-3 text-center lg:text-start">
+              <div className="md:w-2/5 lg:w-3/5 md:px-4 space-y-3">
                 <h1 className="lg:text-3xl text-secondary font-bold text-xl">
                   {clinic.attributes.ClinicName}
                 </h1>
-                <div className="flex mb-10 text-xs sm:flex-row items-center justify-center">
-                  <span className="bg-sky-600 text-white w-5 text-center font-thin">
+                <div className="flex mb-10 sm:flex-row items-center">
+                  <span className="bg-primary text-white text-center text-xxs px-1 py-1 rounded-sm">
                     {/* //TODO */}
                     {/* {clinic.attributes.rating} */}
                     4.8
@@ -70,29 +71,31 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
                   <span className="mx-2">|</span>
                   {/* //TODO */}
                   {/* <span>{clinic.reviews} reviews</span> */}
-                  <span> 49 reviews</span>
+                  <span className="text-xxs"> 49 reviews</span>
                   <span className="ml-4 flex items-center">
                     <MapMarkerFC className="mr-2" />{" "}
-                    {clinic.attributes.ClinicCity}
+                    <span className=" text-xs"> {clinic.attributes.ClinicCity}</span>
+                  
                   </span>
                 </div>
-                <div className="text-xs flex flex-row flex-wrap items-center container justify-center">
+                <div className="flex flex-wrap items-center gap-2 container">
                   {clinic.attributes.Treatments.map((treatment, i) => (
                     <div
                       key={i}
-                      className="text-blue-700 bg-blue-100 rounded-lg m-2 px-3 h-8 flex items-center justify-center"
+                      className="text-brightNavy bg-neutral rounded-lg px-3 h-8 flex items-center justify-center text-sm sm:text-base"
                     >
                       {treatment}
                     </div>
                   ))}
+
                 </div>
               </div>
-              <div className="w-2/5 space-y-1 lg:space-y-6 flex flex-col justify-center items-start">
+              <div className="md:w-2/5 space-y-1 lg:space-y-6 flex flex-row  justify-start sm:flex-col px-4  ">
                 {clinic.attributes.Services.map((serviceName, i) => {
                   return (
                     <div
                       key={i}
-                      className="flex items-center text-xs m:text-lg"
+                      className="flex items-center "
                     >
                       <Image
                         src={iconsData[serviceName]}
@@ -101,7 +104,7 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
                         alt={iconsData[serviceName]}
                         unoptimized
                       />
-                      <span className="sm:ml-6 ml-8">{serviceName}</span>
+                      <span className="hidden sm:inline sm:ml-6 text-sm sm:text-base">{serviceName}</span>
                     </div>
                   );
                 })}

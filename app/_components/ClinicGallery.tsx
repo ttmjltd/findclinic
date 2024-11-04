@@ -1,45 +1,62 @@
 import Image from "next/image";
-import { featuredClinics } from "../_mocks_/ClinicCarouselData";
-import { ClinicDataTypes } from "../types";
 import Link from "next/link";
+import { getClinics, IMAGE_URL } from "../_utils/GlobalApi";
+import { Clinic } from "../apiTypes";
 
-const ClinicGallery: React.FC = () => {
+const ClinicGallery = async () => {
+  const clinics: Clinic[] = await getClinics();
+
+  if (!clinics || clinics.length === 0) {
+    return <p>No clinics available at the moment.</p>;
+  }
+
   return (
     <div className="flex flex-col items-center w-5/6 container mx-auto sm:p-10">
       <h1 className="text-xl text-secondary font-bold text-center m-8">
         Featured Clinics
       </h1>
       <div className="flex flex-wrap justify-center sm:justify-start">
-        {featuredClinics.map((item: ClinicDataTypes) => (
-          <div
-            key={item.id}
-            className="w-full sm:w-1/3 flex-grow-0 sm:flex-grow pl-4 mb-4 sm:mb-0"
-          >
-            <Link
-              href={`/clinic-details/${item.title
-                .split(" ")
-                .map(
-                  (word) =>
-                    word.charAt(0).toLowerCase() + word.slice(1).toLowerCase()
-                )
-                .join("-")}`}
+        {clinics?.map((clinic) => {
+          // Safeguard against missing data
+          const clinicImage =
+            clinic?.attributes?.ClinicMainImage?.data?.attributes;
+          const clinicName = clinic?.attributes?.ClinicName;
+
+          return (
+            <div
+              key={clinic.id}
+              className="w-full sm:w-1/3 flex-grow-0 sm:flex-grow pl-4 mb-4 sm:mb-0"
             >
-              <div className="relative w-2/3 h-[280px] sm:w-full sm:h-[388px] mx-auto">
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  title={item.title}
-                  width={320}
-                  height={388}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <div className="absolute bottom-0 w-full bg-white bg-opacity-50 text-primary p-4 text-center rounded-b-lg text-base xs:text-[10px]">
-                  {item.title}
+              <Link
+                href={`/clinic-details/${clinicName
+                  .split(" ")
+                  .map(
+                    (word) =>
+                      word.charAt(0).toLowerCase() + word.slice(1).toLowerCase()
+                  )
+                  .join("-")}`}
+              >
+                <div className="relative w-2/3 h-[280px] sm:w-full sm:h-[388px] mx-auto">
+                  <Image
+                    src={
+                      clinicImage
+                        ? IMAGE_URL + clinicImage.url
+                        : "/culture.webp"
+                    }
+                    alt={clinicImage?.alternativeText || clinicName}
+                    width={320}
+                    height={388}
+                    className="rounded-lg object-cover w-full h-full"
+                  />
+
+                  <div className="absolute bottom-0 w-full bg-white bg-opacity-50 text-primary p-4 text-center rounded-b-lg text-base xs:text-[10px]">
+                    {clinicName}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
