@@ -7,8 +7,8 @@ import { ExitCrossFC, HamburgerMenuButton } from "../_atoms/Icons";
 const linkGroups = [
   [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/contactus", label: "Contact Us" },
+    { href: "/about-us", label: "About Us" },
+    { href: "/contact-us", label: "Contact Us" },
   ],
   [
     { href: "/treatments", label: "Treatments" },

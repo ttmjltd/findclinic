@@ -21,7 +21,7 @@ const footerLinks: { [key: string]: FooterLink } = {
   },
   contact: {
     label: "Contact Us",
-    href: "/contact",
+    href: "/contact-us",
   },
   privacy: {
     label: "Privacy Policy",
