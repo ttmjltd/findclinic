@@ -9,7 +9,7 @@ const footerLinks: { [key: string]: FooterLink } = {
   },
   about: {
     label: "About Us",
-    href: "/about",
+    href: "/about-us",
   },
   clinics: {
     label: "Clinics",
@@ -21,7 +21,7 @@ const footerLinks: { [key: string]: FooterLink } = {
   },
   contact: {
     label: "Contact Us",
-    href: "/contact",
+    href: "/contact-us",
   },
   privacy: {
     label: "Privacy Policy",
