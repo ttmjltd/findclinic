@@ -92,10 +92,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
   };
 
   return (
-    <form
-      onSubmit={handleSearch}
-      className="flex flex-row items-center md:items-stretch bg-white w-fit p-4 mx-5 md:mx-auto mt-10 border-neutral rounded-xl"
-    >
+    <div className="flex flex-row items-center md:items-stretch bg-white w-fit p-4 mx-5 md:mx-auto mt-10 border-neutral rounded-xl">
       <div className="mb-1 md:mb-0 ">
         <Input
           type="text"
@@ -171,10 +168,9 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
           icon={<SearchFC />}
           variation="narrow-light"
           onClick={handleSearch}
-          type="submit"
         />
       </div>
-    </form>
+    </div>
   );
 };
 

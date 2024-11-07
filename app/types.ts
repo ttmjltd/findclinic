@@ -11,14 +11,13 @@ export interface ClinicDataTypes extends BaseContentType {
   type?: string;
 }
 
-
 export interface ButtonProps {
   label: string | JSX.Element;
   icon?: JSX.Element;
   variation: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  type: "button" | "submit" | "reset";
-  
+  type?: "button" | "submit" | "reset";
+}
 export interface DoctorDataTypes extends BaseContentType {
   fullName: string;
   treatment: string;
@@ -69,7 +68,6 @@ export interface SocialButtonProps {
   label?: string;
   variation?: string;
 }
-
 
 export interface FacebookLoginResponse {
   name: string;

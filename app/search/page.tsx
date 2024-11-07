@@ -11,25 +11,10 @@ const page = async ({
   searchParams: { treatment?: string; location?: string };
 }) => {
   const { treatment = "", location = "" } = searchParams;
-  const fullData: Clinic[] = await getClinics();
-  const data: Clinic[] = await searchedClinics(treatment, location);
-
-  // const filteredClinics = data.filter((clinic) => {
-  //   const matchesTreatment = treatment
-  //     ? clinic.attributes.Treatments.some((t) =>
-  //         t.toLowerCase().includes(treatment.toLowerCase())
-  //       )
-  //     : true;
-  //   const matchesLocation = location
-  //     ? clinic.attributes.ClinicCity.toLowerCase().includes(
-  //         location.toLowerCase()
-  //       )
-  //     : true;
-  //   {
-  //   }
-  //   return matchesTreatment && matchesLocation;
-  // });
   const isFilterActive = Boolean(treatment || location);
+  const data: Clinic[] = isFilterActive
+    ? await searchedClinics(treatment, location)
+    : await getClinics();
 
   const title = isFilterActive
     ? `Result for ${treatment ? `"${treatment}"` : ""} ${
@@ -40,13 +25,12 @@ const page = async ({
   return (
     <div className="flex flex-col items-center ">
       <h1 className="text-4xl text-secondary font-bold text-center mt-20  ">
-        {/* Welcome to the easiest clinic search platform */}
         {title}
       </h1>
       <h1 className="text-xl text-secondary font-bold text-center  mt-2">
         Let&apos;s find the best clinic for you!
       </h1>
-      <SearchComponent data={fullData} />
+      <SearchComponent data={data} />
       {/* TODO - Advance search  */}
       {/* <div className="text-neutralDark underline text-center mt-10">
         <Link href={"#"}>Advanced Search</Link>

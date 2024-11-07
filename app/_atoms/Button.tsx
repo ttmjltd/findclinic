@@ -5,7 +5,7 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   variation,
   onClick,
-  type,
+  type = "button",
 }) => {
   return (
     <button

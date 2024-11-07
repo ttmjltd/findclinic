@@ -61,7 +61,6 @@ const searchedClinics = async (
     query += `&filters[ClinicCity][$eq]=${location}`;
   }
   const data = await fetchData(query);
-
   return data.data;
 };
 

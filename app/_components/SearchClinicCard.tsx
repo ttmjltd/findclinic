@@ -33,13 +33,12 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
           return (
             <div
               key={id}
-              className="bg-white p-6 rounded-lg shadow-md flex flex-col lg:flex-row relative"
+              className="bg-white p-6 rounded-lg shadow-md flex flex-col lg:flex-row relative lg:h-80"
             >
-            
-            {/* <div className="absolute top-2 right-3">
+              {/* <div className="absolute top-2 right-3">
               <LikeButtonFC />
             </div> TODO: When patients have accounst it can be implemented */}
-              <div className="m:w-1/4  max-h-48 max-w-56">
+              <div className="m:w-1/4  max-h-48 max-w-56 items-center justify-center">
                 <Image
                   src={
                     clinic.attributes.ClinicMainImage?.data?.attributes.url
@@ -74,8 +73,10 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
                   <span className="text-xxs"> 49 reviews</span>
                   <span className="ml-4 flex items-center">
                     <MapMarkerFC className="mr-2" />{" "}
-                    <span className=" text-xs"> {clinic.attributes.ClinicCity}</span>
-                  
+                    <span className=" text-xs">
+                      {" "}
+                      {clinic.attributes.ClinicCity}
+                    </span>
                   </span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2 container">
@@ -87,16 +88,12 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
                       {treatment}
                     </div>
                   ))}
-
                 </div>
               </div>
               <div className="md:w-2/5 space-y-1 lg:space-y-6 flex flex-row  justify-start sm:flex-col px-4  ">
                 {clinic.attributes.Services.map((serviceName, i) => {
                   return (
-                    <div
-                      key={i}
-                      className="flex items-center "
-                    >
+                    <div key={i} className="flex items-center ">
                       <Image
                         src={iconsData[serviceName]}
                         width="32"
@@ -104,7 +101,9 @@ const SearchClinicCard: React.FC<SearchClinicCardProps> = ({
                         alt={iconsData[serviceName]}
                         unoptimized
                       />
-                      <span className="hidden sm:inline sm:ml-6 text-sm sm:text-base">{serviceName}</span>
+                      <span className="hidden sm:inline sm:ml-6 text-sm sm:text-base">
+                        {serviceName}
+                      </span>
                     </div>
                   );
                 })}
