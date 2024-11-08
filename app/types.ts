@@ -11,6 +11,13 @@ export interface ClinicDataTypes extends BaseContentType {
   type?: string;
 }
 
+export interface ButtonProps {
+  label: string | JSX.Element;
+  icon?: JSX.Element;
+  variation: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  type?: "button" | "submit" | "reset";
+}
 export interface DoctorDataTypes extends BaseContentType {
   fullName: string;
   treatment: string;
@@ -24,6 +31,8 @@ export interface BlogPostDataTypes extends BaseContentType {
 interface BaseFormElementProps {
   value: any;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
   className?: string;
 }
@@ -59,7 +68,6 @@ export interface SocialButtonProps {
   label?: string;
   variation?: string;
 }
-
 
 export interface FacebookLoginResponse {
   name: string;
