@@ -9,7 +9,7 @@ const footerLinks: { [key: string]: FooterLink } = {
   },
   about: {
     label: "About Us",
-    href: "/about",
+    href: "/about-us",
   },
   clinics: {
     label: "Clinics",
