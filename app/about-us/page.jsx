@@ -27,7 +27,7 @@ const AboutUs = () => {
             View the clinics and treatments
           </button>
         </div>
-        <div className="sm:w-1/2">
+        <div className="flex sm:w-1/2 justify-end items-center">
           <Image
             src="/frame 1.png"
             alt="About Us"
