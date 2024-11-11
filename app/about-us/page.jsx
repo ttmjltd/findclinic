@@ -29,7 +29,7 @@ const AboutUs = () => {
         </div>
         <div className="flex sm:w-1/2 justify-end items-center">
           <Image
-            src="/frame 1.png"
+            src="/Frame 1.png"
             alt="About Us"
             width={500}
             height={400}
@@ -50,6 +50,7 @@ const AboutUs = () => {
               width="80"
               height="80"
               alt="car"
+              unoptimized
             />
             <h4 className="font-semibold mb-2">Verified Clinics</h4>
             <p className="text-neutralDark">
@@ -63,6 +64,7 @@ const AboutUs = () => {
               width="80"
               height="80"
               alt="car"
+              unoptimized
             />
             <h4 className="font-semibold mb-2">Personalized Matches</h4>
             <p className="text-neutralDark">
@@ -76,6 +78,7 @@ const AboutUs = () => {
               width="80"
               height="80"
               alt="car"
+              unoptimized
             />
             <h4 className="font-semibold mb-2">Patient-Centric Approach</h4>
             <p className="text-neutralDark">
@@ -91,7 +94,7 @@ const AboutUs = () => {
         <div className="flex sm:flex-row gap-8 sm:justify-around flex-col">
           <div className="sm:w-1/2">
             <Image
-              src="/frame 2.png"
+              src="/Frame 2.png"
               alt="Our Vision"
               width={500}
               height={400}
@@ -106,12 +109,12 @@ const AboutUs = () => {
               We aim to revolutionize the way patients connect with healthcare
               providers, creating a seamless experience that prioritizes trust,
               transparency, and quality care. By bridging the gap between
-              patients and clinics, we’re making healthcare more accessible to
+              patients and clinics, we&apos;re making healthcare more accessible to
               everyone.
             </p>
             <p className="mb-4">
               Thank you for choosing FindClinics to support your journey in
-              healthcare. We’re here to help you find the right clinic and
+              healthcare. We&apos;re here to help you find the right clinic and
               treatment, so you can focus on what matters most: getting the care
               you deserve.
             </p>
