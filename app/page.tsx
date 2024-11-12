@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import OptionalCards from "./_components/OptionalCards";
-import PatientPopUp from "./_components/PatientPopUp";
-import ScheduleCall from "./_components/ScheduleCall";
+// import PatientPopUp from "./_components/PatientPopUp";
+// import ScheduleCall from "./_components/ScheduleCall";
 import Testimonials from "./_components/Testimonials";
 import TreatmentCounter from "./_components/TreatmentCounter";
 import { getClinics } from "./_utils/GlobalApi";
@@ -21,7 +21,7 @@ const Home = async () => {
 
   return (
     <main>
-      <PatientPopUp />
+      {/* <PatientPopUp /> */}
       <h1 className=" text-2xl md:text-4xl text-secondary font-bold text-center mt-20 mx-1 ">
         Welcome to the easiest clinic search platform
       </h1>
@@ -45,7 +45,7 @@ const Home = async () => {
         text="What our clinics say"
         type="blogPost"
       />
-      <ScheduleCall />
+      {/* <ScheduleCall /> */}
     </main>
   );
 };
