@@ -3,20 +3,20 @@ import Link from "next/link";
 import { getClinics, IMAGE_URL } from "../_utils/GlobalApi";
 import { Clinic } from "../apiTypes";
 
-const ClinicGallery = async () => {
+const FeaturedClinics = async () => {
   const clinics: Clinic[] = await getClinics();
 
   if (!clinics || clinics.length === 0) {
     return <p>No clinics available at the moment.</p>;
   }
-
   return (
     <div className="flex flex-col items-center w-5/6 container mx-auto sm:p-10">
       <h1 className="text-xl text-secondary font-bold text-center m-8">
         Featured Clinics
       </h1>
       <div className="flex flex-wrap justify-center sm:justify-start">
-        {clinics?.map((clinic) => {
+        {/* TODO: Discard slice when isFeatured property is added to clinics schema on strapi to render featured clinics */}
+        {clinics?.slice(0, 3).map((clinic) => {
           // Safeguard against missing data
           const clinicImage =
             clinic?.attributes?.ClinicMainImage?.data?.attributes;
@@ -62,4 +62,4 @@ const ClinicGallery = async () => {
   );
 };
 
-export default ClinicGallery;
+export default FeaturedClinics;
