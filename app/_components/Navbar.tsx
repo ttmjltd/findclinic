@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
               </li>
               <li className="block p-2 antialiased leading-normal hover:bg-neutral hover:rounded-lg">
                 <Link
-                  href="/aboutus"
+                  href="/about-us"
                   className="flex items-center hover:underline whitespace-nowrap"
                 >
                   About Us
