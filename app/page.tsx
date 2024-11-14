@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import OptionalCards from "./_components/OptionalCards";
 import PatientPopUp from "./_components/PatientPopUp";
 import ScheduleCall from "./_components/ScheduleCall";
@@ -8,13 +7,13 @@ import Link from "next/link";
 import SearchComponent from "./_components/SearchComponent";
 import { clinics } from "./_mocks_/ClinicCarouselData";
 import { blogPostsData } from "./_mocks_/BlogMocks";
+import FeaturedClinics from "./_components/FeaturedClinics";
+import { getClinics } from "./_utils/GlobalApi";
+import { Clinic } from "./apiTypes";
 
-const ClinicGallery = dynamic(() => import("./_components/ClinicGallery"), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-});
+export default async function Home() {
+  const clinics: Clinic[] = await getClinics();
 
-export default function Home() {
   return (
     <main>
       <PatientPopUp />
@@ -29,17 +28,12 @@ export default function Home() {
         <Link href={"#"}>Advanced Search</Link>
       </div>
       <TreatmentCounter />
-      <ClinicGallery />
-      <OptionalCards
-        data={clinics}
-        text="Explore other options"
-        type="clinic"
-      />
+      <FeaturedClinics />
+      <OptionalCards data={clinics} text="Explore other options" />
       <Testimonials />
       <OptionalCards
-        data={blogPostsData}
+        data={blogPostsData} // TODO: API connection for blogposts
         text="What our clinics say"
-        type="blogPost"
       />
       <ScheduleCall />
     </main>
