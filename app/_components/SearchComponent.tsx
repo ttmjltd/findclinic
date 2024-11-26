@@ -91,6 +91,12 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
     router.push(`/search?${query}`);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch(); // Trigger the search function
+    }
+  };
+
   return (
     <div className="flex flex-row items-center md:items-stretch bg-white w-fit p-4 mx-5 md:mx-auto mt-10 border-neutral rounded-xl">
       <div className="mb-1 md:mb-0 ">
@@ -104,6 +110,8 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
           onBlur={() =>
             setTimeout(() => setIsTreatmentDropdownVisible(false), 200)
           }
+          onKeyDown={handleKeyDown}
+        
           className="mr-2 md:mr-4  w-44 md:w-fit"
         />
 
@@ -141,6 +149,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ data }) => {
               setIsLocationDropdownVisible(false);
             }, 200)
           }
+          onKeyDown={handleKeyDown}
           className="mr-2 md:mr-4 w-[90px] md:w-fit"
         />
         {isLocationDropdownVisible && (

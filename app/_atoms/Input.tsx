@@ -7,6 +7,7 @@ const Input: React.FC<InputProps> = ({
   onChange,
   onFocus,
   onBlur,
+  onKeyDown,
   placeholder,
   className,
   type = "text",
@@ -26,6 +27,7 @@ const Input: React.FC<InputProps> = ({
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}
+        onKeyDown={onKeyDown}
         className="w-full rounded p-3 h-10 bg-neutral text-secondary outline-none placeholder-brightNavy"
         pattern={pattern}
         inputMode={inputMode}
